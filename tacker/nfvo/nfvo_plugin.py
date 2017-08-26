@@ -284,6 +284,46 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
         return super(NfvoPlugin, self).create_vnffgd(context, vnffgd)
 
     @log.log
+    def get_vnffg(self, context, vnffg_id, fields=None):
+        vnffg_db = super(NfvoPlugin, self).get_vnffg(context, vnffg_id)
+        vnf_id = "b51d095e-9de7-454b-8296-e319761bbe78"
+        vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
+        # undeleted_ports = vnfm_plugin.get_undelete_port_resource(context, vnf_id)
+        undeleted_ports = []
+
+        vim_obj = self._get_vim_from_vnf(context, vnf_id)
+        driver_type = vim_obj['type']
+
+        port_chain_id = self.get_port_chain_id(context, vnffg_id)
+        new_ppg = self._vim_drivers.invoke(driver_type,
+                                           'update_scale_in_chain',
+                                           port_chain_id=port_chain_id,
+                                           undelete_ports=undeleted_ports,
+                                           auth_attr=vim_obj['auth_cred'])
+        print("New ppg:", new_ppg)
+        return vnffg_db
+
+
+    """
+    @log.log
+    def get_vnffg(self, context, vnffg_id, fields=None):
+        vnf_id = "b51d095e-9de7-454b-8296-e319761bbe78"
+        vnffg_db = super(NfvoPlugin, self).get_vnffg(context, vnffg_id)
+        scaling_ports = super(NfvoPlugin, self)._get_scaling_ports(context,
+                                                                   vnf_id=vnf_id,
+                                                                   vnffg=vnffg_db)
+        vim_obj = self._get_vim_from_vnf(context, vnf_id)
+        port_chain_id = self.get_port_chain_id(context, vnffg_id)
+        driver_type = vim_obj['type']
+        ppg_update = self._vim_drivers.invoke(driver_type,
+                                              'update_scale_out_chain',
+                                              port_chain_id=port_chain_id,
+                                              scaling_ports=scaling_ports,
+                                              auth_attr=vim_obj['auth_cred'])
+        return ppg_update
+    """
+
+    @log.log
     def create_vnffg(self, context, vnffg):
         vnffg_info = vnffg['vnffg']
         name = vnffg_info['name']

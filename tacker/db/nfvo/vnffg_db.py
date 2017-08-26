@@ -287,6 +287,14 @@ class VnffgPluginDbMixin(vnffg.VNFFGPluginBase, db_base.CommonDbMixin):
         chain_db = self._get_resource(context, VnffgChain, sfc_id)
         return self._make_chain_dict(chain_db, fields)
 
+    def get_port_chain_id(self, context, vnffg_id, fields=None):
+        vnffgnfp_db = (self._model_query(context, VnffgNfp).
+                        filter(VnffgNfp.vnffg_id == vnffg_id).one())
+        nfp_id = vnffgnfp_db.id
+        vnffgchain_db = (self._model_query(context, VnffgChain).
+                         filter(VnffgChain.nfp_id == nfp_id).one())
+        return vnffgchain_db.instance_id
+
     def get_sfcs(self, context, filters=None, fields=None):
         return self._get_collection(context, VnffgChain,
                                     self._make_chain_dict,
@@ -484,6 +492,41 @@ class VnffgPluginDbMixin(vnffg.VNFFGPluginBase, db_base.CommonDbMixin):
                     chain_list[-1][CP].append(vnf_cp)
 
         return chain_list
+
+    def _get_scaling_ports(self, context, vnf_id, vnffg):
+        """Gets a list of physical port ids that belongs to NFP in VNF
+        Neutron port id will change when scaling happens. This function
+        gets all neutron ports of the given VNF
+
+        :param context: SQL session context
+        :param vnffg: VNFFG information
+        :return: list of of physical port ids
+        """
+        vnffg_id = vnffg['id']
+        vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
+        # Get NFP name
+        vnffgnfp_db = ( self._model_query(context, VnffgNfp).
+                 filter(VnffgNfp.vnffg_id == vnffg_id).one())
+        nfp_name = vnffgnfp_db['name']
+        vnffgd_id = vnffg['vnffgd_id']
+        template_db = self._get_resource(context, VnffgTemplate, vnffgd_id)
+        # Build the list of logical chain representation
+        logical_chain = self._get_nfp_attribute(template_db.template,
+                                                nfp_name, 'path')
+        # Build a list of scaling ports
+        cp_list = []
+        for element in logical_chain:
+            vnf = vnfm_plugin.get_scaling_port_vnf_resources(context, vnf_id)
+            for resource in vnf:
+                # Examples of scaling ports are testVNF1-CP1-r37idnzr3mei (VNF_name-CP-id)
+                cp_item = {}
+                cp_item[CP] = []
+                cp_name = str(resource['name']).split('-')
+                if cp_name[1] == element['capability']:
+                    cp_item['name'] = resource['name']
+                    cp_item[CP].append(resource['id'])
+                    cp_list.append(cp_item)
+        return cp_list
 
     @staticmethod
     def _get_vnffg_property(template, vnffg_property):
