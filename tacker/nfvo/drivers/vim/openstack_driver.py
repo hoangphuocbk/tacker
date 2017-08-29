@@ -404,6 +404,10 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
             epp_dict['egress'] = epp_info['port_pair']['egress']
             existing_port_pairs.append(epp_dict)
 
+        list_current_ports = neutronclient_.port_list()
+        list_current_id_ports = [port['id'] for port in list_current_ports['ports']]
+        print("List current ports:", list_current_id_ports)
+
         for port_item in scaling_ports:
             port_pair = {}
             port_pair['name'] = port_item['name'] + '-connection-points'
@@ -412,11 +416,18 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
             cp_list = port_item[CONNECTION_POINT]
             num_cps = len(cp_list)
             if num_cps == 1:
-                port_pair['ingress'] = cp_list[0]
-                port_pair['egress'] = cp_list[0]
+                if cp_list[0] not in list_current_id_ports:
+                    continue
+                else:
+                    port_pair['ingress'] = cp_list[0]
+                    port_pair['egress'] = cp_list[0]
             else:
-                port_pair['ingress'] = cp_list[0]
-                port_pair['egress'] = cp_list[1]
+                if (cp_list[0] not in list_current_id_ports) or\
+                        (cp_list[1] not in list_current_id_ports):
+                    continue
+                else:
+                    port_pair['ingress'] = cp_list[0]
+                    port_pair['egress'] = cp_list[1]
             port_pair_id = None
             # Check port_pair in existing port_pair_group
             for epp_item in existing_port_pairs:
@@ -432,8 +443,6 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
         return ppg_new
 
     def update_scale_in_chain(self, port_chain_id, undelete_ports, auth_attr=None):
-        print("Gotchaaa")
-        print("Undelete ports:", undelete_ports)
         if not auth_attr:
             LOG.warning("auth information required for n-sfc driver")
             return None
@@ -460,16 +469,13 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
         # Delete port_pairs that contain undelete_ports
         for port_pair_id in delete_port_pairs:
             neutronclient_.port_pair_delete(port_pair_id)
-        # Delete ports
-        for port_id in undelete_ports:
-            neutronclient_.port_delete(port_id)
+        list_current_ports = neutronclient_.port_list()
+        list_current_id_ports = [port['id'] for port in list_current_ports['ports']]
+        # Delete undeleted_ports of Neutron::Port when scale-in
+        for port in undelete_ports:
+            if port in list_current_id_ports:
+                neutronclient_.port_delete(port)
         return ppg_new
-
-
-
-
-
-        print("PPG information:", ppg_info)
 
     def create_chain(self, name, fc_id, vnfs, symmetrical=False,
                      auth_attr=None):
@@ -735,6 +741,15 @@ class NeutronClient(object):
             LOG.warning(_('get port pair list returns %s'), e)
             raise ValueError(str(e))
         return pp_list
+
+    def port_list(self):
+        """Get port list"""
+        try:
+            p_list = self.client.list_ports()
+        except nc_exceptions.BadRequest as e:
+            LOG.warning(_('get port list returns %s'), e)
+            raise ValueError(str(e))
+        return p_list
 
     def port_delete(self, port_id):
         """Delete port """

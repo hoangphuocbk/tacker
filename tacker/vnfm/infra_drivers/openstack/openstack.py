@@ -344,15 +344,14 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
                 raise vnfm.VNFScaleWaitFailed(vnf_id=policy['vnf']['id'],
                                               reason=error_reason)
 
-            if stack_retries == self.STACK_RETRIES - 5:
+            if stack_retries == self.STACK_RETRIES - 4:
                 resources_ids = \
                     heatclient.resource_get_list(stack_id, nested_depth=2)
-                # TODO (hoangphuoc) This update is making for deleting stack resource.
+                # This update is making for deleting stack resource.
                 # When an instance is connected to the chain, we cannot delete it normally
                 # Firstly, we get undeleted port, then update port-pair-group and delete port-pair
                 # after that, delete port.
                 list_port = self.get_undeleted_port(resources_ids)
-                print("List ports:", list_port)
                 if len(list_port) != 0:
                     break
 
@@ -459,6 +458,7 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
     @log.log
     def get_undelete_port_resource(self, plugin, context, vnf_info, auth_attr,
                           region_name=None):
+        # return Neutron::Port that is not deleted
         instance_id = vnf_info['instance_id']
         heatclient = hc.HeatClient(auth_attr, region_name)
         try:
