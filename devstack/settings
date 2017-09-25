@@ -1,6 +1,8 @@
 TACKER_MODE=${TACKER_MODE:-all}
 USE_BARBICAN=True
 
+KUBERNETES_VIM=${KUBERNETES_VIM:-True}
+
 if [ "${TACKER_MODE}" == "all" ]; then
     # Nova
     disable_service n-net
@@ -48,4 +50,26 @@ elif [ "${TACKER_MODE}" == "standalone" ]; then
     ENABLED_SERVICES=key,horizon,tacker,tacker-conductor,mysql,dstat,barbican,mistral,mistral-api,mistral-engine,mistral-executor,mistral-event-engine
 else
     die $LINENO "invalid value: $TACKER_MODE for TACKER_MODE"
+fi
+
+if [ "${KUBERNETES_VIM}" == "True" ]; then
+    KURYR_NEUTRON_DEFAULT_PROJECT='admin'
+    IPV4_ADDRS_SAFE_TO_USE=${IPV4_ADDRS_SAFE_TO_USE:-192.168.120.0/22}
+    SUBNETPOOL_NAME_V4=${SUBNETPOOL_NAME:-"shared-default-subnetpool-v4"}
+    SUBNETPOOL_SIZE_V4=${SUBNETPOOL_SIZE_V4:-26}
+    FIXED_RANGE_MGMT=${FIXED_RANGE_MGMT:-$IPV4_ADDRS_SAFE_TO_USE}
+    SUBNETPOOL_V4_ID=${SUBNETPOOL_V4_ID:-}
+
+    enable_plugin kuryr-kubernetes https://git.openstack.org/openstack/kuryr-kubernetes
+    enable_plugin devstack-plugin-container https://git.openstack.org/openstack/devstack-plugin-container
+    enable_plugin neutron-lbaas git://git.openstack.org/openstack/neutron-lbaas
+    enable_service q-lbaasv2
+    enable_service etcd3
+    enable_service kubernetes-api
+    enable_service kubernetes-controller-manager
+    enable_service kubernetes-scheduler
+    enable_service kubelet
+    enable_service kuryr-kubernetes
+    enable_service rabbit
+    NEUTRON_LBAAS_SERVICE_PROVIDERV2="LOADBALANCERV2:Haproxy:neutron_lbaas.drivers.haproxy.plugin_driver.HaproxyOnHostPluginDriver:default"
 fi

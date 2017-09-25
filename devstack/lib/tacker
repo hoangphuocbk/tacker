@@ -385,8 +385,16 @@ function tacker_create_initial_network {
     done
 
     echo "Creating networks"
+    echo "###################################"
+    echo "FIXED_RANGE_MGMT: $FIXED_RANGE_MGMT"
+
+    SUBNETPOOL_V4_ID=$(openstack subnet pool create ${SUBNETPOOL_NAME_V4} --default-prefix-length ${SUBNETPOOL_SIZE_V4} --pool-prefix ${FIXED_RANGE_MGMT} --share --default -f value -c id)
+
+    echo "New subnet pool: $SUBNETPOOL_V4_ID"
+    echo "##################################"
+
     NET_MGMT_ID=$(openstack network create --provider-network-type flat --provider-physical-network ${MGMT_PHYS_NET} --share ${NET_MGMT} | awk '/ id /{print $4}')
-    SUBNET_MGMT_ID=$(openstack subnet create ${SUBNET_MGMT} --ip-version 4 --gateway ${NETWORK_GATEWAY_MGMT} --network ${NET_MGMT_ID} --subnet-range ${FIXED_RANGE_MGMT} | awk '/ id /{print $4}')
+    SUBNET_MGMT_ID=$(openstack subnet create ${SUBNET_MGMT} --ip-version 4 --gateway ${NETWORK_GATEWAY_MGMT} --network ${NET_MGMT_ID} --subnet-pool ${SUBNETPOOL_V4_ID} | awk '/ id /{print $4}')
     NET0_ID=$(openstack network create --share ${NET0} | awk '/ id /{print $4}')
     SUBNET0_ID=$(openstack subnet create ${SUBNET0} --ip-version 4 --gateway ${NETWORK_GATEWAY0} --network ${NET0_ID} --subnet-range ${FIXED_RANGE0} | awk '/ id /{print $4}')
     NET1_ID=$(openstack network create --share ${NET1} | awk '/ id /{print $4}')
