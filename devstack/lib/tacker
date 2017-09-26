@@ -391,19 +391,36 @@ function tacker_create_initial_network {
     SUBNETPOOL_V4_ID=$(openstack subnet pool create ${SUBNETPOOL_NAME_V4} --default-prefix-length ${SUBNETPOOL_SIZE_V4} --pool-prefix ${FIXED_RANGE_MGMT} --share --default -f value -c id)
 
     echo "New subnet pool: $SUBNETPOOL_V4_ID"
-    echo "##################################"
+
+
+    ROUTER_ID=$(openstack --os-cloud devstack-admin router create $Q_ROUTER_NAME | grep ' id ' | get_field 2)
+
+    echo "ROUTER_ID: $ROUTER_ID"
 
     NET_MGMT_ID=$(openstack network create --provider-network-type flat --provider-physical-network ${MGMT_PHYS_NET} --share ${NET_MGMT} | awk '/ id /{print $4}')
-    SUBNET_MGMT_ID=$(openstack subnet create ${SUBNET_MGMT} --ip-version 4 --gateway ${NETWORK_GATEWAY_MGMT} --network ${NET_MGMT_ID} --subnet-pool ${SUBNETPOOL_V4_ID} | awk '/ id /{print $4}')
+
+    echo "NET_MGMT_ID: $NET_MGMT_ID"
+
+    PUBLIC_NET='public-subnet'
+
+    SUBNET_MGMT_ID=$(openstack subnet create ${PUBLIC_NET} --ip-version 4 --gateway ${NETWORK_GATEWAY_MGMT} --network ${NET_MGMT_ID} --subnet-pool ${SUBNETPOOL_V4_ID} | awk '/ id /{print $4}')
+
+    echo "SUBNET_MGMT_ID: $SUBNET_MGMT_ID"
+
+    openstack --os-cloud devstack-admin router add subnet ${ROUTER_ID} ${SUBNET_MGMT_ID}
+
     NET0_ID=$(openstack network create --share ${NET0} | awk '/ id /{print $4}')
-    SUBNET0_ID=$(openstack subnet create ${SUBNET0} --ip-version 4 --gateway ${NETWORK_GATEWAY0} --network ${NET0_ID} --subnet-range ${FIXED_RANGE0} | awk '/ id /{print $4}')
+    SUBNET0_ID=$(openstack subnet create ${SUBNET0} --ip-version 4 --gateway ${NETWORK_GATEWAY0} --network ${NET0_ID} --subnet-range ${FIXED_RANGE0}  | awk '/ id /{print $4}')
     NET1_ID=$(openstack network create --share ${NET1} | awk '/ id /{print $4}')
     SUBNET1_ID=$(openstack subnet create ${SUBNET1} --ip-version 4 --gateway ${NETWORK_GATEWAY1} --network ${NET1_ID} --subnet-range ${FIXED_RANGE1} | awk '/ id /{print $4}')
 
     echo "Assign ip address to BR_MGMT"
     sudo ip link set ${BR_MGMT} up
+
     sudo ip -4 address flush dev ${BR_MGMT}
     sudo ip address add ${NETWORK_GATEWAY_MGMT_IP} dev ${BR_MGMT}
+
+    echo "##################################"
 }
 
 function tacker_register_default_vim {

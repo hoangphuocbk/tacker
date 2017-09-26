@@ -13,13 +13,12 @@ if [ "${TACKER_MODE}" == "all" ]; then
 
     # TACKER_NEUTRON_AGENTS can be disabled by adding
     # TACKER_NEUTRON_AGENTS='' in local.conf if neutron agents are running on a separate node
-    TACKER_NEUTRON_AGENTS=${TACKER_NEUTRON_AGENTS:-q-agt,q-dhcp,q-meta,q-l3}
+    TACKER_NEUTRON_AGENTS=${TACKER_NEUTRON_AGENTS:-q-agt,q-dhcp,q-meta,q-l3,q-svc}
     for i in $(echo $TACKER_NEUTRON_AGENTS | sed 's/,/ /g')
     do
         enable_service $i
     done
 
-    enable_service q-svc
     enable_service neutron
 
     enable_service tacker
@@ -47,22 +46,21 @@ if [ "${TACKER_MODE}" == "all" ]; then
     NETWORK_GATEWAY1=${NETWORK_GATEWAY1:-10.10.1.1}
 elif [ "${TACKER_MODE}" == "standalone" ]; then
     # set the enabled services here. This will need tacker devstack plugin put as the last one in local.conf
-    ENABLED_SERVICES=key,horizon,tacker,tacker-conductor,mysql,dstat,barbican,mistral,mistral-api,mistral-engine,mistral-executor,mistral-event-engine
+    ENABLED_SERVICES=key,horizon,tacker,tacker-conductor,mysql,dstat,barbican,mistral,mistral-api,mistral-engine,mistral-executor,mistral-event-engine,rabbit
 else
     die $LINENO "invalid value: $TACKER_MODE for TACKER_MODE"
 fi
 
 if [ "${KUBERNETES_VIM}" == "True" ]; then
+    echo "Gotcha!!!"
     KURYR_NEUTRON_DEFAULT_PROJECT='admin'
-    IPV4_ADDRS_SAFE_TO_USE=${IPV4_ADDRS_SAFE_TO_USE:-192.168.120.0/22}
+    IPV4_ADDRS_SAFE_TO_USE=192.168.120.0/22
+    Q_ROUTER_NAME='route-k8s'
     SUBNETPOOL_NAME_V4=${SUBNETPOOL_NAME:-"shared-default-subnetpool-v4"}
     SUBNETPOOL_SIZE_V4=${SUBNETPOOL_SIZE_V4:-26}
-    FIXED_RANGE_MGMT=${FIXED_RANGE_MGMT:-$IPV4_ADDRS_SAFE_TO_USE}
+    FIXED_RANGE_MGMT=${IPV4_ADDRS_SAFE_TO_USE}
     SUBNETPOOL_V4_ID=${SUBNETPOOL_V4_ID:-}
 
-    enable_plugin kuryr-kubernetes https://git.openstack.org/openstack/kuryr-kubernetes
-    enable_plugin devstack-plugin-container https://git.openstack.org/openstack/devstack-plugin-container
-    enable_plugin neutron-lbaas git://git.openstack.org/openstack/neutron-lbaas
     enable_service q-lbaasv2
     enable_service etcd3
     enable_service kubernetes-api
@@ -70,6 +68,5 @@ if [ "${KUBERNETES_VIM}" == "True" ]; then
     enable_service kubernetes-scheduler
     enable_service kubelet
     enable_service kuryr-kubernetes
-    enable_service rabbit
     NEUTRON_LBAAS_SERVICE_PROVIDERV2="LOADBALANCERV2:Haproxy:neutron_lbaas.drivers.haproxy.plugin_driver.HaproxyOnHostPluginDriver:default"
 fi
