@@ -61,3 +61,9 @@ disable_service tempest
 
 #TACKER CONFIGURATION
 USE_BARBICAN=True
+
+# Kubernetes
+KUBERNETES_VIM=True
+enable_plugin kuryr-kubernetes https://git.openstack.org/openstack/kuryr-kubernetes
+enable_plugin neutron-lbaas git://git.openstack.org/openstack/neutron-lbaas
+enable_plugin devstack-plugin-container https://git.openstack.org/openstack/devstack-plugin-container

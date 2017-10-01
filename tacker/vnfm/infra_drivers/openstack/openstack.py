@@ -277,7 +277,7 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
         def _find_mgmt_ips(attributes):
             mgmt_ips = {}
             for k, v in attributes.items():
-                if k.startswith(OUTPUT_PREFIX) and v is not None:
+                if k.startswith(OUTPUT_PREFIX):
                     mgmt_ips[k.replace(OUTPUT_PREFIX, '')] = v
 
             return mgmt_ips
@@ -344,17 +344,6 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
                 raise vnfm.VNFScaleWaitFailed(vnf_id=policy['vnf']['id'],
                                               reason=error_reason)
 
-            if stack_retries == self.STACK_RETRIES - 4:
-                resources_ids = \
-                    heatclient.resource_get_list(stack_id, nested_depth=2)
-                # This update is making for deleting stack resource.
-                # When an instance is connected to the chain, we cannot delete it normally
-                # Firstly, we get undeleted port, then update port-pair-group and delete port-pair
-                # after that, delete port.
-                list_port = self.get_undeleted_port(resources_ids)
-                if len(list_port) != 0:
-                    break
-
             if stack_retries == 0:
                 metadata = heatclient.resource_metadata(stack_id, policy_name)
                 if not metadata['scaling_in_progress']:
@@ -388,29 +377,6 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
 
         return jsonutils.dumps(mgmt_ips)
 
-    @classmethod
-    def get_undeleted_port(cls, resources_ids):
-        dict = {}
-        scaling_group = ["OS::Neutron::Port", "OS::Nova::Server"]
-        for resource in resources_ids:
-            if resource.resource_type in scaling_group:
-                if resource.parent_resource in dict:
-                    if resource.resource_type in dict[resource.parent_resource]:
-                        dict[resource.parent_resource][resource.resource_type].\
-                            append(resource.physical_resource_id)
-                    else:
-                        dict[resource.parent_resource][resource.resource_type] =\
-                            [resource.physical_resource_id]
-                else:
-                    dict[resource.parent_resource] = {}
-                    dict[resource.parent_resource][resource.resource_type] =\
-                        [resource.physical_resource_id]
-        list_port = []
-        for parent_resource in dict:
-            if "OS::Nova::Server" not in dict[parent_resource]:
-                list_port += dict[parent_resource]["OS::Neutron::Port"]
-        return list_port
-
     @log.log
     def get_resource_info(self, plugin, context, vnf_info, auth_attr,
                           region_name=None):
@@ -426,49 +392,6 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
                              "type": resource.resource_type}
                             for resource in resources_ids}
             return details_dict
-        # Raise exception when Heat API service is not available
-        except Exception:
-            raise vnfm.InfraDriverUnreachable(service="Heat API service")
-
-
-    @log.log
-    def get_scaling_port_resource_info(self, plugin, context, vnf_info, auth_attr,
-                                       region_name=None):
-        # This function is used for updating port-pair of vnf
-        instance_id = vnf_info['instance_id']
-        heatclient = hc.HeatClient(auth_attr, region_name)
-        try:
-            # nested_depth=2 is used to get VDU resources
-            # in case of nested template
-            resources_ids =\
-                heatclient.resource_get_list(instance_id, nested_depth=2)
-            details_dict = {}
-            for resource in resources_ids:
-                if resource.resource_type == "OS::Neutron::Port":
-                    name = str(resource.resource_name) + "-" + resource.parent_resource
-                    details_dict[name] = {
-                        "id": resource.physical_resource_id,
-                        "type": resource.resource_type
-                    }
-            return details_dict
-        # Raise exception when Heat API service is not available
-        except Exception:
-            raise vnfm.InfraDriverUnreachable(service="Heat API service")
-
-    @log.log
-    def get_undelete_port_resource(self, plugin, context, vnf_info, auth_attr,
-                          region_name=None):
-        # return Neutron::Port that is not deleted
-        instance_id = vnf_info['instance_id']
-        heatclient = hc.HeatClient(auth_attr, region_name)
-        try:
-            # nested_depth=2 is used to get VDU resources
-            # in case of nested template
-            resources_ids = \
-                heatclient.resource_get_list(instance_id, nested_depth=2)
-            print("resource_ids:", resources_ids)
-            undelete_ports = self.get_undeleted_port(resources_ids)
-            return undelete_ports
         # Raise exception when Heat API service is not available
         except Exception:
             raise vnfm.InfraDriverUnreachable(service="Heat API service")

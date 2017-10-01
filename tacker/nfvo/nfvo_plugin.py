@@ -158,6 +158,22 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
                     old_key_type = old_vim_obj['auth_cred'].get('key_type')
                     if old_key_type == 'barbican_key':
                         old_auth_need_delete = True
+                elif 'bearer_token' in vim_obj['auth_cred']:
+                    if 'bearer_token' in auth_cred:
+                        vim_obj['auth_cred']['bearer_token'] = auth_cred['bearer_token']
+                        self._vim_drivers.invoke(vim_type,
+                                                 'register_vim',
+                                                 context=context,
+                                                 vim_obj=vim_obj)
+                        new_auth_created = True
+
+                        # Check whether old vim's auth need to be deleted
+                        old_key_type = old_vim_obj['auth_cred'].get('key_type')
+                        if old_key_type == 'barbican_key':
+                            old_auth_need_delete = True
+                    else:
+                        # TODO: Phuoc - raise Error here
+                        pass
 
             vim_obj = super(NfvoPlugin, self).update_vim(
                 context, vim_id, vim_obj)
@@ -282,46 +298,6 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
             self.validate_vnffg_properties(template['template'])
 
         return super(NfvoPlugin, self).create_vnffgd(context, vnffgd)
-
-    @log.log
-    def get_vnffg(self, context, vnffg_id, fields=None):
-        vnffg_db = super(NfvoPlugin, self).get_vnffg(context, vnffg_id)
-        #vnf_id = "8c1c867f-5f4f-4c6e-8b30-f452c8e73da9"
-        #self.update_scale_in(context, vnffg_id, vnf_id)
-        #self.update_scale_out(context, vnffg_id, vnf_id)
-        return vnffg_db
-
-    @log.log
-    def update_scale_in(self, context, vnffg_id, vnf_id):
-        vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
-        undeleted_ports = vnfm_plugin.get_undelete_port_resource(context, vnf_id)
-
-        vim_obj = self._get_vim_from_vnf(context, vnf_id)
-        driver_type = vim_obj['type']
-
-        port_chain_id = self.get_port_chain_id(context, vnffg_id)
-        new_ppg = self._vim_drivers.invoke(driver_type,
-                                           'update_scale_in_chain',
-                                           port_chain_id=port_chain_id,
-                                           undelete_ports=undeleted_ports,
-                                           auth_attr=vim_obj['auth_cred'])
-
-
-
-    @log.log
-    def update_scale_out(self, context, vnffg_id, vnf_id):
-        vnffg_db = super(NfvoPlugin, self).get_vnffg(context, vnffg_id)
-        scaling_ports = super(NfvoPlugin, self)._get_scaling_ports(context,
-                                                                   vnf_id=vnf_id,
-                                                                   vnffg=vnffg_db)
-        vim_obj = self._get_vim_from_vnf(context, vnf_id)
-        port_chain_id = self.get_port_chain_id(context, vnffg_id)
-        driver_type = vim_obj['type']
-        ppg_update = self._vim_drivers.invoke(driver_type,
-                                              'update_scale_out_chain',
-                                              port_chain_id=port_chain_id,
-                                              scaling_ports=scaling_ports,
-                                              auth_attr=vim_obj['auth_cred'])
 
     @log.log
     def create_vnffg(self, context, vnffg):
