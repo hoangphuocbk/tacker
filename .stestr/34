@@ -1,0 +1,50 @@
+time: 2017-10-30 16:03:10.234999Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 16:03:10.265325Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+24B
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 93, in test_register_k8sclient
+    self._test_register_vim(self.vim_obj, mock_ks_client)
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 109, in _test_register_vim
+    mock_fernet_obj.encrypt.assert_called_once_with('abcxyz')
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 947, in assert_called_once_with
+    raise AssertionError(msg)
+AssertionError: Expected 'encrypt' to be called once. Called 2 times.
+0
+]
+tags: -worker-0
+time: 2017-10-30 16:03:10.249013Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 16:03:10.270093Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+1B1
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 141, in test_encode_vim_auth_barbican
+    mock_fernet_obj.encrypt.assert_called_once_with(mock.ANY)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 947, in assert_called_once_with
+    raise AssertionError(msg)
+AssertionError: Expected 'encrypt' to be called once. Called 2 times.
+0
+]
+tags: -worker-1
+time: 2017-10-30 16:03:10.269308Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 16:03:10.280990Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-3
+time: 2017-10-30 16:03:10.590871Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 16:03:10.601857Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-2

@@ -1,0 +1,43 @@
+time: 2017-10-30 16:54:44.378450Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 16:54:44.392430Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+]
+tags: -worker-2
+time: 2017-10-30 16:54:44.416155Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 16:54:44.435774Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-1
+time: 2017-10-30 16:54:44.427356Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 16:54:44.452286Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-3
+time: 2017-10-30 16:54:44.634372Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 16:54:44.652572Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+46A
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 94, in test_register_k8sclient
+    self.kubernetes_api.initialize_CoreApiClient.assert_called_once_with(auth_obj)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 948, in assert_called_once_with
+    return self.assert_called_with(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 937, in assert_called_with
+    six.raise_from(AssertionError(_error_message(cause)), cause)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/six.py", line 737, in raise_from
+    raise value
+AssertionError: Expected call: initialize_CoreApiClient({'username': 'test_user', 'ssl_ca_cert': None, 'auth_url': 'https://localhost:6443', 'password': 'test_password'})
+Actual call: initialize_CoreApiClient({'username': 'test_user', 'ssl_ca_cert': None, 'key_type': 'barbican_key', 'secret_uuid': <FakeKeymgrAPI name='mock.store()' id='140550741035408'>, 'auth_url': 'https://localhost:6443', 'password': 'encrypted_password'})
+0
+]
+tags: -worker-0

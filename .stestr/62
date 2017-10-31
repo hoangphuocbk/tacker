@@ -1,0 +1,4565 @@
+time: 2017-10-31 03:08:42.280209Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-31 03:08:42.295839Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.296220Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-31 03:08:42.300027Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.300305Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_encode_vim_auth_barbican
+time: 2017-10-31 03:08:42.303205Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_encode_vim_auth_barbican [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.303456Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_get_vim_resource_id_name_not_exist
+time: 2017-10-31 03:08:42.306024Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_get_vim_resource_id_name_not_exist [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.306253Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_keystone_v3
+time: 2017-10-31 03:08:42.325450Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_keystone_v3 [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.325700Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_vim_missing_auth
+time: 2017-10-31 03:08:42.329970Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_vim_missing_auth [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.330545Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_create_flow_classifier
+time: 2017-10-31 03:08:42.334408Z
+successful: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_create_flow_classifier [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.401788Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-31 03:08:42.434739Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.437708Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_get_vim_resource_id
+time: 2017-10-31 03:08:42.440571Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_get_vim_resource_id [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.441638Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_keystone_v2
+time: 2017-10-31 03:08:42.467448Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_keystone_v2 [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.467709Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_vim_invalid_auth
+time: 2017-10-31 03:08:42.478123Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_register_vim_invalid_auth [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.478493Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_delete_chain
+time: 2017-10-31 03:08:42.482307Z
+successful: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_delete_chain [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.334768Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vim
+time: 2017-10-31 03:08:42.497322Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vim [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.497617Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_template_param_not_parse
+time: 2017-10-31 03:08:42.518736Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_template_param_not_parse [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.495641Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_deregister_vim
+time: 2017-10-31 03:08:42.535336Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.541709Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_get_vim_resource_id_name_not_unique
+time: 2017-10-31 03:08:42.544955Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_get_vim_resource_id_name_not_unique [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.546140Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_create_chain
+time: 2017-10-31 03:08:42.557493Z
+successful: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_create_chain [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.559426Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_delete_flow_classifier
+time: 2017-10-31 03:08:42.562306Z
+successful: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_delete_flow_classifier [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.567263Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_update_flow_classifier
+time: 2017-10-31 03:08:42.571514Z
+successful: tacker.tests.unit.nfvo.drivers.vnffg.sfc_drivers.networking-sfc.test_n_sfc.TestChainSFC.test_update_flow_classifier [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.572621Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.workflow.test_workflow_generator.TestWorkflowGenerator.test_prepare_workflow_create
+time: 2017-10-31 03:08:42.574242Z
+successful: tacker.tests.unit.nfvo.drivers.workflow.test_workflow_generator.TestWorkflowGenerator.test_prepare_workflow_create [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.524890Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_ns_no_task_exception
+time: 2017-10-31 03:08:42.583002Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_ns_no_task_exception [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.604306Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_deregister_vim_barbican
+time: 2017-10-31 03:08:42.620554Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_openstack_driver.TestOpenstack_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:42.620999Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.workflow.test_workflow_generator.TestWorkflowGenerator.test_prepare_workflow_delete
+time: 2017-10-31 03:08:42.622354Z
+successful: tacker.tests.unit.nfvo.drivers.workflow.test_workflow_generator.TestWorkflowGenerator.test_prepare_workflow_delete [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:42.583263Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_vnffg
+time: 2017-10-31 03:08:42.728006Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_vnffg [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.490694Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_ns
+time: 2017-10-31 03:08:42.739697Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_ns [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.622631Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_ns_inline
+time: 2017-10-31 03:08:42.815952Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_ns_inline [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:42.728294Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vnffg
+time: 2017-10-31 03:08:42.834725Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vnffg [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.835065Z
+tags: worker-2
+test: tacker.tests.unit.test_alarm_receiver.TestAlarmReceiver.test_handle_url
+time: 2017-10-31 03:08:42.836680Z
+successful: tacker.tests.unit.test_alarm_receiver.TestAlarmReceiver.test_handle_url [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.836977Z
+tags: worker-2
+test: tacker.tests.unit.test_alarm_receiver.TestAlarmReceiver.test_process_request
+time: 2017-10-31 03:08:42.840476Z
+successful: tacker.tests.unit.test_alarm_receiver.TestAlarmReceiver.test_process_request [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:42.740073Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_abstract_types_inline
+time: 2017-10-31 03:08:42.845340Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_abstract_types_inline [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.816244Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_ns_workflow_no_task_exception
+time: 2017-10-31 03:08:42.853499Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_ns_workflow_no_task_exception [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:42.845586Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_param_value_format_error
+time: 2017-10-31 03:08:42.857818Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_param_value_format_error [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.858101Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffgd_inline
+time: 2017-10-31 03:08:42.922008Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffgd_inline [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.580190Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_nsd_inline
+time: 2017-10-31 03:08:42.972058Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_nsd_inline [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.926507Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_ns
+time: 2017-10-31 03:08:42.983024Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_ns [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.983504Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_tosca_invalid
+time: 2017-10-31 03:08:43.039469Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_tosca_invalid [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:43.039717Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_vnffg_properties
+time: 2017-10-31 03:08:43.046456Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_vnffg_properties [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:42.973213Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_abstract_types
+time: 2017-10-31 03:08:43.083893Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_abstract_types [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:43.085038Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_param_value_not_use
+time: 2017-10-31 03:08:43.103175Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_param_value_not_use [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.853738Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_nsd
+time: 2017-10-31 03:08:43.131915Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_nsd [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:43.104943Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_vnf_mapping
+time: 2017-10-31 03:08:43.195289Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_vnf_mapping [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:43.133231Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_param_values
+time: 2017-10-31 03:08:43.240494Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffg_param_values [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:43.196446Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffgd
+time: 2017-10-31 03:08:43.263991Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_create_vnffgd [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:43.241709Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_vim
+time: 2017-10-31 03:08:43.294778Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_delete_vim [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:43.270049Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vim
+time: 2017-10-31 03:08:43.322531Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vim [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:43.296015Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vim_barbican
+time: 2017-10-31 03:08:43.352723Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vim_barbican [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:43.353933Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vnffg_nonexistent_vnf
+time: 2017-10-31 03:08:43.441297Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_update_vnffg_nonexistent_vnf [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:43.441658Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_vnffg_properties_wrong_number
+time: 2017-10-31 03:08:43.454121Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_vnffg_properties_wrong_number [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:43.323771Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_tosca
+time: 2017-10-31 03:08:43.509645Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_tosca [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:43.511532Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_tosca_missing_tosca_ver
+time: 2017-10-31 03:08:43.519081Z
+successful: tacker.tests.unit.nfvo.test_nfvo_plugin.TestNfvoPlugin.test_validate_tosca_missing_tosca_ver [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:42.840861Z
+tags: worker-2
+test: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_param_value_none
+time: 2017-10-31 03:08:43.935866Z
+successful: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_param_value_none [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+71
+2017-10-31 12:08:43,933    ERROR [tacker.api.api_common] Failed to parse request. Parameter 'name' not specified
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.936743Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_emulated_pagination
+time: 2017-10-31 03:08:43.943636Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_emulated_pagination [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.944160Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_emulated_sort
+time: 2017-10-31 03:08:43.948884Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_emulated_sort [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.949531Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_emulated_sort_without_sort_field
+time: 2017-10-31 03:08:43.956075Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_emulated_sort_without_sort_field [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.956615Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_empty
+time: 2017-10-31 03:08:43.964256Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_empty [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.964831Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters
+time: 2017-10-31 03:08:43.968273Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.968862Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_with_fields
+time: 2017-10-31 03:08:43.972344Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_with_fields [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.973014Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_negative_pagination_max_limit
+time: 2017-10-31 03:08:43.978422Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_negative_pagination_max_limit [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.979051Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_negative_value
+time: 2017-10-31 03:08:43.982531Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_negative_value [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.983114Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_native_pagination_without_native_sorting
+time: 2017-10-31 03:08:43.992031Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_native_pagination_without_native_sorting [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.992602Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_page_reverse
+time: 2017-10-31 03:08:43.996310Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_page_reverse [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.997122Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_without_direction
+time: 2017-10-31 03:08:44.002296Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_without_direction [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.003008Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.CreateResourceTestCase.test_resource_creation
+time: 2017-10-31 03:08:44.007830Z
+successful: tacker.tests.unit.test_api_v2.CreateResourceTestCase.test_resource_creation [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.008353Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk
+time: 2017-10-31 03:08:44.018787Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.019348Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_missing_attr
+time: 2017-10-31 03:08:44.022907Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_missing_attr [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.023626Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone_bad_tenant
+time: 2017-10-31 03:08:44.032785Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone_bad_tenant [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.033315Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone_shared_network
+time: 2017-10-31 03:08:44.040344Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone_shared_network [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.041120Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_invalid_attribute_field
+time: 2017-10-31 03:08:44.044988Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_invalid_attribute_field [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.045567Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_with_last_page
+time: 2017-10-31 03:08:44.049406Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_with_last_page [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.049948Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_keystone
+time: 2017-10-31 03:08:44.058623Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_keystone [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.059169Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_keystone_bad_tenant
+time: 2017-10-31 03:08:44.063331Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_keystone_bad_tenant [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.064400Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.NotificationTest.test_network_update_notifer
+time: 2017-10-31 03:08:44.069728Z
+skip: tacker.tests.unit.test_api_v2.NotificationTest.test_network_update_notifer [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.070732Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.SubresourceTest.test_update_sub_resource
+time: 2017-10-31 03:08:44.074217Z
+skip: tacker.tests.unit.test_api_v2.SubresourceTest.test_update_sub_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.074809Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.V2Views.test_network
+time: 2017-10-31 03:08:44.079779Z
+skip: tacker.tests.unit.test_api_v2.V2Views.test_network [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.080618Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2.V2Views.test_subnet
+time: 2017-10-31 03:08:44.084447Z
+skip: tacker.tests.unit.test_api_v2.V2Views.test_subnet [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.085161Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_from_query_extension
+time: 2017-10-31 03:08:44.091453Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_from_query_extension [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.091864Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_with_charset
+time: 2017-10-31 03:08:44.096402Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_with_charset [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.096950Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_http_error
+time: 2017-10-31 03:08:44.104818Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_http_error [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+238
+2017-10-31 12:08:44,101    ERROR [tacker.api.v1.resource] test failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 77, in resource
+    result = method(request=request, **args)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1062, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1118, in _mock_call
+    raise effect
+webob.exc.HTTPGatewayTimeout: The gateway has timed out.
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.105285Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_mapped_tacker_error_with_json
+time: 2017-10-31 03:08:44.116597Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_mapped_tacker_error_with_json [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+279
+2017-10-31 12:08:44,110    ERROR [tacker.api.v1.resource] test failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 77, in resource
+    result = method(request=request, **args)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1062, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1118, in _mock_call
+    raise effect
+tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_mapped_tacker_error_with_json.<locals>.TestException: 网络
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.117053Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_status_200
+time: 2017-10-31 03:08:44.122546Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_status_200 [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.123076Z
+tags: worker-2
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unhandled_error_with_json
+time: 2017-10-31 03:08:44.129834Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unhandled_error_with_json [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+209
+2017-10-31 12:08:44,127    ERROR [tacker.api.v1.resource] test failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 77, in resource
+    result = method(request=request, **args)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1062, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1118, in _mock_call
+    raise effect
+Exception
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.130432Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_is_attr_set
+time: 2017-10-31 03:08:44.133902Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_is_attr_set [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.134340Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_convert_boolean
+time: 2017-10-31 03:08:44.139015Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_convert_boolean [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.139493Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_or_empty
+time: 2017-10-31 03:08:44.143484Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_or_empty [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.143887Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_with_invalid_validator
+time: 2017-10-31 03:08:44.150555Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_with_invalid_validator [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.150951Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_without_constraints
+time: 2017-10-31 03:08:44.156074Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_without_constraints [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.156620Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_hostroutes
+time: 2017-10-31 03:08:44.161079Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_hostroutes [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.161501Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_ip_pools
+time: 2017-10-31 03:08:44.165296Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_ip_pools [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.165736Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_mac_address
+time: 2017-10-31 03:08:44.169412Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_mac_address [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.170359Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_not_empty_string_or_none
+time: 2017-10-31 03:08:44.175972Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_not_empty_string_or_none [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.176394Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_regex
+time: 2017-10-31 03:08:44.180430Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_regex [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.180867Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_uuid
+time: 2017-10-31 03:08:44.190308Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_uuid [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.190828Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_list_to_dict_succeeds_for_values
+time: 2017-10-31 03:08:44.194150Z
+successful: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_list_to_dict_succeeds_for_values [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.195206Z
+tags: worker-2
+test: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_to_int_none
+time: 2017-10-31 03:08:44.201320Z
+successful: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_to_int_none [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.201932Z
+tags: worker-2
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_with_user_id
+time: 2017-10-31 03:08:44.205371Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_with_user_id [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.205969Z
+tags: worker-2
+test: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_all_args
+time: 2017-10-31 03:08:44.214230Z
+skip: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_all_args [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.214809Z
+tags: worker-2
+test: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_password_mask_args_kwargs
+time: 2017-10-31 03:08:44.217808Z
+skip: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_password_mask_args_kwargs [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.218394Z
+tags: worker-2
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_event_by_id
+time: 2017-10-31 03:08:44.235803Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_event_by_id [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.236441Z
+tags: worker-2
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events
+time: 2017-10-31 03:08:44.258500Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:43.046778Z
+tags: worker-3
+test: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_body_keyerror
+time: 2017-10-31 03:08:44.260822Z
+successful: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_body_keyerror [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.261309Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields
+time: 2017-10-31 03:08:44.264625Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.265217Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_with_convert_to
+time: 2017-10-31 03:08:44.268784Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_with_convert_to [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.269296Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_great_than_max_limit
+time: 2017-10-31 03:08:44.272649Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_great_than_max_limit [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.258899Z
+tags: worker-2
+test: tacker.tests.unit.test_db_migration.TestCli.test_current
+time: 2017-10-31 03:08:44.280252Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_current [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.273187Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_non_integer_pagination_max_limit
+time: 2017-10-31 03:08:44.281126Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_non_integer_pagination_max_limit [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.281630Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_marker
+time: 2017-10-31 03:08:44.285186Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_marker [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.281078Z
+tags: worker-2
+test: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_file_multiple_heads
+time: 2017-10-31 03:08:44.291473Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_file_multiple_heads [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.285732Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_page_reverse_with_non_bool
+time: 2017-10-31 03:08:44.291637Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_page_reverse_with_non_bool [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.292136Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort
+time: 2017-10-31 03:08:44.301736Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.291977Z
+tags: worker-2
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_events
+time: 2017-10-31 03:08:44.303653Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_events [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.302230Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_with_invalid_attribute
+time: 2017-10-31 03:08:44.306051Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_with_invalid_attribute [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.303988Z
+tags: worker-2
+test: tacker.tests.unit.test_extension_extended_attribute.ExtensionExtendedAttributeTestCase.test_ext_test_resource_create
+time: 2017-10-31 03:08:44.307543Z
+skip: tacker.tests.unit.test_extension_extended_attribute.ExtensionExtendedAttributeTestCase.test_ext_test_resource_create [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.308283Z
+tags: worker-2
+test: tacker.tests.unit.test_extensions.ExtensionControllerTest.test_extension_can_be_accessed_by_alias
+time: 2017-10-31 03:08:44.312652Z
+skip: tacker.tests.unit.test_extensions.ExtensionControllerTest.test_extension_can_be_accessed_by_alias [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.306730Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.FiltersTestCase.test_attr_info_with_convert_list_to
+time: 2017-10-31 03:08:44.317570Z
+skip: tacker.tests.unit.test_api_v2.FiltersTestCase.test_attr_info_with_convert_list_to [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.318097Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.FiltersTestCase.test_attr_info_without_conversion
+time: 2017-10-31 03:08:44.321424Z
+skip: tacker.tests.unit.test_api_v2.FiltersTestCase.test_attr_info_without_conversion [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.321997Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk_missing_attr
+time: 2017-10-31 03:08:44.325277Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk_missing_attr [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.325778Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk_no_networks
+time: 2017-10-31 03:08:44.333755Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk_no_networks [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.313632Z
+tags: worker-2
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_exceptions_notimplemented
+time: 2017-10-31 03:08:44.338994Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_exceptions_notimplemented [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,323     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.334228Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk_partial_body
+time: 2017-10-31 03:08:44.343479Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bulk_partial_body [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.343982Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_no_body
+time: 2017-10-31 03:08:44.349370Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_no_body [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.339475Z
+tags: worker-2
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_can_be_added_as_extension
+time: 2017-10-31 03:08:44.358521Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_can_be_added_as_extension [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,347     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.349875Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_no_keystone_env
+time: 2017-10-31 03:08:44.360584Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_no_keystone_env [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.361103Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_with_keystone_env
+time: 2017-10-31 03:08:44.365242Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_with_keystone_env [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.366073Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_fields
+time: 2017-10-31 03:08:44.377234Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_fields [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.359041Z
+tags: worker-2
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_ext_for_formatted_req_on_custom_collection_action
+time: 2017-10-31 03:08:44.379253Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_ext_for_formatted_req_on_custom_collection_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,367     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.377732Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone
+time: 2017-10-31 03:08:44.381891Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.382819Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_keystone
+time: 2017-10-31 03:08:44.386466Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_keystone [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.387283Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination
+time: 2017-10-31 03:08:44.390846Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.391364Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_with_empty_page
+time: 2017-10-31 03:08:44.394691Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_with_empty_page [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.379881Z
+tags: worker-2
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_delete_custom_collection_action
+time: 2017-10-31 03:08:44.395323Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_delete_custom_collection_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,387     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.395243Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_readonly_field
+time: 2017-10-31 03:08:44.398549Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_readonly_field [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.399148Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.NotificationTest.test_network_create_notifer
+time: 2017-10-31 03:08:44.409941Z
+skip: tacker.tests.unit.test_api_v2.NotificationTest.test_network_create_notifer [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.410470Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.NotificationTest.test_network_delete_notifer
+time: 2017-10-31 03:08:44.413693Z
+skip: tacker.tests.unit.test_api_v2.NotificationTest.test_network_delete_notifer [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.395793Z
+tags: worker-2
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_gets_prefix_of_plugin
+time: 2017-10-31 03:08:44.415246Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_gets_prefix_of_plugin [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,403     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.414270Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.SubresourceTest.test_delete_sub_resource
+time: 2017-10-31 03:08:44.420162Z
+skip: tacker.tests.unit.test_api_v2.SubresourceTest.test_delete_sub_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.415792Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_check_non_existent_action
+time: 2017-10-31 03:08:44.420869Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_check_non_existent_action [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.421440Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_nonexistent_action_throws
+time: 2017-10-31 03:08:44.425047Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_nonexistent_action_throws [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.420731Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2.V2Views.test_port
+time: 2017-10-31 03:08:44.423941Z
+skip: tacker.tests.unit.test_api_v2.V2Views.test_port [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.425533Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_ignore_case_role_check
+time: 2017-10-31 03:08:44.428985Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_ignore_case_role_check [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.424500Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_best_match_language
+time: 2017-10-31 03:08:44.432752Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_best_match_language [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.433142Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_accept_default
+time: 2017-10-31 03:08:44.436561Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_accept_default [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.429586Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_build_subattribute_match_rule_empty_dict_validator
+time: 2017-10-31 03:08:44.437913Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_build_subattribute_match_rule_empty_dict_validator [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.442718Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_from_accept
+time: 2017-10-31 03:08:44.446106Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_from_accept [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.442844Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_plugin_failure
+time: 2017-10-31 03:08:44.446173Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_plugin_failure [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.446717Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check
+time: 2017-10-31 03:08:44.449973Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.446578Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_4xx_error_logged_info_level
+time: 2017-10-31 03:08:44.456762Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_4xx_error_logged_info_level [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.453846Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_parent_resource_bw_compatibility
+time: 2017-10-31 03:08:44.457215Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_parent_resource_bw_compatibility [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.457721Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_context_is_admin_rule_missing
+time: 2017-10-31 03:08:44.461956Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_context_is_admin_rule_missing [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.462501Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_other_rules
+time: 2017-10-31 03:08:44.466192Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_other_rules [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.457201Z
+tags: worker-3
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_non_4xx_error_logged_exception_level
+time: 2017-10-31 03:08:44.467614Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_non_4xx_error_logged_exception_level [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.466767Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_role_check
+time: 2017-10-31 03:08:44.470455Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_role_check [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.471104Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_read_on_private_fails
+time: 2017-10-31 03:08:44.474463Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_read_on_private_fails [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.474955Z
+tags: worker-2
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_write_on_private_fails
+time: 2017-10-31 03:08:44.478257Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_write_on_private_fails [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.468081Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestAttributes.test_hostname_pattern
+time: 2017-10-31 03:08:44.478454Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_hostname_pattern [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.478866Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_or_none
+time: 2017-10-31 03:08:44.482175Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_or_none [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.479003Z
+tags: worker-2
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create
+time: 2017-10-31 03:08:44.482918Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.482592Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_wrong_values
+time: 2017-10-31 03:08:44.485850Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_wrong_values [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.483469Z
+tags: worker-2
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_overwrite
+time: 2017-10-31 03:08:44.486937Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_overwrite [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.486240Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_ip_address
+time: 2017-10-31 03:08:44.497020Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_ip_address [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.497505Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_subnet_or_none
+time: 2017-10-31 03:08:44.516111Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_subnet_or_none [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.516532Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_list_to_dict_succeeds_for_missing_values
+time: 2017-10-31 03:08:44.523891Z
+successful: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_list_to_dict_succeeds_for_missing_values [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.524293Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_fails_for_missing_equals
+time: 2017-10-31 03:08:44.527650Z
+successful: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_fails_for_missing_equals [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.528089Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestConvertToBoolean.test_convert_to_boolean_str
+time: 2017-10-31 03:08:44.539639Z
+successful: tacker.tests.unit.test_attributes.TestConvertToBoolean.test_convert_to_boolean_str [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.540016Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_none_to_empty_dict
+time: 2017-10-31 03:08:44.543352Z
+successful: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_none_to_empty_dict [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.543759Z
+tags: worker-3
+test: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_to_int_str
+time: 2017-10-31 03:08:44.551571Z
+successful: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_to_int_str [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.552034Z
+tags: worker-3
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_no_user_id
+time: 2017-10-31 03:08:44.559727Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_no_user_id [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.560243Z
+tags: worker-3
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_request_id_extracted_from_env
+time: 2017-10-31 03:08:44.563527Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_request_id_extracted_from_env [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.564051Z
+tags: worker-3
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_roles_with_admin
+time: 2017-10-31 03:08:44.572046Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_roles_with_admin [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.572595Z
+tags: worker-3
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_with_user_tenant_name
+time: 2017-10-31 03:08:44.579900Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_with_user_tenant_name [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.487582Z
+tags: worker-2
+test: tacker.tests.unit.test_tosca_templates_under_samples.TestSamples.test_scale_sample
+time: 2017-10-31 03:08:44.583621Z
+successful: tacker.tests.unit.test_tosca_templates_under_samples.TestSamples.test_scale_sample [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.583990Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.ActionDispatcherTest.test_dispatch_default
+time: 2017-10-31 03:08:44.588431Z
+successful: tacker.tests.unit.test_wsgi.ActionDispatcherTest.test_dispatch_default [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.588932Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_default_raise_Malformed_Exception
+time: 2017-10-31 03:08:44.592765Z
+successful: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_default_raise_Malformed_Exception [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.593184Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_json_with_unicode
+time: 2017-10-31 03:08:44.598062Z
+successful: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_json_with_unicode [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.580525Z
+tags: worker-3
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_event_not_found
+time: 2017-10-31 03:08:44.602398Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_event_not_found [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.598544Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.JSONDictSerializerTest.test_json
+time: 2017-10-31 03:08:44.602538Z
+successful: tacker.tests.unit.test_wsgi.JSONDictSerializerTest.test_json [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.602933Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.JSONDictSerializerTest.test_json_with_utf8
+time: 2017-10-31 03:08:44.606353Z
+successful: tacker.tests.unit.test_wsgi.JSONDictSerializerTest.test_json_with_utf8 [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.606800Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_deserializer
+time: 2017-10-31 03:08:44.606988Z
+successful: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_deserializer [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.607182Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.RequestHeadersDeserializerTest.test_custom
+time: 2017-10-31 03:08:44.611245Z
+successful: tacker.tests.unit.test_wsgi.RequestHeadersDeserializerTest.test_custom [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.611695Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_accept_and_query_extension
+time: 2017-10-31 03:08:44.616314Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_accept_and_query_extension [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.616771Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_unsupported
+time: 2017-10-31 03:08:44.620459Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_unsupported [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.620960Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_with_charset
+time: 2017-10-31 03:08:44.625204Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_with_charset [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.602687Z
+tags: worker-3
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events_filtered_invalid_id
+time: 2017-10-31 03:08:44.628932Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events_filtered_invalid_id [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:43.454470Z
+tags: worker-1
+test: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_body
+time: 2017-10-31 03:08:44.629615Z
+successful: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_body [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.625714Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_wrong_content_type_server_error
+time: 2017-10-31 03:08:44.632453Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_wrong_content_type_server_error [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+227
+2017-10-31 12:08:44,629     INFO [tacker.wsgi] POST http://localhost/
+2017-10-31 12:08:44,629    ERROR [tacker.wsgi] Internal error
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 798, in __call__
+    action_result = self.dispatch(request, action, args)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 830, in dispatch
+    controller_method = getattr(self.controller, action)
+TypeError: getattr(): attribute name must be string
+2017-10-31 12:08:44,631     INFO [tacker.wsgi] http://localhost/ returned with HTTP 500
+0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.633306Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_get_serializer
+time: 2017-10-31 03:08:44.633579Z
+successful: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_get_serializer [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.631865Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_multiple
+time: 2017-10-31 03:08:44.636046Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_multiple [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.633766Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_serialize_response_None
+time: 2017-10-31 03:08:44.634026Z
+successful: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_serialize_response_None [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.634228Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.SerializerTest.test_serialize_content_type_json
+time: 2017-10-31 03:08:44.638090Z
+successful: tacker.tests.unit.test_wsgi.SerializerTest.test_serialize_content_type_json [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.629168Z
+tags: worker-3
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events_filtered_valid_id
+time: 2017-10-31 03:08:44.641652Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events_filtered_valid_id [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.638580Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.TestWSGIServerWithSSL.test_app_using_ipv6_and_ssl
+time: 2017-10-31 03:08:44.642203Z
+skip: tacker.tests.unit.test_wsgi.TestWSGIServerWithSSL.test_app_using_ipv6_and_ssl [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.642707Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.TestWSGIServerWithSSL.test_app_using_ssl_combined_cert_and_key
+time: 2017-10-31 03:08:44.646256Z
+skip: tacker.tests.unit.test_wsgi.TestWSGIServerWithSSL.test_app_using_ssl_combined_cert_and_key [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.641992Z
+tags: worker-3
+test: tacker.tests.unit.test_config.ConfigurationTest.test_load_paste_app_not_found
+time: 2017-10-31 03:08:44.650416Z
+successful: tacker.tests.unit.test_config.ConfigurationTest.test_load_paste_app_not_found [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.647100Z
+tags: worker-2
+test: tacker.tests.unit.test_wsgi.TextDeserializerTest.test_dispatch_default
+time: 2017-10-31 03:08:44.651316Z
+successful: tacker.tests.unit.test_wsgi.TextDeserializerTest.test_dispatch_default [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.638682Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_multiple_with_empty
+time: 2017-10-31 03:08:44.657344Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_multiple_with_empty [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.660326Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_empty
+time: 2017-10-31 03:08:44.665147Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_empty [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.650863Z
+tags: worker-3
+test: tacker.tests.unit.test_db_migration.TestCli.test_check_migration
+time: 2017-10-31 03:08:44.672204Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_check_migration [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.667938Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple_empty
+time: 2017-10-31 03:08:44.673738Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple_empty [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.672735Z
+tags: worker-3
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_age_negative_integer_input
+time: 2017-10-31 03:08:44.680451Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_age_negative_integer_input [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.676181Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple_with_empty
+time: 2017-10-31 03:08:44.681674Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple_with_empty [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.684899Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_zero
+time: 2017-10-31 03:08:44.689403Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_zero [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.680700Z
+tags: worker-3
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_invalid_granularity_input
+time: 2017-10-31 03:08:44.692104Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_invalid_granularity_input [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.692016Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_with_invalid_dirs
+time: 2017-10-31 03:08:44.696953Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_with_invalid_dirs [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.692343Z
+tags: worker-3
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_vim
+time: 2017-10-31 03:08:44.702613Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_vim [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.702331Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.FiltersTestCase.test_attr_info_with_convert_to
+time: 2017-10-31 03:08:44.707076Z
+skip: tacker.tests.unit.test_api_v2.FiltersTestCase.test_attr_info_with_convert_to [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.702924Z
+tags: worker-3
+test: tacker.tests.unit.test_extension_extended_attribute.ExtensionExtendedAttributeTestCase.test_ext_test_resource_get
+time: 2017-10-31 03:08:44.706279Z
+skip: tacker.tests.unit.test_extension_extended_attribute.ExtensionExtendedAttributeTestCase.test_ext_test_resource_get [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.709436Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.ActionExtensionTest.test_extended_action_for_adding_extra_data
+time: 2017-10-31 03:08:44.714364Z
+skip: tacker.tests.unit.test_extensions.ActionExtensionTest.test_extended_action_for_adding_extra_data [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.715001Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.ExtensionControllerTest.test_show_returns_not_found_for_non_existent_extension
+time: 2017-10-31 03:08:44.718584Z
+skip: tacker.tests.unit.test_extensions.ExtensionControllerTest.test_show_returns_not_found_for_non_existent_extension [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.719086Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.PluginInterfaceTest.test_issubclass_hook
+time: 2017-10-31 03:08:44.722755Z
+successful: tacker.tests.unit.test_extensions.PluginInterfaceTest.test_issubclass_hook [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.713697Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.FiltersTestCase.test_blank_values
+time: 2017-10-31 03:08:44.725972Z
+skip: tacker.tests.unit.test_api_v2.FiltersTestCase.test_blank_values [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.729158Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create
+time: 2017-10-31 03:08:44.733405Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.735844Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_attr_not_specified
+time: 2017-10-31 03:08:44.740741Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_attr_not_specified [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.744307Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_readonly_attr
+time: 2017-10-31 03:08:44.751262Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_readonly_attr [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.723473Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_post_custom_collection_action
+time: 2017-10-31 03:08:44.754537Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_post_custom_collection_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,735     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.754171Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_return_extra_attr
+time: 2017-10-31 03:08:44.760678Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_return_extra_attr [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.764253Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_use_defaults
+time: 2017-10-31 03:08:44.768233Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_use_defaults [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.754971Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_put_custom_collection_action
+time: 2017-10-31 03:08:44.774169Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_put_custom_collection_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,767     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.770554Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_delete_keystone
+time: 2017-10-31 03:08:44.777138Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_delete_keystone [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.780365Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_delete_keystone_bad_tenant
+time: 2017-10-31 03:08:44.784770Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_delete_keystone_bad_tenant [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.787599Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_noauth
+time: 2017-10-31 03:08:44.792320Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_noauth [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.774589Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_with_custom_member_action
+time: 2017-10-31 03:08:44.796316Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_with_custom_member_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,785     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.796110Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_reverse_with_empty_page
+time: 2017-10-31 03:08:44.801601Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_reverse_with_empty_page [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.804751Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_reverse_with_last_page
+time: 2017-10-31 03:08:44.809745Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_pagination_reverse_with_last_page [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.651802Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_alarm_respawn
+time: 2017-10-31 03:08:44.822070Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_alarm_respawn [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:44.796766Z
+tags: worker-3
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_returns_404_for_non_existent_extension
+time: 2017-10-31 03:08:44.824275Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_returns_404_for_non_existent_extension [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:44,803     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.830209Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.DefaultPolicyTestCase.test_policy_called
+time: 2017-10-31 03:08:44.833486Z
+skip: tacker.tests.unit.test_policy.DefaultPolicyTestCase.test_policy_called [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:43.522681Z
+tags: worker-0
+test: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_body_none
+time: 2017-10-31 03:08:44.833481Z
+successful: tacker.tests.unit.test_api_api_common.APICommonTestCase.test_prepare_request_body_none [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.823337Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_noauth
+time: 2017-10-31 03:08:44.832084Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_update_noauth [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.833977Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_check_bad_action_noraise
+time: 2017-10-31 03:08:44.838782Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_check_bad_action_noraise [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.839439Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_good_action
+time: 2017-10-31 03:08:44.842596Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_good_action [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.838003Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.ListArgsTestCase.test_list_args_with_empty
+time: 2017-10-31 03:08:44.849731Z
+successful: tacker.tests.unit.test_api_v2.ListArgsTestCase.test_list_args_with_empty [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.833977Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_multiple_empty
+time: 2017-10-31 03:08:44.838305Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_fields_multiple_empty [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.843502Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_build_subattribute_match_rule_wrong_validation_info
+time: 2017-10-31 03:08:44.854467Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_build_subattribute_match_rule_wrong_validation_info [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.850245Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.ResourceIndexTestCase.test_index_json
+time: 2017-10-31 03:08:44.854884Z
+successful: tacker.tests.unit.test_api_v2.ResourceIndexTestCase.test_index_json [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.855280Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2.SubresourceTest.test_create_sub_resource
+time: 2017-10-31 03:08:44.858616Z
+skip: tacker.tests.unit.test_api_v2.SubresourceTest.test_create_sub_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.855014Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_nonadminctx_returns_403
+time: 2017-10-31 03:08:44.858288Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_nonadminctx_returns_403 [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.858861Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_firewall_rule_shared
+time: 2017-10-31 03:08:44.864059Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_firewall_rule_shared [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.859279Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_missing
+time: 2017-10-31 03:08:44.867851Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_missing [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.864722Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_regularuser_on_read
+time: 2017-10-31 03:08:44.868707Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_regularuser_on_read [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.868245Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_context_with_tacker_context
+time: 2017-10-31 03:08:44.872081Z
+skip: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_context_with_tacker_context [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.869213Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_malformed_target_field_raises
+time: 2017-10-31 03:08:44.875300Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_malformed_target_field_raises [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.872714Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_error_logged_exception_level
+time: 2017-10-31 03:08:44.878941Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_error_logged_exception_level [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.875785Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_parent_resource
+time: 2017-10-31 03:08:44.879137Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_parent_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.853689Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple
+time: 2017-10-31 03:08:44.877421Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.879654Z
+tags: worker-3
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_set_rules_with_deprecated_set_policy
+time: 2017-10-31 03:08:44.883078Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_set_rules_with_deprecated_set_policy [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.883627Z
+tags: worker-3
+test: tacker.tests.unit.test_post_mortem_debug.TestFilteredTraceback.test_filter_traceback
+time: 2017-10-31 03:08:44.887325Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestFilteredTraceback.test_filter_traceback [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.887733Z
+tags: worker-3
+test: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_first_traceback_ignored
+time: 2017-10-31 03:08:44.891600Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_first_traceback_ignored [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.891956Z
+tags: worker-3
+test: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_middle_traceback_ignored
+time: 2017-10-31 03:08:44.896340Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_middle_traceback_ignored [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.896757Z
+tags: worker-3
+test: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_single_member_trailing_chain
+time: 2017-10-31 03:08:44.900740Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_single_member_trailing_chain [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.883107Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple_values
+time: 2017-10-31 03:08:44.894708Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_multiple_values [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.901164Z
+tags: worker-3
+test: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_two_member_trailing_chain
+time: 2017-10-31 03:08:44.904817Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_two_member_trailing_chain [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.879349Z
+tags: worker-1
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_tacker_error_localized
+time: 2017-10-31 03:08:44.908064Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_tacker_error_localized [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+285
+2017-10-31 12:08:44,885    ERROR [tacker.api.v1.resource] test failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 77, in resource
+    result = method(request=request, **args)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1062, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1118, in _mock_call
+    raise effect
+tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_tacker_error_localized.<locals>.TestException: Translated error
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.905205Z
+tags: worker-3
+test: tacker.tests.unit.test_post_mortem_debug.TestTesttoolsExceptionHandler.test_exception_handler
+time: 2017-10-31 03:08:44.915587Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestTesttoolsExceptionHandler.test_exception_handler [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.902068Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_with_convert_list_to
+time: 2017-10-31 03:08:44.912697Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_filters_with_convert_list_to [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.916018Z
+tags: worker-3
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create_logs_unknown_kwarg
+time: 2017-10-31 03:08:44.922208Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create_logs_unknown_kwarg [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.908706Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_uuid_pattern
+time: 2017-10-31 03:08:44.923286Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_uuid_pattern [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.917677Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit
+time: 2017-10-31 03:08:44.924734Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.923688Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_not_required_keys
+time: 2017-10-31 03:08:44.929886Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_not_required_keys [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.922792Z
+tags: worker-3
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_get_admin_context_not_update_local_store
+time: 2017-10-31 03:08:44.926003Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_get_admin_context_not_update_local_store [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.933245Z
+tags: worker-3
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_to_dict_with_name
+time: 2017-10-31 03:08:44.937102Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_to_dict_with_name [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.930474Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_required_keys
+time: 2017-10-31 03:08:44.938485Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_required_keys [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.938860Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_type
+time: 2017-10-31 03:08:44.942861Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_dict_type [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.929349Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_infinite_pagination_max_limit
+time: 2017-10-31 03:08:44.938520Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_infinite_pagination_max_limit [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.937591Z
+tags: worker-3
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_with_load_roles_false
+time: 2017-10-31 03:08:44.946760Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_with_load_roles_false [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:44.943275Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_ip_address_or_none
+time: 2017-10-31 03:08:44.947629Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_ip_address_or_none [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.948046Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_non_negative
+time: 2017-10-31 03:08:44.951634Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_non_negative [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.945519Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_non_integer
+time: 2017-10-31 03:08:44.955356Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_non_integer [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.952040Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_range
+time: 2017-10-31 03:08:44.957040Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_range [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.957472Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_regex_or_none
+time: 2017-10-31 03:08:44.961418Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_regex_or_none [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.959150Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_unspecific
+time: 2017-10-31 03:08:44.965105Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_limit_with_unspecific [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.961783Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_string
+time: 2017-10-31 03:08:44.966572Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_string [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.968078Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_native_pagination_without_allow_sorting
+time: 2017-10-31 03:08:44.973610Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_native_pagination_without_allow_sorting [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.969688Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_subnet
+time: 2017-10-31 03:08:44.980127Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_subnet [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.976816Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_page_reverse_with_unspecific
+time: 2017-10-31 03:08:44.982060Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_page_reverse_with_unspecific [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.980540Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_uuid_list
+time: 2017-10-31 03:08:44.984292Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_uuid_list [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.984745Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_values
+time: 2017-10-31 03:08:44.989209Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_values [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.989752Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_fails_for_missing_key
+time: 2017-10-31 03:08:44.993533Z
+successful: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_fails_for_missing_key [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.993890Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_succeeds_for_one_equals
+time: 2017-10-31 03:08:44.997740Z
+successful: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_succeeds_for_one_equals [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.984386Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_with_primary_key
+time: 2017-10-31 03:08:45.001146Z
+skip: tacker.tests.unit.test_api_v2.APIv2TestCase.test_sort_with_primary_key [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.998128Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_succeeds_for_two_equals
+time: 2017-10-31 03:08:45.006810Z
+successful: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_str_to_list_succeeds_for_two_equals [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.004363Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.ExtensionTestCase.test_extended_create
+time: 2017-10-31 03:08:45.009451Z
+skip: tacker.tests.unit.test_api_v2.ExtensionTestCase.test_extended_create [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.007657Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestConvertToBoolean.test_convert_to_boolean_int
+time: 2017-10-31 03:08:45.011449Z
+successful: tacker.tests.unit.test_attributes.TestConvertToBoolean.test_convert_to_boolean_int [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:44.822345Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_monitoring_multi_vdus
+time: 2017-10-31 03:08:45.018634Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_monitoring_multi_vdus [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.014082Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.FiltersTestCase.test_all_skip_args
+time: 2017-10-31 03:08:45.018447Z
+skip: tacker.tests.unit.test_api_v2.FiltersTestCase.test_all_skip_args [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.012098Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_empty_list
+time: 2017-10-31 03:08:45.021735Z
+successful: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_empty_list [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.022106Z
+tags: worker-1
+test: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_list_iterable
+time: 2017-10-31 03:08:45.025427Z
+successful: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_list_iterable [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.019954Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.FiltersTestCase.test_no_attr_info
+time: 2017-10-31 03:08:45.030857Z
+skip: tacker.tests.unit.test_api_v2.FiltersTestCase.test_no_attr_info [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.025868Z
+tags: worker-1
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_roles_no_admin
+time: 2017-10-31 03:08:45.035398Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_roles_no_admin [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.031917Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bad_keystone_tenant
+time: 2017-10-31 03:08:45.038415Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_bad_keystone_tenant [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.035930Z
+tags: worker-1
+test: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_with_tenant_id
+time: 2017-10-31 03:08:45.042170Z
+skip: tacker.tests.unit.test_auth.TackerKeystoneContextTestCase.test_with_tenant_id [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.039075Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_no_resource
+time: 2017-10-31 03:08:45.046988Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_create_no_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.047573Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_delete_noauth
+time: 2017-10-31 03:08:45.052302Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_delete_noauth [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.052847Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone_strip_admin_only_attribute
+time: 2017-10-31 03:08:45.059403Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_get_keystone_strip_admin_only_attribute [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.060206Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_keystone_bad
+time: 2017-10-31 03:08:45.067715Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_keystone_bad [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.043073Z
+tags: worker-1
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events_valid_fields
+time: 2017-10-31 03:08:45.067799Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_get_events_valid_fields [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.069646Z
+tags: worker-1
+test: tacker.tests.unit.test_common_utils.TestDict2Tuples.test_dict
+time: 2017-10-31 03:08:45.074653Z
+successful: tacker.tests.unit.test_common_utils.TestDict2Tuples.test_dict [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.068242Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_noauth
+time: 2017-10-31 03:08:45.080516Z
+skip: tacker.tests.unit.test_api_v2.JSONV2TestCase.test_list_noauth [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.082844Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.ListArgsTestCase.test_list_args
+time: 2017-10-31 03:08:45.086645Z
+successful: tacker.tests.unit.test_api_v2.ListArgsTestCase.test_list_args [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.088342Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.SubresourceTest.test_index_sub_resource
+time: 2017-10-31 03:08:45.093833Z
+skip: tacker.tests.unit.test_api_v2.SubresourceTest.test_index_sub_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.096204Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2.SubresourceTest.test_show_sub_resource
+time: 2017-10-31 03:08:45.099748Z
+skip: tacker.tests.unit.test_api_v2.SubresourceTest.test_show_sub_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.103657Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_accept_and_query_extension
+time: 2017-10-31 03:08:45.108403Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_accept_and_query_extension [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.075123Z
+tags: worker-1
+test: tacker.tests.unit.test_db_migration.TestCli.test_database_sync_revision
+time: 2017-10-31 03:08:45.115211Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_database_sync_revision [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.112742Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_from_accept_best
+time: 2017-10-31 03:08:45.118694Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_content_type_from_accept_best [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.122135Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_context_without_tacker_context
+time: 2017-10-31 03:08:45.126248Z
+successful: tacker.tests.unit.test_api_v2_resource.RequestTestCase.test_context_without_tacker_context [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.130656Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_mapped_tacker_error_localized
+time: 2017-10-31 03:08:45.140112Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_mapped_tacker_error_localized [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+283
+2017-10-31 12:08:45,137    ERROR [tacker.api.v1.resource] test failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 77, in resource
+    result = method(request=request, **args)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1062, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1118, in _mock_call
+    raise effect
+tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_mapped_tacker_error_localized.<locals>.TestException: Translated error
+0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.142254Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_no_route_args
+time: 2017-10-31 03:08:45.149942Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_no_route_args [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+11E
+2017-10-31 12:08:45,147    ERROR [tacker.api.v1.resource] None failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 75, in resource
+    method = getattr(controller, action)
+TypeError: getattr(): attribute name must be string
+0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.115703Z
+tags: worker-1
+test: tacker.tests.unit.test_db_migration.TestCli.test_stamp
+time: 2017-10-31 03:08:45.151600Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_stamp [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.153356Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_post_with_body
+time: 2017-10-31 03:08:45.158638Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_post_with_body [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.151999Z
+tags: worker-1
+test: tacker.tests.unit.test_db_migration.TestCli.test_update_head_file_multiple_heads
+time: 2017-10-31 03:08:45.164043Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_update_head_file_multiple_heads [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.160642Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_status_204
+time: 2017-10-31 03:08:45.171020Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_status_204 [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.165866Z
+tags: worker-1
+test: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_file_missing_file
+time: 2017-10-31 03:08:45.183776Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_file_missing_file [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.172806Z
+tags: worker-0
+test: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_tacker_error_with_json
+time: 2017-10-31 03:08:45.186580Z
+successful: tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_tacker_error_with_json [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+27B
+2017-10-31 12:08:45,183    ERROR [tacker.api.v1.resource] test failed: No details.
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/v1/resource.py", line 77, in resource
+    result = method(request=request, **args)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1062, in __call__
+    return _mock_self._mock_call(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/mock/mock.py", line 1118, in _mock_call
+    raise effect
+tacker.tests.unit.test_api_v2_resource.ResourceTestCase.test_unmapped_tacker_error_with_json.<locals>.TestException: 网络
+0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.188633Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_mac_pattern
+time: 2017-10-31 03:08:45.194227Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_mac_pattern [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.184213Z
+tags: worker-1
+test: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_success
+time: 2017-10-31 03:08:45.196378Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_success [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.018925Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_sriov
+time: 2017-10-31 03:08:45.197685Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_sriov [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.196833Z
+tags: worker-1
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_age_not_integer_input
+time: 2017-10-31 03:08:45.207019Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_age_not_integer_input [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.196219Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_subdictionary
+time: 2017-10-31 03:08:45.208288Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_subdictionary [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.209920Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_a_valid_dict_with_constraints
+time: 2017-10-31 03:08:45.213693Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_a_valid_dict_with_constraints [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.217425Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_fixed_ips
+time: 2017-10-31 03:08:45.221278Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_fixed_ips [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.207291Z
+tags: worker-1
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_vnf
+time: 2017-10-31 03:08:45.222886Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_vnf [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.223023Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_mac_address_or_none
+time: 2017-10-31 03:08:45.227793Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_mac_address_or_none [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.229621Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_nameservers
+time: 2017-10-31 03:08:45.238566Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_nameservers [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.223215Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ActionExtensionTest.test_extended_action_for_deleting_extra_data
+time: 2017-10-31 03:08:45.240276Z
+skip: tacker.tests.unit.test_extensions.ActionExtensionTest.test_extended_action_for_deleting_extra_data [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.244786Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_no_whitespace
+time: 2017-10-31 03:08:45.248679Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_no_whitespace [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.240804Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ActionExtensionTest.test_returns_404_for_non_existent_action
+time: 2017-10-31 03:08:45.250651Z
+skip: tacker.tests.unit.test_extensions.ActionExtensionTest.test_returns_404_for_non_existent_action [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.254470Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.PluginInterfaceTest.test_issubclass_hook_not_all_methods_implemented
+time: 2017-10-31 03:08:45.257826Z
+successful: tacker.tests.unit.test_extensions.PluginInterfaceTest.test_issubclass_hook_not_all_methods_implemented [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.250737Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_not_empty_string
+time: 2017-10-31 03:08:45.257310Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_not_empty_string [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:44.947309Z
+tags: worker-3
+test: tacker.tests.unit.test_tosca_templates_under_samples.TestSamples.test_list_samples
+time: 2017-10-31 03:08:45.264317Z
+successful: tacker.tests.unit.test_tosca_templates_under_samples.TestSamples.test_list_samples [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.260282Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestAttributes.test_validate_string_or_none
+time: 2017-10-31 03:08:45.263867Z
+successful: tacker.tests.unit.test_attributes.TestAttributes.test_validate_string_or_none [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.264603Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ActionDispatcherTest.test_dispatch_action_None
+time: 2017-10-31 03:08:45.271900Z
+successful: tacker.tests.unit.test_wsgi.ActionDispatcherTest.test_dispatch_action_None [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.272399Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_expected_content_type
+time: 2017-10-31 03:08:45.272721Z
+successful: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_expected_content_type [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.266944Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_list_to_dict_succeeds_for_multiple_values
+time: 2017-10-31 03:08:45.271852Z
+skip: tacker.tests.unit.test_attributes.TestConvertKvp.test_convert_kvp_list_to_dict_succeeds_for_multiple_values [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.272920Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_accept_default
+time: 2017-10-31 03:08:45.276261Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_accept_default [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.276708Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_call_resource_class_internal_error
+time: 2017-10-31 03:08:45.281182Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_call_resource_class_internal_error [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+302
+2017-10-31 12:08:45,279     INFO [tacker.wsgi] <bound method ResourceTest.test_call_resource_class_internal_error.<locals>.FakeRequest.method of <tacker.tests.unit.test_wsgi.ResourceTest.test_call_resource_class_internal_error.<locals>.FakeRequest object at 0x7fc3613d4f28>> http://where.no
+2017-10-31 12:08:45,279    ERROR [tacker.wsgi] Internal error
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 798, in __call__
+    action_result = self.dispatch(request, action, args)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 830, in dispatch
+    controller_method = getattr(self.controller, action)
+TypeError: getattr(): attribute name must be string
+2017-10-31 12:08:45,280     INFO [tacker.wsgi] http://where.no returned with HTTP 500
+0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.277775Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertToBoolean.test_convert_to_boolean_bool
+time: 2017-10-31 03:08:45.283720Z
+successful: tacker.tests.unit.test_attributes.TestConvertToBoolean.test_convert_to_boolean_bool [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.281607Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_type_error
+time: 2017-10-31 03:08:45.285862Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_type_error [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+145
+2017-10-31 12:08:45,284    ERROR [tacker.wsgi] index() argument after ** must be a mapping, not str
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 834, in dispatch
+    return controller_method(request=request, **action_args)
+TypeError: index() argument after ** must be a mapping, not str
+0
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.286343Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ResponseHeadersSerializerTest.test_custom
+time: 2017-10-31 03:08:45.290547Z
+successful: tacker.tests.unit.test_wsgi.ResponseHeadersSerializerTest.test_custom [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.290912Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ResponseHeadersSerializerTest.test_default
+time: 2017-10-31 03:08:45.294779Z
+successful: tacker.tests.unit.test_wsgi.ResponseHeadersSerializerTest.test_default [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.258216Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.RequestExtensionTest.test_edit_previously_uneditable_field
+time: 2017-10-31 03:08:45.294733Z
+successful: tacker.tests.unit.test_extensions.RequestExtensionTest.test_edit_previously_uneditable_field [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+102
+2017-10-31 12:08:45,265     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+2017-10-31 12:08:45,284     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.295165Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_serialize_json_response
+time: 2017-10-31 03:08:45.295449Z
+successful: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_serialize_json_response [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.295608Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_serialize_unknown_content_type
+time: 2017-10-31 03:08:45.295912Z
+successful: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_serialize_unknown_content_type [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.288151Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_none_to_empty_list_none
+time: 2017-10-31 03:08:45.292977Z
+successful: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_none_to_empty_list_none [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.296090Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.SerializerTest.test_deserialize_json_content_type
+time: 2017-10-31 03:08:45.299926Z
+successful: tacker.tests.unit.test_wsgi.SerializerTest.test_deserialize_json_content_type [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.300300Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.SerializerTest.test_serialize_unknown_content_type
+time: 2017-10-31 03:08:45.306249Z
+successful: tacker.tests.unit.test_wsgi.SerializerTest.test_serialize_unknown_content_type [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.299709Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_none_to_empty_list_value
+time: 2017-10-31 03:08:45.305681Z
+successful: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_none_to_empty_list_value [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.308972Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_to_int_int
+time: 2017-10-31 03:08:45.313944Z
+successful: tacker.tests.unit.test_attributes.TestConvertToInt.test_convert_to_int_int [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.316115Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_list_non_iterable
+time: 2017-10-31 03:08:45.320043Z
+successful: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_list_non_iterable [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.295222Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_plugin_prefix_with_parent_resource
+time: 2017-10-31 03:08:45.323368Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_plugin_prefix_with_parent_resource [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,302     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.322646Z
+tags: worker-0
+test: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_list_string
+time: 2017-10-31 03:08:45.328739Z
+successful: tacker.tests.unit.test_attributes.TestConvertToList.test_convert_to_list_string [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.198007Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_vnic_normal
+time: 2017-10-31 03:08:45.335469Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_vnic_normal [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.330881Z
+tags: worker-0
+test: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_all_kwargs
+time: 2017-10-31 03:08:45.336437Z
+skip: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_all_kwargs [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.338780Z
+tags: worker-0
+test: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_known_args_kwargs_unknown_kwargs
+time: 2017-10-31 03:08:45.342313Z
+skip: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_known_args_kwargs_unknown_kwargs [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.323907Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_ext_for_nested_resource_custom_collection_action
+time: 2017-10-31 03:08:45.349544Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_ext_for_nested_resource_custom_collection_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,331     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.346021Z
+tags: worker-0
+test: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_known_args_unknown_args_kwargs
+time: 2017-10-31 03:08:45.352291Z
+skip: tacker.tests.unit.test_common_log.TestCallLog.test_call_log_known_args_unknown_args_kwargs [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.355106Z
+tags: worker-0
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_InvalidModelInputExceptionNotThrown
+time: 2017-10-31 03:08:45.369488Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_InvalidModelInputExceptionNotThrown [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.350082Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_ext_with_custom_member_action_gets_plugin_prefix
+time: 2017-10-31 03:08:45.373357Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_ext_with_custom_member_action_gets_plugin_prefix [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,357     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.370969Z
+tags: worker-0
+test: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_create_event
+time: 2017-10-31 03:08:45.383521Z
+successful: tacker.tests.unit.test_common_services_plugin.TestCommonServicesPlugin.test_create_event [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.384616Z
+tags: worker-0
+test: tacker.tests.unit.test_common_utils.TestChangeMemory.test_change_memory_from_gb_to_mb
+time: 2017-10-31 03:08:45.385175Z
+successful: tacker.tests.unit.test_common_utils.TestChangeMemory.test_change_memory_from_gb_to_mb [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.385980Z
+tags: worker-0
+test: tacker.tests.unit.test_common_utils.TestChangeMemory.test_change_memory_from_mb_to_gb
+time: 2017-10-31 03:08:45.386516Z
+successful: tacker.tests.unit.test_common_utils.TestChangeMemory.test_change_memory_from_mb_to_gb [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.387320Z
+tags: worker-0
+test: tacker.tests.unit.test_config.ConfigurationTest.test_defaults
+time: 2017-10-31 03:08:45.392644Z
+successful: tacker.tests.unit.test_config.ConfigurationTest.test_defaults [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.373823Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_get_custom_collection_action
+time: 2017-10-31 03:08:45.395742Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_for_get_custom_collection_action [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,382     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.394680Z
+tags: worker-0
+test: tacker.tests.unit.test_db_migration.TestCli.test_history
+time: 2017-10-31 03:08:45.411700Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_history [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.396218Z
+tags: worker-1
+test: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_with_custom_member_action_and_attr_map
+time: 2017-10-31 03:08:45.419015Z
+successful: tacker.tests.unit.test_extensions.ResourceExtensionTest.test_resource_extension_with_custom_member_action_and_attr_map [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,405     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.419513Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.DefaultPolicyTestCase.test_default_not_found
+time: 2017-10-31 03:08:45.423081Z
+skip: tacker.tests.unit.test_policy.DefaultPolicyTestCase.test_default_not_found [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.424317Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.DefaultPolicyTestCase.test_not_found_policy_calls_default
+time: 2017-10-31 03:08:45.428774Z
+skip: tacker.tests.unit.test_policy.DefaultPolicyTestCase.test_not_found_policy_calls_default [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.429708Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_early_AND_enforcement
+time: 2017-10-31 03:08:45.433157Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_early_AND_enforcement [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.433741Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_early_OR_enforcement
+time: 2017-10-31 03:08:45.437020Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_early_OR_enforcement [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.437516Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_bad_action_throws
+time: 2017-10-31 03:08:45.441716Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_bad_action_throws [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.414041Z
+tags: worker-0
+test: tacker.tests.unit.test_db_migration.TestCli.test_update_head_file_success
+time: 2017-10-31 03:08:45.444084Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_update_head_file_success [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.442237Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_http_false
+time: 2017-10-31 03:08:45.445575Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_http_false [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.446745Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_http_true
+time: 2017-10-31 03:08:45.453086Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_enforce_http_true [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.336074Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_new_flavor
+time: 2017-10-31 03:08:45.456787Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_new_flavor [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.453688Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_admin_only_subattribute
+time: 2017-10-31 03:08:45.460220Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_admin_only_subattribute [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.460754Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_admin_only_subattribute_nonadminctx_returns_403
+time: 2017-10-31 03:08:45.464147Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_admin_only_subattribute_nonadminctx_returns_403 [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.464714Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_no_context_is_admin_policy
+time: 2017-10-31 03:08:45.468162Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_no_context_is_admin_policy [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.468728Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_update
+time: 2017-10-31 03:08:45.472101Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_update [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.472652Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_firewall_policy_shared
+time: 2017-10-31 03:08:45.476267Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_firewall_policy_shared [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.476876Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_invalid_parent_resource_raises
+time: 2017-10-31 03:08:45.481573Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_tenant_id_check_invalid_parent_resource_raises [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.482136Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_or_check
+time: 2017-10-31 03:08:45.488736Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_or_check [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.448336Z
+tags: worker-0
+test: tacker.tests.unit.test_db_migration.TestCli.test_upgrade
+time: 2017-10-31 03:08:45.488432Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_upgrade [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.489280Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_rule_check
+time: 2017-10-31 03:08:45.494992Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_get_roles_with_rule_check [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.495554Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_write_on_shared_fails
+time: 2017-10-31 03:08:45.498954Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_write_on_shared_fails [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.499500Z
+tags: worker-1
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_set_rules_with_deprecated_view_policy
+time: 2017-10-31 03:08:45.508234Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_set_rules_with_deprecated_view_policy [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.491975Z
+tags: worker-0
+test: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_file_wrong_contents
+time: 2017-10-31 03:08:45.507612Z
+successful: tacker.tests.unit.test_db_migration.TestCli.test_validate_head_file_wrong_contents [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.508850Z
+tags: worker-1
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_admin_to_dict
+time: 2017-10-31 03:08:45.512183Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_admin_to_dict [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.512987Z
+tags: worker-1
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_to_dict
+time: 2017-10-31 03:08:45.516575Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_to_dict [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.517372Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.ActionDispatcherTest.test_dispatch
+time: 2017-10-31 03:08:45.521493Z
+successful: tacker.tests.unit.test_wsgi.ActionDispatcherTest.test_dispatch [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.522014Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.DictSerializerTest.test_dispatch_default
+time: 2017-10-31 03:08:45.525768Z
+successful: tacker.tests.unit.test_wsgi.DictSerializerTest.test_dispatch_default [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.511294Z
+tags: worker-0
+test: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_vnfd
+time: 2017-10-31 03:08:45.528695Z
+successful: tacker.tests.unit.test_db_purge_delete.TestDbPurgeDelete.test_purge_delete_call_vnfd [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.526171Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.FaultTest.test_call_fault
+time: 2017-10-31 03:08:45.530156Z
+successful: tacker.tests.unit.test_wsgi.FaultTest.test_call_fault [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.530772Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.JSONDictSerializerTest.test_json_with_unicode
+time: 2017-10-31 03:08:45.534859Z
+successful: tacker.tests.unit.test_wsgi.JSONDictSerializerTest.test_json_with_unicode [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.535313Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.MiddlewareTest.test_process_response
+time: 2017-10-31 03:08:45.539084Z
+successful: tacker.tests.unit.test_wsgi.MiddlewareTest.test_process_response [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.539506Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_action_args
+time: 2017-10-31 03:08:45.539694Z
+successful: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_action_args [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.539837Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_body_deserializer_unknown_content_type
+time: 2017-10-31 03:08:45.540089Z
+successful: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_get_body_deserializer_unknown_content_type [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.530183Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.ActionExtensionTest.test_returns_404_for_non_existent_resource
+time: 2017-10-31 03:08:45.538516Z
+skip: tacker.tests.unit.test_extensions.ActionExtensionTest.test_returns_404_for_non_existent_resource [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.540409Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_accept_with_given_content_types
+time: 2017-10-31 03:08:45.545306Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_accept_with_given_content_types [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.545736Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_from_query_extension
+time: 2017-10-31 03:08:45.549835Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_from_query_extension [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.547971Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.ExtensionControllerTest.test_index_gets_all_registerd_extensions
+time: 2017-10-31 03:08:45.553575Z
+skip: tacker.tests.unit.test_extensions.ExtensionControllerTest.test_index_gets_all_registerd_extensions [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.550286Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_call_resource_class_bad_request
+time: 2017-10-31 03:08:45.557527Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_call_resource_class_bad_request [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+739
+2017-10-31 12:08:45,553     INFO [tacker.wsgi] <bound method ResourceTest.test_call_resource_class_bad_request.<locals>.FakeRequest.method of <tacker.tests.unit.test_wsgi.ResourceTest.test_call_resource_class_bad_request.<locals>.FakeRequest object at 0x7fc937a7d2e8>> http://where.no
+2017-10-31 12:08:45,553    ERROR [tacker.wsgi] InvalidContentType: Unsupported Content-Type
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 558, in get_body_deserializer
+    return self.body_deserializers[content_type]
+KeyError: 'best_match_content_type'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 787, in __call__
+    action, args, accept = self.deserializer.deserialize(request)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 523, in deserialize
+    action_args.update(self.deserialize_body(request, action))
+  File "/opt/stack/tacker/tacker/wsgi.py", line 551, in deserialize_body
+    LOG.debug("Unable to deserialize body as provided "
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/oslo_utils/excutils.py", line 220, in __exit__
+    self.force_reraise()
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/oslo_utils/excutils.py", line 196, in force_reraise
+    six.reraise(self.type_, self.value, self.tb)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/six.py", line 693, in reraise
+    raise value
+  File "/opt/stack/tacker/tacker/wsgi.py", line 548, in deserialize_body
+    deserializer = self.get_body_deserializer(content_type)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 560, in get_body_deserializer
+    raise exception.InvalidContentType(content_type=content_type)
+tacker.common.exceptions.InvalidContentType: Invalid content type best_match_content_type
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.557988Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_dispatch
+time: 2017-10-31 03:08:45.561697Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_dispatch [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.557198Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.ExtensionManagerTest.test_invalid_extensions_are_not_registered
+time: 2017-10-31 03:08:45.567342Z
+successful: tacker.tests.unit.test_extensions.ExtensionManagerTest.test_invalid_extensions_are_not_registered [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+1D6
+2017-10-31 12:08:45,563    ERROR [tacker.api.extensions] Extension path '' doesn't exist!
+2017-10-31 12:08:45,564    ERROR [tacker.api.extensions] Exception loading extension: 'InvalidExtension' object has no attribute 'get_name'
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/extensions.py", line 507, in _check_extension
+    LOG.debug('Ext name: %s', extension.get_name())
+AttributeError: 'InvalidExtension' object has no attribute 'get_name'
+0
+Content-Type: text/plain;charset=utf8
+pythonlogging:'tacker.api.extensions'
+1D6
+2017-10-31 12:08:45,563    ERROR [tacker.api.extensions] Extension path '' doesn't exist!
+2017-10-31 12:08:45,564    ERROR [tacker.api.extensions] Exception loading extension: 'InvalidExtension' object has no attribute 'get_name'
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/api/extensions.py", line 507, in _check_extension
+    LOG.debug('Ext name: %s', extension.get_name())
+AttributeError: 'InvalidExtension' object has no attribute 'get_name'
+0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.562099Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_malformed_request_body_throws_bad_request
+time: 2017-10-31 03:08:45.569537Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_malformed_request_body_throws_bad_request [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+7B9
+2017-10-31 12:08:45,565     INFO [tacker.wsgi] POST http://localhost/
+2017-10-31 12:08:45,565    ERROR [tacker.wsgi] MalformedRequestBody: Malformed request body
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 479, in _from_json
+    return jsonutils.loads(datastring)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/oslo_serialization/jsonutils.py", line 260, in loads
+    return json.loads(encodeutils.safe_decode(s, encoding), **kwargs)
+  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.5/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 787, in __call__
+    action, args, accept = self.deserializer.deserialize(request)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 523, in deserialize
+    action_args.update(self.deserialize_body(request, action))
+  File "/opt/stack/tacker/tacker/wsgi.py", line 554, in deserialize_body
+    return deserializer.deserialize(request.body, action)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 469, in deserialize
+    return self.dispatch(datastring, action=action)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 390, in dispatch
+    return action_method(*args, **kwargs)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 485, in default
+    return {'body': self._from_json(datastring)}
+  File "/opt/stack/tacker/tacker/wsgi.py", line 482, in _from_json
+    raise exception.MalformedRequestBody(reason=msg)
+tacker.common.exceptions.MalformedRequestBody: Malformed request body: Cannot understand JSON
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.572350Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.PluginInterfaceTest.test_issubclass_hook_class_without_abstract_methods
+time: 2017-10-31 03:08:45.576481Z
+successful: tacker.tests.unit.test_extensions.PluginInterfaceTest.test_issubclass_hook_class_without_abstract_methods [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.570064Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_wrong_content_type_throws_unsupported_media_type_error
+time: 2017-10-31 03:08:45.580138Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_wrong_content_type_throws_unsupported_media_type_error [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+7B9
+2017-10-31 12:08:45,573     INFO [tacker.wsgi] POST http://localhost/
+2017-10-31 12:08:45,573    ERROR [tacker.wsgi] MalformedRequestBody: Malformed request body
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 479, in _from_json
+    return jsonutils.loads(datastring)
+  File "/opt/stack/tacker/.tox/py35/lib/python3.5/site-packages/oslo_serialization/jsonutils.py", line 260, in loads
+    return json.loads(encodeutils.safe_decode(s, encoding), **kwargs)
+  File "/usr/lib/python3.5/json/__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.5/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.5/json/decoder.py", line 355, in raw_decode
+    obj, end = self.scan_once(s, idx)
+json.decoder.JSONDecodeError: Expecting property name enclosed in double quotes: line 1 column 2 (char 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/stack/tacker/tacker/wsgi.py", line 787, in __call__
+    action, args, accept = self.deserializer.deserialize(request)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 523, in deserialize
+    action_args.update(self.deserialize_body(request, action))
+  File "/opt/stack/tacker/tacker/wsgi.py", line 554, in deserialize_body
+    return deserializer.deserialize(request.body, action)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 469, in deserialize
+    return self.dispatch(datastring, action=action)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 390, in dispatch
+    return action_method(*args, **kwargs)
+  File "/opt/stack/tacker/tacker/wsgi.py", line 485, in default
+    return {'body': self._from_json(datastring)}
+  File "/opt/stack/tacker/tacker/wsgi.py", line 482, in _from_json
+    raise exception.MalformedRequestBody(reason=msg)
+tacker.common.exceptions.MalformedRequestBody: Malformed request body: Cannot understand JSON
+0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.582493Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.SerializerTest.test_get_deserialize_handler_unknown_content_type
+time: 2017-10-31 03:08:45.586606Z
+successful: tacker.tests.unit.test_wsgi.SerializerTest.test_get_deserialize_handler_unknown_content_type [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.457105Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_userdata
+time: 2017-10-31 03:08:45.588321Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_userdata [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.588746Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.monitor_drivers.http_ping.test_http_ping.TestVNFMonitorHTTPPing.test_monitor_url
+time: 2017-10-31 03:08:45.588924Z
+successful: tacker.tests.unit.vnfm.monitor_drivers.http_ping.test_http_ping.TestVNFMonitorHTTPPing.test_monitor_url [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.589172Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.monitor_drivers.ping.test_ping.TestVNFMonitorPing.test_monitor_call_for_failure
+time: 2017-10-31 03:08:45.590986Z
+successful: tacker.tests.unit.vnfm.monitor_drivers.ping.test_ping.TestVNFMonitorPing.test_monitor_call_for_failure [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.588967Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.TestWSGIServer.test_app
+time: 2017-10-31 03:08:45.594189Z
+skip: tacker.tests.unit.test_wsgi.TestWSGIServer.test_app [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.591325Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_monitor.TestVNFMonitor.test_add_hosting_vnf
+time: 2017-10-31 03:08:45.596806Z
+successful: tacker.tests.unit.vnfm.test_monitor.TestVNFMonitor.test_add_hosting_vnf [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.579592Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.RequestExtensionTest.test_extend_get_resource_response
+time: 2017-10-31 03:08:45.602786Z
+successful: tacker.tests.unit.test_extensions.RequestExtensionTest.test_extend_get_resource_response [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,587     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.603329Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.RequestExtensionTest.test_get_resources
+time: 2017-10-31 03:08:45.607173Z
+skip: tacker.tests.unit.test_extensions.RequestExtensionTest.test_get_resources [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.594780Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.TestWSGIServer.test_start_multiple_workers
+time: 2017-10-31 03:08:45.614311Z
+successful: tacker.tests.unit.test_wsgi.TestWSGIServer.test_start_multiple_workers [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:45.607703Z
+tags: worker-0
+test: tacker.tests.unit.test_extensions.RequestExtensionTest.test_headers_can_be_extended
+time: 2017-10-31 03:08:45.627064Z
+successful: tacker.tests.unit.test_extensions.RequestExtensionTest.test_headers_can_be_extended [ multipart
+Content-Type: text/plain;charset=utf8
+pythonlogging:''
+81
+2017-10-31 12:08:45,616     INFO [tacker.common.config] Config paste file: /opt/stack/tacker/tacker/tests/etc/api-paste.ini.test
+0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.629409Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.PolicyFileTestCase.test_modified_policy_reloads
+time: 2017-10-31 03:08:45.633168Z
+skip: tacker.tests.unit.test_policy.PolicyFileTestCase.test_modified_policy_reloads [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.636309Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.PolicyTestCase.test_templatized_enforcement
+time: 2017-10-31 03:08:45.640690Z
+skip: tacker.tests.unit.test_policy.PolicyTestCase.test_templatized_enforcement [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.642047Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_create
+time: 2017-10-31 03:08:45.645559Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_attribute_create [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.647899Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_nonadminctx_no_ctx_is_admin_policy_403
+time: 2017-10-31 03:08:45.652049Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_adminonly_nonadminctx_no_ctx_is_admin_policy_403 [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.654099Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_subattribute
+time: 2017-10-31 03:08:45.660397Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_enforce_subattribute [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.663018Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_read_on_shared_succeeds
+time: 2017-10-31 03:08:45.666994Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_nonadmin_read_on_shared_succeeds [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.668459Z
+tags: worker-0
+test: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_tenant_id_check_no_target_field_raises
+time: 2017-10-31 03:08:45.672250Z
+skip: tacker.tests.unit.test_policy.TackerPolicyTestCase.test_tenant_id_check_no_target_field_raises [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.675921Z
+tags: worker-0
+test: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_no_ignored_tracebacks
+time: 2017-10-31 03:08:45.680744Z
+successful: tacker.tests.unit.test_post_mortem_debug.TestGetIgnoredTraceback.test_no_ignored_tracebacks [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.683839Z
+tags: worker-0
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_admin_without_session_to_dict
+time: 2017-10-31 03:08:45.688489Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_admin_without_session_to_dict [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.690927Z
+tags: worker-0
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create_with_name
+time: 2017-10-31 03:08:45.695546Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create_with_name [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.698844Z
+tags: worker-0
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create_with_request_id
+time: 2017-10-31 03:08:45.702569Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_create_with_request_id [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.705125Z
+tags: worker-0
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_elevated_retains_request_id
+time: 2017-10-31 03:08:45.710368Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_elevated_retains_request_id [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.712849Z
+tags: worker-0
+test: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_with_load_roles_true
+time: 2017-10-31 03:08:45.717105Z
+skip: tacker.tests.unit.test_tacker_context.TestTackerContext.test_tacker_context_with_load_roles_true [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.720872Z
+tags: worker-0
+test: tacker.tests.unit.test_tosca_templates_under_samples.TestSamples.test_alarm_sample
+time: 2017-10-31 03:08:45.831159Z
+successful: tacker.tests.unit.test_tosca_templates_under_samples.TestSamples.test_alarm_sample [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.832403Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_json
+time: 2017-10-31 03:08:45.837354Z
+successful: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_json [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.597052Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_monitor.TestVNFMonitor.test_run_monitor
+time: 2017-10-31 03:08:45.842589Z
+successful: tacker.tests.unit.vnfm.test_monitor.TestVNFMonitor.test_run_monitor [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.839623Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_json_with_utf8
+time: 2017-10-31 03:08:45.844225Z
+successful: tacker.tests.unit.test_wsgi.JSONDeserializerTest.test_json_with_utf8 [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.846559Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_deserialize
+time: 2017-10-31 03:08:45.848447Z
+successful: tacker.tests.unit.test_wsgi.RequestDeserializerTest.test_deserialize [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.849886Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.RequestHeadersDeserializerTest.test_default
+time: 2017-10-31 03:08:45.854003Z
+successful: tacker.tests.unit.test_wsgi.RequestHeadersDeserializerTest.test_default [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.855307Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_from_accept
+time: 2017-10-31 03:08:45.860051Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_from_accept [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.861128Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_missing
+time: 2017-10-31 03:08:45.865426Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_missing [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.866977Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_with_given_content_types
+time: 2017-10-31 03:08:45.871552Z
+successful: tacker.tests.unit.test_wsgi.RequestTest.test_content_type_with_given_content_types [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.872661Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.ResourceTest.test_dispatch_unknown_controller_action
+time: 2017-10-31 03:08:45.877179Z
+successful: tacker.tests.unit.test_wsgi.ResourceTest.test_dispatch_unknown_controller_action [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.878526Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_get_body_serializer
+time: 2017-10-31 03:08:45.879031Z
+successful: tacker.tests.unit.test_wsgi.ResponseSerializerTest.test_get_body_serializer [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.879612Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.SerializerTest.test_deserialize_raise_bad_request
+time: 2017-10-31 03:08:45.883540Z
+successful: tacker.tests.unit.test_wsgi.SerializerTest.test_deserialize_raise_bad_request [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.842893Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_trigger_multi_actions
+time: 2017-10-31 03:08:45.887543Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_trigger_multi_actions [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.884613Z
+tags: worker-0
+test: tacker.tests.unit.test_wsgi.TestWSGIServer.test_ipv6_listen_called_with_scope
+time: 2017-10-31 03:08:45.889172Z
+skip: tacker.tests.unit.test_wsgi.TestWSGIServer.test_ipv6_listen_called_with_scope [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.887920Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnfd_no_service_types
+time: 2017-10-31 03:08:45.919427Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnfd_no_service_types [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.919924Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_scale_vnf_out
+time: 2017-10-31 03:08:45.973649Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_scale_vnf_out [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.974230Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_show_vnf_details_vnf_active
+time: 2017-10-31 03:08:45.999610Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_show_vnf_details_vnf_active [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.999877Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_show_vnf_details_vnf_inactive
+time: 2017-10-31 03:08:46.036441Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_show_vnf_details_vnf_inactive [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:46.036715Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_update_vnf
+time: 2017-10-31 03:08:46.067721Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_update_vnf [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:46.068045Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_add_resources_tpl_for_flavor
+time: 2017-10-31 03:08:46.082647Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_add_resources_tpl_for_flavor [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:46.082998Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_add_resources_tpl_for_image
+time: 2017-10-31 03:08:46.088609Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_add_resources_tpl_for_image [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:45.891045Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_port_with_allowed_address_pairs
+time: 2017-10-31 03:08:46.098906Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_port_with_allowed_address_pairs [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.088870Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_convert_unsupported_res_prop_kilo_ver
+time: 2017-10-31 03:08:46.101875Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_convert_unsupported_res_prop_kilo_ver [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:46.102119Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_vdu_monitoring
+time: 2017-10-31 03:08:46.102472Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_vdu_monitoring [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:46.102643Z
+tags: worker-2
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_post_process_heat_template
+time: 2017-10-31 03:08:46.168644Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_post_process_heat_template [ multipart
+]
+tags: -worker-2
+time: 2017-10-31 03:08:46.099395Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_port_with_mac_and_ip
+time: 2017-10-31 03:08:46.197635Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_port_with_mac_and_ip [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.198348Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_scale
+time: 2017-10-31 03:08:46.375665Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_scale [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.375946Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_alarm_monitoring_not_matched
+time: 2017-10-31 03:08:46.448318Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_alarm_monitoring_not_matched [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.448614Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_all_numa_count
+time: 2017-10-31 03:08:46.544742Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_all_numa_count [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.545059Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_numa_node_count_trumps
+time: 2017-10-31 03:08:46.631984Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_numa_node_count_trumps [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.632221Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_new_flavor_with_defaults
+time: 2017-10-31 03:08:46.788701Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_new_flavor_with_defaults [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.789048Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_get_resource_info
+time: 2017-10-31 03:08:46.791883Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_get_resource_info [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.792185Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack_driver.TestOpenStack.test_create_wait_with_heat_connection_exception
+time: 2017-10-31 03:08:46.796532Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack_driver.TestOpenStack.test_create_wait_with_heat_connection_exception [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.796839Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.monitor_drivers.http_ping.test_http_ping.TestVNFMonitorHTTPPing.test_monitor_call_for_success
+time: 2017-10-31 03:08:46.798333Z
+successful: tacker.tests.unit.vnfm.monitor_drivers.http_ping.test_http_ping.TestVNFMonitorHTTPPing.test_monitor_call_for_success [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.798832Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_trigger_respawn
+time: 2017-10-31 03:08:46.829292Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_trigger_respawn [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:46.829948Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_delete_vnf
+time: 2017-10-31 03:08:47.059750Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_delete_vnf [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:47.060088Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_scale_vnf_in
+time: 2017-10-31 03:08:47.105701Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_scale_vnf_in [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:47.106147Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_check_for_substitution_mappings
+time: 2017-10-31 03:08:47.123797Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_check_for_substitution_mappings [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:47.124091Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_block_storage_details
+time: 2017-10-31 03:08:47.133848Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_block_storage_details [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:47.134068Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_flavor_dict_extra_specs_all_numa_count
+time: 2017-10-31 03:08:47.173911Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_flavor_dict_extra_specs_all_numa_count [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:47.174119Z
+tags: worker-0
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_mgmt_driver
+time: 2017-10-31 03:08:47.174452Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_mgmt_driver [ multipart
+]
+tags: -worker-0
+time: 2017-10-31 03:08:45.306662Z
+tags: worker-3
+test: tacker.tests.unit.test_wsgi.TestWSGIServer.test_start_random_port
+time: 2017-10-31 03:08:51.318055Z
+successful: tacker.tests.unit.test_wsgi.TestWSGIServer.test_start_random_port [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.318701Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_port_with_security_groups
+time: 2017-10-31 03:08:51.406163Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_port_with_security_groups [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.406411Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca
+time: 2017-10-31 03:08:51.488374Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.488641Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_mgmt_sriov_port
+time: 2017-10-31 03:08:51.591403Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_mgmt_sriov_port [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:45.616787Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.TestWSGIServer.test_start_random_port_with_ipv6
+time: 2017-10-31 03:08:51.627688Z
+successful: tacker.tests.unit.test_wsgi.TestWSGIServer.test_start_random_port_with_ipv6 [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:51.628132Z
+tags: worker-1
+test: tacker.tests.unit.test_wsgi.TestWSGIServerWithSSL.test_app_using_ssl
+time: 2017-10-31 03:08:51.633179Z
+skip: tacker.tests.unit.test_wsgi.TestWSGIServerWithSSL.test_app_using_ssl [ multipart
+Content-Type: text/plain;charset=utf8
+reason
+D
+Not ready yet0
+]
+tags: -worker-1
+time: 2017-10-31 03:08:51.591732Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_huge_pages
+time: 2017-10-31 03:08:51.665335Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_huge_pages [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.665586Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_numa_nodes
+time: 2017-10-31 03:08:51.736821Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_numa_nodes [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.737083Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_no_units
+time: 2017-10-31 03:08:51.829053Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_no_units [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.634248Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_alarm_scale
+time: 2017-10-31 03:08:51.849018Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_alarm_scale [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:51.829362Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_new_image
+time: 2017-10-31 03:08:51.923054Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_new_image [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.923302Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_delete
+time: 2017-10-31 03:08:51.925291Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_delete [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.849266Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_and_capabilities
+time: 2017-10-31 03:08:51.931482Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_and_capabilities [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:51.925475Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_update
+time: 2017-10-31 03:08:51.935672Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_update [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.935929Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack_driver.TestOpenStack.test_delete_wait_with_heat_connection_exception
+time: 2017-10-31 03:08:51.942254Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack_driver.TestOpenStack.test_delete_wait_with_heat_connection_exception [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.942587Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.monitor_drivers.http_ping.test_http_ping.TestVNFMonitorHTTPPing.test_monitor_call_for_failure
+time: 2017-10-31 03:08:51.943855Z
+successful: tacker.tests.unit.vnfm.monitor_drivers.http_ping.test_http_ping.TestVNFMonitorHTTPPing.test_monitor_call_for_failure [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.944129Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.monitor_drivers.ping.test_ping.TestVNFMonitorPing.test_monitor_url
+time: 2017-10-31 03:08:51.944288Z
+successful: tacker.tests.unit.vnfm.monitor_drivers.ping.test_ping.TestVNFMonitorPing.test_monitor_url [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.944534Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_trigger_scale
+time: 2017-10-31 03:08:52.008090Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_trigger_scale [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:51.931757Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_all_numa_nodes
+time: 2017-10-31 03:08:52.018085Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_all_numa_nodes [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.018291Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_cpu_allocations
+time: 2017-10-31 03:08:52.093964Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_create_tosca_with_flavor_extra_specs_cpu_allocations [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.008342Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_with_vnfd
+time: 2017-10-31 03:08:52.234945Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_with_vnfd [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:52.094269Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_tosca_params
+time: 2017-10-31 03:08:52.248473Z
+successful: tacker.tests.unit.vnfm.infra_drivers.openstack.test_openstack.TestOpenStack.test_tosca_params [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.248855Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.monitor_drivers.ping.test_ping.TestVNFMonitorPing.test_monitor_call_for_success
+time: 2017-10-31 03:08:52.249676Z
+successful: tacker.tests.unit.vnfm.monitor_drivers.ping.test_ping.TestVNFMonitorPing.test_monitor_call_for_success [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.249933Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.test_monitor.TestVNFMonitor.test_to_hosting_vnf
+time: 2017-10-31 03:08:52.252107Z
+successful: tacker.tests.unit.vnfm.test_monitor.TestVNFMonitor.test_to_hosting_vnf [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.235155Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnfd
+time: 2017-10-31 03:08:52.289485Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnfd [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:52.289752Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_get_vnf_policies
+time: 2017-10-31 03:08:52.316047Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_get_vnf_policies [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:52.316283Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.test_vim_client.TestVIMClient.test_get_vim_without_defined_default_vim
+time: 2017-10-31 03:08:52.317728Z
+successful: tacker.tests.unit.vnfm.test_vim_client.TestVIMClient.test_get_vim_without_defined_default_vim [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:52.318067Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_tacker_conf_heat_extra_specs_all_numa_count
+time: 2017-10-31 03:08:52.356833Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_tacker_conf_heat_extra_specs_all_numa_count [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:52.357009Z
+tags: worker-3
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_updateimport
+time: 2017-10-31 03:08:52.357123Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_updateimport [ multipart
+]
+tags: -worker-3
+time: 2017-10-31 03:08:52.252626Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_from_template
+time: 2017-10-31 03:08:52.524566Z
+successful: tacker.tests.unit.vnfm.test_plugin.TestVNFMPlugin.test_create_vnf_from_template [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.525542Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_findvdus
+time: 2017-10-31 03:08:52.526119Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_findvdus [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.526414Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_flavor_dict
+time: 2017-10-31 03:08:52.576312Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_flavor_dict [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.576603Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_mgmt_ports
+time: 2017-10-31 03:08:52.577078Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_get_mgmt_ports [ multipart
+]
+tags: -worker-1
+time: 2017-10-31 03:08:52.577327Z
+tags: worker-1
+test: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_post_process_template
+time: 2017-10-31 03:08:52.624391Z
+successful: tacker.tests.unit.vnfm.tosca.test_utils.TestToscaUtils.test_post_process_template [ multipart
+]
+tags: -worker-1

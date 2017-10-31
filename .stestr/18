@@ -1,0 +1,100 @@
+time: 2017-10-30 08:48:15.056844Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 08:48:15.063872Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+410
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 53, in setUp
+    kubernetes_fernet_path='/tmp/k8s_fernet/')
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/fixture.py", line 78, in config
+    self.conf.set_override(k, v, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/debtcollector/removals.py", line 261, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2405, in __inner
+    result = f(self, *args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2730, in set_override
+    opt_info = self._get_opt_info(name, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 3102, in _get_opt_info
+    raise NoSuchOptError(opt_name, group)
+oslo_config.cfg.NoSuchOptError: no such option kubernetes_fernet_path in group [k8s_vim]
+0
+]
+tags: -worker-0
+time: 2017-10-30 08:48:15.123809Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 08:48:15.131236Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+410
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 53, in setUp
+    kubernetes_fernet_path='/tmp/k8s_fernet/')
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/fixture.py", line 78, in config
+    self.conf.set_override(k, v, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/debtcollector/removals.py", line 261, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2405, in __inner
+    result = f(self, *args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2730, in set_override
+    opt_info = self._get_opt_info(name, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 3102, in _get_opt_info
+    raise NoSuchOptError(opt_name, group)
+oslo_config.cfg.NoSuchOptError: no such option kubernetes_fernet_path in group [k8s_vim]
+0
+]
+tags: -worker-2
+time: 2017-10-30 08:48:15.240524Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_k8s_client
+time: 2017-10-30 08:48:15.247101Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_k8s_client [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+410
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 53, in setUp
+    kubernetes_fernet_path='/tmp/k8s_fernet/')
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/fixture.py", line 78, in config
+    self.conf.set_override(k, v, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/debtcollector/removals.py", line 261, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2405, in __inner
+    result = f(self, *args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2730, in set_override
+    opt_info = self._get_opt_info(name, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 3102, in _get_opt_info
+    raise NoSuchOptError(opt_name, group)
+oslo_config.cfg.NoSuchOptError: no such option kubernetes_fernet_path in group [k8s_vim]
+0
+]
+tags: -worker-1
+time: 2017-10-30 08:48:15.248873Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 08:48:15.256398Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+410
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 53, in setUp
+    kubernetes_fernet_path='/tmp/k8s_fernet/')
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/fixture.py", line 78, in config
+    self.conf.set_override(k, v, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/debtcollector/removals.py", line 261, in wrapper
+    return f(*args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2405, in __inner
+    result = f(self, *args, **kwargs)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 2730, in set_override
+    opt_info = self._get_opt_info(name, group)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/oslo_config/cfg.py", line 3102, in _get_opt_info
+    raise NoSuchOptError(opt_name, group)
+oslo_config.cfg.NoSuchOptError: no such option kubernetes_fernet_path in group [k8s_vim]
+0
+]
+tags: -worker-3

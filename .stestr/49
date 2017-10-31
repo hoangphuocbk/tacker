@@ -1,0 +1,46 @@
+time: 2017-10-30 17:30:48.266542Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 17:30:48.282979Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-1
+time: 2017-10-30 17:30:48.460687Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 17:30:48.474161Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-2
+time: 2017-10-30 17:30:48.480043Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 17:30:48.498150Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+]
+tags: -worker-3
+time: 2017-10-30 17:30:48.543653Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 17:30:48.558244Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+35B
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 91, in test_register_k8sclient
+    self._test_register_vim(self.vim_obj, mock_ks_client)
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 104, in _test_register_vim
+    self.kubernetes_driver.register_vim(None, vim_obj)
+  File "tacker/common/log.py", line 35, in wrapper
+    return method(*args, **kwargs)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 141, in register_vim
+    self.authenticate_vim(vim_obj)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 66, in authenticate_vim
+    auth_cred, file_descriptor = self._get_auth_creds(vim_obj)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 74, in _get_auth_creds
+    auth_cred['auth_url'] = vim_obj['auth_url']
+KeyError: 'auth_url'
+0
+]
+tags: -worker-0

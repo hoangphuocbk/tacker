@@ -1,0 +1,40 @@
+time: 2017-10-30 17:34:48.896088Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 17:34:48.909130Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+]
+tags: -worker-0
+time: 2017-10-30 17:34:48.921204Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 17:34:48.936011Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-3
+time: 2017-10-30 17:34:48.986094Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 17:34:49.008351Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-2
+time: 2017-10-30 17:34:49.017909Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 17:34:49.037682Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+24B
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 91, in test_register_k8sclient
+    self._test_register_vim(self.vim_obj, mock_ks_client)
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 105, in _test_register_vim
+    mock_fernet_obj.encrypt.assert_called_once_with(mock.ANY)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 947, in assert_called_once_with
+    raise AssertionError(msg)
+AssertionError: Expected 'encrypt' to be called once. Called 0 times.
+0
+]
+tags: -worker-1

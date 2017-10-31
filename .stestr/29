@@ -1,0 +1,58 @@
+time: 2017-10-30 15:08:55.782922Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 15:08:55.797257Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-0
+time: 2017-10-30 15:08:55.786548Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 15:08:55.806581Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-3
+time: 2017-10-30 15:08:55.818904Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 15:08:55.835429Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+1B1
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 139, in test_encode_vim_auth_barbican
+    mock_fernet_obj.encrypt.assert_called_once_with(mock.ANY)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 947, in assert_called_once_with
+    raise AssertionError(msg)
+AssertionError: Expected 'encrypt' to be called once. Called 2 times.
+0
+]
+tags: -worker-1
+time: 2017-10-30 15:08:55.949993Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 15:08:55.981582Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+412
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 93, in test_register_k8sclient
+    self._test_register_vim(self.vim_obj, mock_ks_client)
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 106, in _test_register_vim
+    self.kubernetes_driver.register_vim(None, vim_obj)
+  File "tacker/common/log.py", line 35, in wrapper
+    return method(*args, **kwargs)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 141, in register_vim
+    self.authenticate_vim(vim_obj)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 66, in authenticate_vim
+    auth_cred, file_descriptor = self._get_auth_creds(vim_obj)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 73, in _get_auth_creds
+    file_descriptor = self._create_ssl_ca_file(auth_cred)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 84, in _create_ssl_ca_file
+    self.kubernetes.create_ca_cert_tmp_file(ca_cert)
+TypeError: 'FakeKubernetesAPI' object is not iterable
+0
+]
+tags: -worker-2

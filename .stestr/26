@@ -1,0 +1,48 @@
+time: 2017-10-30 15:03:18.093066Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 15:03:18.111976Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-2
+time: 2017-10-30 15:03:18.163200Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 15:03:18.182627Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+]
+tags: -worker-1
+time: 2017-10-30 15:03:18.198814Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 15:03:18.225508Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+3E6
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 90, in test_register_k8sclient
+    self._test_register_vim(self.vim_obj, mock_ks_client)
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 103, in _test_register_vim
+    self.kubernetes_driver.register_vim(None, vim_obj)
+  File "tacker/common/log.py", line 35, in wrapper
+    return method(*args, **kwargs)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 141, in register_vim
+    self.authenticate_vim(vim_obj)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 66, in authenticate_vim
+    auth_cred, file_descriptor = self._get_auth_creds(vim_obj)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 73, in _get_auth_creds
+    file_descriptor = self._create_ssl_ca_file(auth_cred)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 81, in _create_ssl_ca_file
+    ca_cert = auth_cred['ssl_ca_cert']
+KeyError: 'ssl_ca_cert'
+0
+]
+tags: -worker-3
+time: 2017-10-30 15:03:18.257057Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 15:03:18.295546Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-0

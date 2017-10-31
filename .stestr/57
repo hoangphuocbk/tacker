@@ -1,0 +1,60 @@
+time: 2017-10-30 18:11:22.791379Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 18:11:22.795405Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+101
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 44, in setUp
+    self.auth_obj = utils.get_k8s_vim_basic_auth_obj()
+AttributeError: 'module' object has no attribute 'get_k8s_vim_basic_auth_obj'
+0
+]
+tags: -worker-2
+time: 2017-10-30 18:11:22.963923Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 18:11:22.967378Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+101
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 44, in setUp
+    self.auth_obj = utils.get_k8s_vim_basic_auth_obj()
+AttributeError: 'module' object has no attribute 'get_k8s_vim_basic_auth_obj'
+0
+]
+tags: -worker-0
+time: 2017-10-30 18:11:22.974396Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 18:11:22.978486Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+101
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 44, in setUp
+    self.auth_obj = utils.get_k8s_vim_basic_auth_obj()
+AttributeError: 'module' object has no attribute 'get_k8s_vim_basic_auth_obj'
+0
+]
+tags: -worker-1
+time: 2017-10-30 18:11:23.124496Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 18:11:23.127718Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+Content-Type: text/x-traceback;charset=utf8,language=python
+traceback
+101
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 44, in setUp
+    self.auth_obj = utils.get_k8s_vim_basic_auth_obj()
+AttributeError: 'module' object has no attribute 'get_k8s_vim_basic_auth_obj'
+0
+]
+tags: -worker-3

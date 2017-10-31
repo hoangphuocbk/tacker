@@ -23,7 +23,6 @@ USE_GET_PIP=1
 
 # Logging
 LOGFILE=$DEST/logs/stack.sh.log
-SCREEN_LOGDIR=$DEST/logs/screen
 VERBOSE=True
 ENABLE_DEBUG_LOG_LEVEL=True
 ENABLE_VERBOSE_LOG_LEVEL=True
@@ -48,11 +47,14 @@ PUBLIC_BRIDGE=br-ext
 
 NETWORK_GATEWAY=${NETWORK_GATEWAY:-15.0.0.1}
 FIXED_RANGE=${FIXED_RANGE:-15.0.0.0/24}
+# Change fixed range K8S network if your infrastructure is conflicted
+# FIXED_RANGE_K8S=${FIXED_RANGE_K8S:-192.168.28.0/22}
 
 enable_plugin heat https://git.openstack.org/openstack/heat master
 enable_plugin networking-sfc git://git.openstack.org/openstack/networking-sfc master
 enable_plugin barbican https://git.openstack.org/openstack/barbican
 enable_plugin tacker https://git.openstack.org/openstack/tacker master
+enable_plugin mistral https://git.openstack.org/openstack/mistral master
 
 enable_service n-novnc
 enable_service n-cauth
@@ -61,3 +63,9 @@ disable_service tempest
 
 #TACKER CONFIGURATION
 USE_BARBICAN=True
+
+# Kubernetes
+KUBERNETES_VIM=True
+enable_plugin kuryr-kubernetes https://git.openstack.org/openstack/kuryr-kubernetes master
+enable_plugin neutron-lbaas git://git.openstack.org/openstack/neutron-lbaas master
+enable_plugin devstack-plugin-container https://git.openstack.org/openstack/devstack-plugin-container master

@@ -1,0 +1,56 @@
+time: 2017-10-30 15:19:43.640322Z
+tags: worker-1
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican
+time: 2017-10-30 15:19:43.654583Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim_barbican [ multipart
+]
+tags: -worker-1
+time: 2017-10-30 15:19:43.653166Z
+tags: worker-2
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican
+time: 2017-10-30 15:19:43.678390Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_encode_vim_auth_barbican [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+1B1
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 141, in test_encode_vim_auth_barbican
+    mock_fernet_obj.encrypt.assert_called_once_with(mock.ANY)
+  File "/opt/stack/tacker/.tox/py27/local/lib/python2.7/site-packages/mock/mock.py", line 947, in assert_called_once_with
+    raise AssertionError(msg)
+AssertionError: Expected 'encrypt' to be called once. Called 2 times.
+0
+]
+tags: -worker-2
+time: 2017-10-30 15:19:43.815886Z
+tags: worker-0
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient
+time: 2017-10-30 15:19:43.836156Z
+failure: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_register_k8sclient [ multipart
+Content-Type: text/x-traceback;language=python,charset=utf8
+traceback
+373
+Traceback (most recent call last):
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 93, in test_register_k8sclient
+    self._test_register_vim(self.vim_obj, mock_ks_client)
+  File "tacker/tests/unit/nfvo/drivers/vim/test_kubernetes_driver.py", line 108, in _test_register_vim
+    self.kubernetes_driver.register_vim(None, vim_obj)
+  File "tacker/common/log.py", line 35, in wrapper
+    return method(*args, **kwargs)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 143, in register_vim
+    vim_obj['auth_cred'])
+  File "tacker/common/log.py", line 35, in wrapper
+    return method(*args, **kwargs)
+  File "tacker/nfvo/drivers/vim/kubernetes_driver.py", line 217, in encode_vim_auth
+    raise nfvo.VimEncryptKeyError(vim_id=vim_id)
+tacker.extensions.nfvo.VimEncryptKeyError: Barbican must be enabled for VIM 647a91c3-d436-43e6-a1e8-71118dde84ce
+0
+]
+tags: -worker-0
+time: 2017-10-30 15:19:43.918830Z
+tags: worker-3
+test: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim
+time: 2017-10-30 15:19:43.933386Z
+successful: tacker.tests.unit.nfvo.drivers.vim.test_kubernetes_driver.TestKubernetes_Driver.test_deregister_vim [ multipart
+]
+tags: -worker-3

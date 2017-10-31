@@ -34,6 +34,7 @@ There are two ways to install Tacker service:
    install/kolla.rst
    install/devstack.rst
    install/manual_installation.rst
+   install/kubernetes_vim_installation.rst
 
 Getting Started
 ===============

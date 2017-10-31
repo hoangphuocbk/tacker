@@ -255,6 +255,16 @@ function configure_tacker {
 
         echo "Creating bridge"
         sudo ovs-vsctl --may-exist add-br ${BR_MGMT}
+
+        if [ "${KUBERNETES_VIM}" == "True" ]; then
+            iniset "/$Q_PLUGIN_CONF_FILE" ml2_type_flat flat_networks $PUBLIC_PHYSICAL_NETWORK,$MGMT_PHYS_NET,$K8S_PHYS_NET
+            iniset "/$Q_PLUGIN_CONF_FILE" ovs bridge_mappings $PUBLIC_PHYSICAL_NETWORK:$PUBLIC_BRIDGE,$MGMT_PHYS_NET:$BR_MGMT,$K8S_PHYS_NET:$BR_K8S
+            echo "Creating Kubernetes bridge"
+            sudo ovs-vsctl --may-exist add-br ${BR_K8S}
+            if [[ "${USE_BARBICAN}" == "True" ]]; then
+                iniset $TACKER_CONF k8s_vim use_barbican True
+            fi
+        fi
     fi
     if [[ "${USE_BARBICAN}" == "True" ]]; then
          iniset $TACKER_CONF vim_keys use_barbican True
@@ -385,42 +395,29 @@ function tacker_create_initial_network {
     done
 
     echo "Creating networks"
-    echo "###################################"
-    echo "FIXED_RANGE_MGMT: $FIXED_RANGE_MGMT"
-
-    SUBNETPOOL_V4_ID=$(openstack subnet pool create ${SUBNETPOOL_NAME_V4} --default-prefix-length ${SUBNETPOOL_SIZE_V4} --pool-prefix ${FIXED_RANGE_MGMT} --share --default -f value -c id)
-
-    echo "New subnet pool: $SUBNETPOOL_V4_ID"
-
-
-    ROUTER_ID=$(openstack --os-cloud devstack-admin router create $Q_ROUTER_NAME | grep ' id ' | get_field 2)
-
-    echo "ROUTER_ID: $ROUTER_ID"
-
     NET_MGMT_ID=$(openstack network create --provider-network-type flat --provider-physical-network ${MGMT_PHYS_NET} --share ${NET_MGMT} | awk '/ id /{print $4}')
-
-    echo "NET_MGMT_ID: $NET_MGMT_ID"
-
-    PUBLIC_NET='public-subnet'
-
-    SUBNET_MGMT_ID=$(openstack subnet create ${PUBLIC_NET} --ip-version 4 --gateway ${NETWORK_GATEWAY_MGMT} --network ${NET_MGMT_ID} --subnet-pool ${SUBNETPOOL_V4_ID} | awk '/ id /{print $4}')
-
-    echo "SUBNET_MGMT_ID: $SUBNET_MGMT_ID"
-
-    openstack --os-cloud devstack-admin router add subnet ${ROUTER_ID} ${SUBNET_MGMT_ID}
-
+    SUBNET_MGMT_ID=$(openstack subnet create ${SUBNET_MGMT} --ip-version 4 --gateway ${NETWORK_GATEWAY_MGMT} --network ${NET_MGMT_ID} --subnet-range ${FIXED_RANGE_MGMT} | awk '/ id /{print $4}')
     NET0_ID=$(openstack network create --share ${NET0} | awk '/ id /{print $4}')
-    SUBNET0_ID=$(openstack subnet create ${SUBNET0} --ip-version 4 --gateway ${NETWORK_GATEWAY0} --network ${NET0_ID} --subnet-range ${FIXED_RANGE0}  | awk '/ id /{print $4}')
+    SUBNET0_ID=$(openstack subnet create ${SUBNET0} --ip-version 4 --gateway ${NETWORK_GATEWAY0} --network ${NET0_ID} --subnet-range ${FIXED_RANGE0} | awk '/ id /{print $4}')
     NET1_ID=$(openstack network create --share ${NET1} | awk '/ id /{print $4}')
     SUBNET1_ID=$(openstack subnet create ${SUBNET1} --ip-version 4 --gateway ${NETWORK_GATEWAY1} --network ${NET1_ID} --subnet-range ${FIXED_RANGE1} | awk '/ id /{print $4}')
 
     echo "Assign ip address to BR_MGMT"
     sudo ip link set ${BR_MGMT} up
-
     sudo ip -4 address flush dev ${BR_MGMT}
     sudo ip address add ${NETWORK_GATEWAY_MGMT_IP} dev ${BR_MGMT}
 
-    echo "##################################"
+    if [ "${KUBERNETES_VIM}" == "True" ]; then
+        SUBNETPOOL_V4_ID=$(openstack subnet pool create ${SUBNETPOOL_NAME_V4} --default-prefix-length ${SUBNETPOOL_SIZE_V4} --pool-prefix ${FIXED_RANGE_K8S} --share --default -f value -c id)
+        NET_K8S_ID=$(openstack network create --provider-network-type flat --provider-physical-network ${K8S_PHYS_NET} --share ${NET_K8S} | awk '/ id /{print $4}')
+        SUBNET_K8S_ID=$(openstack subnet create ${SUBNET_K8S} --ip-version 4 --gateway ${NETWORK_GATEWAY_K8S} --network ${NET_K8S_ID} --subnet-pool ${SUBNETPOOL_V4_ID} | awk '/ id /{print $4}')
+
+        echo "Assign ip address to ${BR_K8S}"
+        sudo ip link set ${BR_K8S} up
+        sudo ip -4 address flush dev ${BR_K8S}
+        sudo ip address add ${NETWORK_GATEWAY_K8S_IP} dev ${BR_K8S}
+        openstack router create $Q_ROUTER_NAME | grep ' id ' | get_field 2
+    fi
 }
 
 function tacker_register_default_vim {
