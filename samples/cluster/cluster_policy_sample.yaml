@@ -1,0 +1,17 @@
+properties:
+  role:
+    active:
+      VIM0: 1
+    standby: 1
+  load_balancer:
+    vip:
+      subnet: subnet0
+      vip_address: 10.10.0.100
+    listener:
+      connection_litmit: 10
+      protocol: HTTP
+      protocol_port: 80
+    pool:
+      lb_algorithm: ROUND_ROBIN
+    target: CP2
+    lb_deployment_timeout: 200

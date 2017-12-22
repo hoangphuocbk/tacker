@@ -14,6 +14,7 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
+import eventlet
 import os
 import six
 import yaml
@@ -24,6 +25,7 @@ from keystoneauth1.identity import v2
 from keystoneauth1.identity import v3
 from keystoneauth1 import session
 from neutronclient.common import exceptions as nc_exceptions
+from neutronclient.neutron import v2_0 as neutronV20
 from neutronclient.v2_0 import client as neutron_client
 from oslo_config import cfg
 from oslo_log import log as logging
@@ -714,6 +716,211 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
                             new_pp_id = new_port_pairs[j]
                             neutronclient.port_pair_delete(new_pp_id)
 
+    def _wait_for_lb_ready(self, neutron_client, lb_id, timeout=200):
+        lb_status = False
+        timer = 0
+        while timer < timeout:
+            lb_resource = neutron_client.\
+                find_resource_by_name_or_id('loadbalancer', lb_id)
+            if lb_resource is None:
+                break
+            else:
+                failed_prov_status = {'ERROR'}
+                failed_oper_status = {'DEGRADED', 'ERROR'}
+                prov_status = lb_resource.get('provisioning_status')
+                oper_status = lb_resource.get('operating_status')
+                if prov_status == 'ACTIVE' and oper_status == 'ONLINE':
+                    lb_status = True
+                    break
+                elif prov_status in failed_prov_status \
+                        or oper_status in failed_oper_status:
+                    break
+            eventlet.sleep(2)
+            timer += 2
+        return lb_status
+
+    def create_loadbalancer(self, lb_pool, lb_vip, lb_listener,
+                            lb_deployment_timeout, auth_attr=None):
+        lb_dict = dict()
+        if not auth_attr:
+            LOG.warning("auth information required for neutron-lbaas service")
+            raise EnvironmentError('auth attribute required for'
+                                   ' neutron-lbaas service')
+        neutronclient_ = NeutronClient(auth_attr)
+        try:
+            lb_id = None
+            pool_id = None
+            listener_id = None
+            # Checking algorithm validation
+            lb_algorithms = ['SOURCE_IP', 'ROUND_ROBIN', 'LEAST_CONNECTIONS']
+            if not lb_pool:
+                lb_algorithm = 'ROUND_ROBIN'
+            else:
+                lb_algorithm = lb_pool.get('lb_algorithm',
+                                           'ROUND_ROBIN').upper()
+                if lb_algorithm not in lb_algorithms:
+                    raise nfvo.\
+                        LBUnsupportedAlgorithmTypeException(type=lb_algorithm)
+            # Checking protocol validation
+            lb_protocols = ['TCP', 'HTTP', 'HTTPS',
+                            'TERMINATED_HTTPS', 'PROXY']
+            if not lb_listener:
+                connection_limit = None
+                lb_protocol = 'HTTP'
+                protocol_port = 80
+            else:
+                connection_limit = lb_listener.get('connection_limit', None)
+                protocol_port = lb_listener.get('protocol_port', 80)
+                lb_protocol = lb_listener.get('protocol', 'HTTP').upper()
+                if lb_protocol not in lb_protocols:
+                    raise nfvo.\
+                        LBUnsupportedProtocolTypeException(type=lb_protocol)
+
+            # Create lbaas-loadbalancer
+            subnet_id = neutronclient_.subnet_get(lb_vip['subnet'])
+            lb_dict['subnet_id'] = subnet_id
+            vip_address = lb_vip.get('vip_address', None)
+
+            lb_result = \
+                neutronclient_.loadbalancer_create(subnet_id, vip_address)
+            lb_id = lb_result.get('loadbalancer').get('id')
+
+            LOG.debug('Creating lbaas-loadbalancer %s', lb_id)
+            lb_status = self._wait_for_lb_ready(neutronclient_, lb_id,
+                                                timeout=lb_deployment_timeout)
+            if not lb_status:
+                LOG.error("Creating load balancer based on %s failed.", lb_id)
+                # Delete lbaas-loadbalancer
+                self.delete_loadbalancer(lb_id=lb_id, auth_attr=auth_attr)
+                return None
+
+            lb_dict['lb_id'] = lb_id
+            lb_dict['vip_address'] = \
+                lb_result['loadbalancer'].get('vip_address')
+
+            # Create lbaas-listener
+            listener_dict = neutronclient_.listener_create(lb_id,
+                                                           lb_protocol,
+                                                           protocol_port,
+                                                           connection_limit)
+            listener_id = listener_dict.get('listener').get('id')
+            lb_dict['listener_id'] = listener_id
+
+            LOG.debug('Adding lbaas-listener %s to load balancer %s',
+                      listener_id, lb_id)
+            lb_status = self._wait_for_lb_ready(neutronclient_, lb_id,
+                                                timeout=lb_deployment_timeout)
+            if not lb_status:
+                LOG.error('Listener %s could not be added in Load balancer %s',
+                          listener_id, lb_id)
+                # Delete load balancer and listener
+                self.delete_loadbalancer(lb_id=lb_id, listener_id=listener_id,
+                                         auth_attr=auth_attr)
+                return None
+
+            # Create lbaas-pool
+            pool_dict = neutronclient_.pool_create(listener_id, lb_algorithm,
+                                                   lb_protocol)
+            pool_id = pool_dict.get('pool').get('id')
+            lb_dict['pool_id'] = pool_id
+
+            LOG.debug('Adding lbaas-pool %s to lbaas-listener %s',
+                      pool_id, listener_id)
+            lb_status = self._wait_for_lb_ready(neutronclient_, lb_id,
+                                                timeout=lb_deployment_timeout)
+            if not lb_status:
+                LOG.error('Pool %s could not be added in Load balancer %s',
+                          pool_id, lb_id)
+                # Delete load balancer, pool and listener
+                self.delete_loadbalancer(lb_id=lb_id, pool_id=pool_id,
+                                         listener_id=listener_id,
+                                         auth_attr=auth_attr)
+                return None
+            lb_dict['protocol_port'] = protocol_port
+            LOG.debug('Load balancer %s has been created', lb_id)
+        except Exception as e:
+            LOG.error('Load balancer creation failed. \n%s', e)
+            if lb_id:
+                self.delete_loadbalancer(lb_id=lb_id, pool_id=pool_id,
+                                         listener_id=listener_id,
+                                         auth_attr=auth_attr)
+            return None
+        return lb_dict
+
+    def delete_loadbalancer(self, lb_id, pool_id=None, listener_id=None,
+                            auth_attr=None):
+        if not auth_attr:
+            LOG.warning("auth information required for neutron-lbaas service")
+            raise EnvironmentError('auth attribute required for'
+                                   ' neutron-lbaas service')
+        neutronclient_ = NeutronClient(auth_attr)
+
+        # Delete lbaas-pool
+        if pool_id:
+            LOG.debug('Deleting lbaas-pool %s', pool_id)
+            neutronclient_.pool_delete(pool_id)
+            self._wait_for_lb_ready(neutronclient_, lb_id, timeout=200)
+
+        # Delete lbaas-listener
+        if listener_id:
+            LOG.debug('Deleting lbaas-listener %s', listener_id)
+            neutronclient_.listener_delete(listener_id)
+            self._wait_for_lb_ready(neutronclient_, lb_id, timeout=200)
+
+        # Delete lbaas-loadbalancer
+        LOG.debug('Deleting lbaas-loadbalancer %s', lb_id)
+        neutronclient_.loadbalancer_delete(lb_id)
+        LOG.debug('Load balancer %s has been deleted', lb_id)
+
+    def pool_member_add(self, net_port_id, lb_info, weight=None,
+                        auth_attr=None):
+        """Add a member to Neutron lbaas-pool."""
+        if not auth_attr:
+            LOG.warning("auth information required for neutron-lbaas service")
+            raise EnvironmentError('auth attribute required for'
+                                   ' neutron-lbaas service')
+        neutronclient_ = NeutronClient(auth_attr)
+
+        lb_id = lb_info['lb_id']
+        port_info = neutronclient_.find_port_info_by_port_id(net_port_id)
+        ip_address = port_info['port']['fixed_ips'][0]['ip_address']
+
+        lb_status = self._wait_for_lb_ready(neutronclient_, lb_id, timeout=200)
+        if not lb_status:
+            LOG.error(('Load balancer %s is not ready.'), lb_id)
+            return None
+        member = neutronclient_.pool_member_create(lb_info['pool_id'],
+                                                  ip_address,
+                                                  lb_info['protocol_port'],
+                                                  lb_info['subnet_id'],
+                                                  weight)
+        member_id = member['member']['id']
+        LOG.debug('Adding member %s to lbaas-loadbalancer %s',
+                  member_id, lb_id)
+        lb_status = self._wait_for_lb_ready(neutronclient_, lb_id, timeout=200)
+        if not lb_status:
+            LOG.warning(_('Failed in adding pool member %s.'), member_id)
+            return None
+
+        LOG.debug('Member pool %s has been added to lbaas-loadbalancer %s',
+                  member_id, lb_id)
+        return member_id
+
+    def pool_member_remove(self, lb_id, pool_id, member_id, auth_attr=None):
+        if not auth_attr:
+            LOG.warning("auth information required for neutron-lbaas service")
+            raise EnvironmentError('auth attribute required for'
+                                   ' neutron-lbaas service')
+        neutronclient_ = NeutronClient(auth_attr)
+
+        neutronclient_.pool_member_delete(pool_id, member_id)
+        LOG.debug('Delete member %s from lbaas-loadbalancer %s',
+                  member_id, lb_id)
+        lb_status = self._wait_for_lb_ready(neutronclient_, lb_id, timeout=200)
+        if not lb_status:
+            LOG.warning(_('Failed in deleting pool member (%s).'), member_id)
+            return None
+
 
 class NeutronClient(object):
     """Neutron Client class for networking-sfc driver"""
@@ -862,3 +1069,118 @@ class NeutronClient(object):
         except nc_exceptions.NotFound:
             LOG.warning('port pair group %s not found', ppg_id)
             raise ValueError('port pair group %s not found' % ppg_id)
+
+    def find_port_info_by_port_id(self, port_id):
+        port_info = self.client.show_port(port_id)
+        LOG.debug(("find_address_by_port_id port_info: {port_info}").
+                  format(port_info=port_info))
+        return port_info
+
+    def find_resource_by_name_or_id(self, resource_name, name_or_id):
+        return neutronV20.find_resource_by_name_or_id(self.client,
+                                                      resource_name,
+                                                      name_or_id)
+
+    def find_resourceid_by_name_or_id(self, resource_name, name_or_id):
+        return neutronV20.find_resourceid_by_name_or_id(self.client,
+                                                        resource_name,
+                                                        name_or_id)
+
+    def network_get(self, name_or_id, ignore_missing=False):
+        network = self.client.find_network(name_or_id, ignore_missing)
+        if not network:
+            raise ValueError('Network %s not found' % name_or_id)
+        return network
+
+    def port_find(self, name_or_id, ignore_missing=False):
+        port = self.client.find_port(name_or_id, ignore_missing)
+        if not port:
+            raise ValueError('Port %s not found' % name_or_id)
+        return port
+
+    def subnet_get(self, name_or_id, ignore_missing=False):
+        subnet = self.find_resourceid_by_name_or_id('subnet',
+                                                    name_or_id)
+        if not subnet:
+            raise ValueError('Subnet %s not found' % name_or_id)
+        return subnet
+
+    def loadbalancer_get(self, name_or_id, ignore_missing=False):
+        lb_dict = self.client.find_load_balancer(name_or_id, ignore_missing)
+        if not lb_dict:
+            raise ValueError('Load balancer %s not found' % name_or_id)
+        return lb_dict
+
+    def loadbalancer_create(self, vip_subnet_id, vip_address,
+                            admin_state_up=True, name=None, description=None):
+
+        lb_config = dict(vip_subnet_id=vip_subnet_id,
+                         admin_state_up=admin_state_up)
+        if vip_address:
+            lb_config['vip_address'] = vip_address
+        if name:
+            lb_config['name'] = name
+        if description:
+            lb_config['description'] = description
+
+        lb_dict = self.client.create_loadbalancer(dict(loadbalancer=lb_config))
+        return lb_dict
+
+    def loadbalancer_delete(self, lb_id):
+        self.client.delete_loadbalancer(lb_id)
+
+    def listener_create(self, lb_id, protocol, protocol_port,
+                        connection_limit, admin_state_up=True,
+                        name=None, description=None):
+
+        listener_config = dict(loadbalancer_id=lb_id,
+                               protocol=protocol,
+                               protocol_port=protocol_port,
+                               admin_state_up=admin_state_up)
+        if connection_limit:
+            listener_config['connection_limit'] = connection_limit
+        if name:
+            listener_config['name'] = name
+        if description:
+            listener_config['description'] = description
+
+        listener_dict = \
+            self.client.create_listener(dict(listener=listener_config))
+        return listener_dict
+
+    def listener_delete(self, listener_id):
+        self.client.delete_listener(listener_id)
+
+    def pool_create(self, listener_id, lb_algorithm, protocol,
+                    admin_state_up=True, name=None, description=None):
+        pool_config = dict(lb_algorithm=lb_algorithm,
+                           listener_id=listener_id,
+                           protocol=protocol,
+                           admin_state_up=admin_state_up)
+        if name:
+            pool_config['name'] = name
+        if description:
+            pool_config['description'] = description
+
+        pool_dict = self.client.create_lbaas_pool(dict(pool=pool_config))
+        return pool_dict
+
+    def pool_delete(self, pool_id):
+        self.client.delete_lbaas_pool(pool_id)
+
+    def pool_member_create(self, pool_id, address, protocol_port, subnet_id,
+                           weight, admin_state_up=True):
+        member_config = dict(address=address,
+                             protocol_port=protocol_port,
+                             admin_state_up=admin_state_up,
+                             subnet_id=subnet_id)
+        if weight:
+            member_config['weight'] = weight
+
+        member_dict = \
+            self.client.create_lbaas_member(pool_id,
+                                            dict(member=member_config))
+        return member_dict
+
+    def pool_member_delete(self, pool_id, member_id):
+        self.client.delete_lbaas_member(member_id, pool_id)

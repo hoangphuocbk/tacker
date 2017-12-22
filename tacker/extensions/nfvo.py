@@ -51,6 +51,11 @@ class VimNotFoundException(exceptions.TackerException):
                 "pass a valid VIM id")
 
 
+class VimNameNotFoundException(exceptions.TackerException):
+    message = _("Specified VIM name %(vim_name)s is invalid. "
+                "Please verify and pass a valid VIM name")
+
+
 class VimRegionNotFoundException(exceptions.TackerException):
     message = _("Unknown VIM region name %(region_name)s")
 
@@ -266,6 +271,14 @@ class UpdateClassifierException(exceptions.TackerException):
 
 class UpdateVnffgException(exceptions.TackerException):
     message = _("%(message)s")
+
+
+class LBUnsupportedAlgorithmTypeException(exceptions.TackerException):
+    message = _("Algorithm %(type)s is unsupported by Load balancer")
+
+
+class LBUnsupportedProtocolTypeException(exceptions.TackerException):
+    message = _("Protocol %(type)s is unsupported by Load balancer")
 
 
 NAME_MAX_LEN = 255
@@ -787,6 +800,139 @@ RESOURCE_ATTRIBUTE_MAP = {
             'default': None,
         },
     },
+    'clusters': {
+        'id': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:uuid': None},
+            'is_visible': True,
+            'primary_key': True
+        },
+        'tenant_id': {
+            'allow_post': True,
+            'allow_put': False,
+            'validate': {'type:string': None},
+            'required_by_policy': True,
+            'is_visible': True
+        },
+        'vnfd_id': {
+            'allow_post': True,
+            'allow_put': False,
+            'validate': {'type:uuid': None},
+            'is_visible': True,
+        },
+        'name': {
+            'allow_post': True,
+            'allow_put': True,
+            'validate': {'type:string': None},
+            'is_visible': True,
+        },
+        'policy_info': {
+            'allow_post': True,
+            'allow_put': True,
+            'convert_to': attr.convert_none_to_empty_dict,
+            'validate': {'type:dict_or_nodata': None},
+            'is_visible': True,
+            'default': None,
+        },
+        'description': {
+            'allow_post': True,
+            'allow_put': True,
+            'validate': {'type:string': None},
+            'is_visible': True,
+            'default': '',
+        },
+        'status': {
+            'allow_post': False,
+            'allow_put': False,
+            'is_visible': True,
+        },
+        'vip_endpoint': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:dict_or_nodata': None},
+            'is_visible': True,
+        },
+        'lb_info': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:dict_or_nodata': None},
+            'is_visible': True,
+            'default': None
+        },
+        'role_config': {
+            'allow_post': False,
+            'allow_put': True,
+            'validate': {'type:dict_or_nodata': None},
+            'is_visible': True,
+            'default': None
+        },
+    },
+    'clustermembers': {
+        'id': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:uuid': None},
+            'is_visible': True,
+            'primary_key': True
+        },
+        'tenant_id': {
+            'allow_post': True,
+            'allow_put': False,
+            'validate': {'type:string': None},
+            'required_by_policy': True,
+            'is_visible': True
+        },
+        'name': {
+            'allow_post': True,
+            'allow_put': True,
+            'validate': {'type:string': None},
+            'is_visible': True,
+        },
+        'cluster_id': {
+            'allow_post': True,
+            'allow_put': True,
+            'validate': {'type:uuid': None},
+            'is_visible': True,
+        },
+        'vnfd_id': {
+            'allow_post': True,
+            'allow_put': False,
+            'validate': {'type:uuid': None},
+            'is_visible': True,
+        },
+        'role': {
+            'allow_post': True,
+            'allow_put': True,
+            'validate': {'type:string': None},
+            'is_visible': True,
+        },
+        'vim_id': {
+            'allow_post': True,
+            'allow_put': False,
+            'validate': {'type:string': None},
+            'is_visible': True,
+            'default': '',
+        },
+        'lb_member_id': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:uuid': None},
+            'is_visible': True,
+        },
+        'mgmt_url': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:string': None},
+            'is_visible': True,
+        },
+        'vnf_id': {
+            'allow_post': False,
+            'allow_put': False,
+            'validate': {'type:string': None},
+            'is_visible': True,
+        },
+    },
 
 }
 
@@ -868,7 +1014,7 @@ class NFVOPluginBase(service_base.NFVPluginBase):
 
     def get_vim_by_name(self, context, vim_name, fields=None,
                         mask_password=True):
-        raise NotImplementedError()
+        pass
 
     def get_default_vim(self, context):
         raise NotImplementedError()

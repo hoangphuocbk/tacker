@@ -1,0 +1,18 @@
+description: A sample of policy for VNF cluster deployment
+properties:
+  role:
+    active:
+      VIM0: 1
+    standby:
+      VIM0: 1
+  load_balancer:
+    pool:
+      protocol: HTTP
+      protocol_port: 80
+      subnet: subnet_mgmt
+      lb_method: ROUND_ROBIN
+    vip:
+      subnet: subnet_mgmt
+      protocol: HTTP
+      protocol_port: 80
+    target: CP1

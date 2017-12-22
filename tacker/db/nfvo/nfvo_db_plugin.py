@@ -206,3 +206,18 @@ class NfvoPluginDb(nfvo.NFVOPluginBase, db_base.CommonDbMixin):
     def get_default_vim(self, context):
         vim_db = self._get_default_vim(context)
         return self._make_vim_dict(vim_db, mask_password=False)
+
+    def get_vim_by_name(self, context, vim_name=None):
+        vim_dict = {}
+        try:
+            if not vim_name:
+                vim_dict = self.get_default_vim(context)
+            else:
+                query = self._model_query(context, nfvo_db.Vim)
+                vim_db = query.filter(nfvo_db.Vim.name == vim_name).one()
+                vim_dict = self._make_vim_dict(vim_db, mask_password=False)
+        except Exception:
+            raise nfvo.VimNameNotFoundException(vim_name=vim_name)
+
+        self._build_vim_auth(context, vim_dict)
+        return vim_dict

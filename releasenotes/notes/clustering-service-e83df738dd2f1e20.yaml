@@ -1,0 +1,3 @@
+---
+features:
+  - Enable clustering service to VNFs to support high availability in Tacker
