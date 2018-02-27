@@ -11,17 +11,17 @@ topology_template:
       properties:
         namespace: default
         mapping_ports:
-          - "80:80"
+          - "80:8080"
         labels:
           - "app: webserver"
-        service_type: ClusterIP
+        service_type: LoadBalancer
         vnfcs:
           web_server:
             num_cpus: 0.2
             mem_size: 100 MB
-            image: k8s.gcr.io/hpa-example
+            image: celebdor/kuryr-demo
             ports:
-              - "80"
+              - "8080"
             config: |
               param0: key1
               param1: key2
@@ -31,6 +31,6 @@ topology_template:
         type: tosca.policies.tacker.Scaling
         targets: [VDU1]
         properties:
-          min_instances: 1
+          min_instances: 2
           max_instances: 10
           target_cpu_utilization_percentage: 50

@@ -31,13 +31,22 @@ bring VMs and Pods (and other Kubernetes resources) on the same network.
 
 .. code-block:: console
 
+  # Set public external network configuration
+  PUBLIC_INTERFACE=eth0
+  FLOATING_RANGE=192.168.11.0/24
+  PUBLIC_NETWORK_GATEWAY=192.168.11.1
+  Q_FLOATING_ALLOCATION_POOL=start=192.168.11.200,end=192.168.11.254
+
+  # Enable Kubernetes and kuryr-kubernetes
   KUBERNETES_VIM=True
-  NEUTRON_CREATE_INITIAL_NETWORKS=False
   enable_plugin kuryr-kubernetes https://git.openstack.org/openstack/kuryr-kubernetes master
   enable_plugin neutron-lbaas git://git.openstack.org/openstack/neutron-lbaas master
   enable_plugin devstack-plugin-container https://git.openstack.org/openstack/devstack-plugin-container master
 
-You can also see the same examples in [#first]_ and [#second]_.
+The public network will be used to launched LoadBalancer for Services in
+Kubernetes. The example for setting public subnet is described in [#first]_
+
+For more details, users also see the same examples in [#second]_ and [#third]_.
 
 2. Run stack.sh
 
@@ -132,7 +141,7 @@ the project k8s:
   +--------------------------------------+-----------------+--------------------------------------+
   | ID                                   | Name            | Subnets                              |
   +--------------------------------------+-----------------+--------------------------------------+
-  | 28361f77-1875-4070-b0dc-014e26c48aeb | k8s-public-net  | 28c51d19-d437-46e8-9b0e-00bc392c57d6 |
+  | 28361f77-1875-4070-b0dc-014e26c48aeb | public          | 28c51d19-d437-46e8-9b0e-00bc392c57d6 |
   | 71c20650-6295-4462-9219-e0007120e64b | k8s-service-net | f2835c3a-f567-44f6-b006-a6f7c52f2396 |
   | 97c12aef-54f3-41dc-8b80-7f07c34f2972 | k8s-pod-net     | 7759453f-6e8a-4660-b845-964eca537c44 |
   | 9935fff9-f60c-4fe8-aa77-39ba7ac10417 | net0            | 92b2bd7b-3c14-4d32-8de3-9d3cc4d204cb |
@@ -141,7 +150,7 @@ the project k8s:
   +--------------------------------------+-----------------+--------------------------------------+
 
 To check Kubernetes cluster works well, please see some tests in
-kuryr-kubernetes to get more information [#third]_.
+kuryr-kubernetes to get more information [#fourth]_.
 
 5. Register Kubernetes VIM
 
@@ -218,7 +227,7 @@ support multi tenant on Kubernetes in the future.
   type: "kubernetes"
 
 User can change the authentication like username, password, etc. Please see
-Kubernetes document [#fourth]_ to read more information about Kubernetes
+Kubernetes document [#fifth]_ to read more information about Kubernetes
 authentication.
 
 * Run Tacker command for register vim:
@@ -259,7 +268,8 @@ password, bearer_token and ssl_ca_cert) except auth_url and type of VIM.
 
 References
 ==========
-.. [#first] https://github.com/openstack/tacker/blob/master/doc/source/install/devstack.rst
-.. [#second] https://github.com/openstack/tacker/blob/master/devstack/local.conf.example
-.. [#third] https://github.com/openstack/kuryr-kubernetes/blob/master/doc/source/installation/testing_connectivity.rst
-.. [#fourth] https://kubernetes.io/docs/admin/authentication
+.. [#first] https://github.com/openstack-dev/devstack/blob/master/doc/source/networking.rst#shared-guest-interface
+.. [#second] https://github.com/openstack/tacker/blob/master/doc/source/install/devstack.rst
+.. [#third] https://github.com/openstack/tacker/blob/master/devstack/local.conf.example
+.. [#fourth] https://github.com/openstack/kuryr-kubernetes/blob/master/doc/source/installation/testing_connectivity.rst
+.. [#fifth] https://kubernetes.io/docs/admin/authentication

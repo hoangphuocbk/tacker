@@ -13,7 +13,7 @@ topology_template:
         mapping_ports:
           - "80:80"
           - "88:88"
-        service_type: NodePort
+        service_type: LoadBalancer
         vnfcs:
           front_end:
             num_cpus: 0.5
@@ -32,6 +32,6 @@ topology_template:
         type: tosca.policies.tacker.Scaling
         targets: [VDU1]
         properties:
-          min_instances: 1
-          max_instances: 3
+          min_instances: 2
+          max_instances: 5
           target_cpu_utilization_percentage: 40
