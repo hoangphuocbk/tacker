@@ -509,6 +509,9 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
         vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
         vim_id = vnfm_plugin.get_vnf(context, vnf_id, fields=['vim_id'])
         vim_obj = self.get_vim(context, vim_id['vim_id'], mask_password=False)
+        if vim_obj['type'] == 'kubernetes':
+            print("Wwwwwoooooooeeeeeeee!")
+            vim_obj = self.get_vim(context, vim_obj['auth_cred'].get('openstack_vim_id'), mask_password=False)
         if vim_obj is None:
             raise nfvo.VimFromVnfNotFoundException(vnf_id=vnf_id)
         self._build_vim_auth(context, vim_obj)

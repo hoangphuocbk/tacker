@@ -379,7 +379,7 @@ class OpenStack(abstract_driver.DeviceAbstractDriver,
 
     @log.log
     def get_resource_info(self, plugin, context, vnf_info, auth_attr,
-                          region_name=None):
+                          extra_vim_auth=None, region_name=None):
         instance_id = vnf_info['instance_id']
         heatclient = hc.HeatClient(auth_attr, region_name)
         try:

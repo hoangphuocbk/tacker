@@ -460,6 +460,7 @@ class VnffgPluginDbMixin(vnffg.VNFFGPluginBase, db_base.CommonDbMixin):
         """
         chain_list = []
         prev_forwarder = None
+        print("Update here too")
         vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
         # Build the list of logical chain representation
         logical_chain = self._get_nfp_attribute(template_db.template,

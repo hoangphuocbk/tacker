@@ -49,8 +49,7 @@ class Transformer(object):
         # from TOSCA VNF template
         kubernetes_objects = dict()
         for tosca_kube_obj in tosca_kube_objects:
-            namespace = tosca_kube_obj.namespace
-            kubernetes_objects['namespace'] = namespace
+            kubernetes_objects['namespace'] = tosca_kube_obj.namespace
             kubernetes_objects['objects'] = list()
             kube_obj_name = tosca_kube_obj.name
             new_kube_obj_name = self.pre_process_name(kube_obj_name)
@@ -78,8 +77,8 @@ class Transformer(object):
             # translate to Service object
             service_object = self.init_service(tosca_kube_obj=tosca_kube_obj,
                                                kube_obj_name=new_kube_obj_name)
-            kubernetes_objects['objects'].append(service_object)
-
+            if service_object:
+                kubernetes_objects['objects'].append(service_object)
         return kubernetes_objects
 
     def deploy(self, kubernetes_objects):
@@ -94,6 +93,7 @@ class Transformer(object):
 
         for k8s_object in k8s_objects:
             object_type = k8s_object.kind
+            record = False
 
             if object_type == 'ConfigMap':
                 self.core_v1_api_client.create_namespaced_config_map(
@@ -105,6 +105,7 @@ class Transformer(object):
                 self.extension_api_client.create_namespaced_deployment(
                     namespace=namespace,
                     body=k8s_object)
+                record = True
                 LOG.debug('Successfully created Deployment %s',
                           k8s_object.metadata.name)
             elif object_type == 'HorizontalPodAutoscaler':
@@ -120,6 +121,7 @@ class Transformer(object):
                     body=k8s_object)
                 LOG.debug('Successfully created Service %s',
                           k8s_object.metadata.name)
+            if record:
                 deployment_names.append(namespace)
                 deployment_names.append(k8s_object.metadata.name)
 
@@ -127,15 +129,6 @@ class Transformer(object):
         # for tracking resources pattern:
         # namespace1,deployment1,namespace2,deployment2,namespace3,deployment3
         return ",".join(deployment_names)
-
-    # config_labels configures label
-    def config_labels(self, deployment_name=None, scaling_name=None):
-        label = dict()
-        if deployment_name:
-            label.update({"selector": deployment_name})
-        if scaling_name:
-            label.update({"scaling_name": scaling_name})
-        return label
 
     # Init resource requirement for container
     def init_resource_requirements(self, container):
@@ -204,23 +197,10 @@ class Transformer(object):
                 name=deployment_name)
             containers.append(container)
 
-        # Make a label with pattern {"selector": "deployment_name"}
-        if tosca_kube_obj.scaling_object:
-            scaling_name = tosca_kube_obj.scaling_object.scaling_name
-            update_label = self.config_labels(deployment_name=deployment_name,
-                                              scaling_name=scaling_name)
-        else:
-            update_label = self.config_labels(deployment_name=deployment_name)
-        if tosca_kube_obj.labels:
-            if 'selector' in update_label:
-                del update_label['selector']
-            labels = dict(tosca_kube_obj.labels.items() + update_label.items())
-        else:
-            labels = update_label
-
         # Create and configure a spec section
         pod_template = client.V1PodTemplateSpec(
-            metadata=client.V1ObjectMeta(labels=labels),
+            metadata=client.V1ObjectMeta(
+                labels=tosca_kube_obj.deployment_labels),
             spec=client.V1PodSpec(containers=containers))
 
         # Create the specification of deployment
@@ -238,80 +218,70 @@ class Transformer(object):
 
     # init_hpa initializes Kubernetes Horizon Pod Auto-scaling object
     def init_hpa(self, tosca_kube_obj, kube_obj_name):
-        scaling_props = tosca_kube_obj.scaling_object
-        hpa = None
-        if scaling_props:
-            min_replicas = scaling_props.min_replicas
-            max_replicas = scaling_props.max_replicas
-            cpu_util = scaling_props.target_cpu_utilization_percentage
-            deployment_name = kube_obj_name
+        if tosca_kube_obj.service_type:
+            scaling_props = tosca_kube_obj.scaling_object
+            hpa = None
+            if scaling_props:
+                min_replicas = scaling_props.min_replicas
+                max_replicas = scaling_props.max_replicas
+                cpu_util = scaling_props.target_cpu_utilization_percentage
+                deployment_name = kube_obj_name
 
-            # Create target Deployment object
-            target = client.V1CrossVersionObjectReference(
-                api_version="extensions/v1beta1",
-                kind="Deployment",
-                name=deployment_name)
-            # Create the specification of horizon pod auto-scaling
-            hpa_spec = client.V1HorizontalPodAutoscalerSpec(
-                min_replicas=min_replicas,
-                max_replicas=max_replicas,
-                target_cpu_utilization_percentage=cpu_util,
-                scale_target_ref=target)
-            metadata = client.V1ObjectMeta(name=deployment_name)
-            # Create Horizon Pod Auto-Scaling
-            hpa = client.V1HorizontalPodAutoscaler(
-                api_version="autoscaling/v1",
-                kind="HorizontalPodAutoscaler",
-                spec=hpa_spec,
-                metadata=metadata)
-        return hpa
+                # Create target Deployment object
+                target = client.V1CrossVersionObjectReference(
+                    api_version="extensions/v1beta1",
+                    kind="Deployment",
+                    name=deployment_name)
+                # Create the specification of horizon pod auto-scaling
+                hpa_spec = client.V1HorizontalPodAutoscalerSpec(
+                    min_replicas=min_replicas,
+                    max_replicas=max_replicas,
+                    target_cpu_utilization_percentage=cpu_util,
+                    scale_target_ref=target)
+                metadata = client.V1ObjectMeta(
+                    name=deployment_name, labels=tosca_kube_obj.service_labels)
+                # Create Horizon Pod Auto-Scaling
+                hpa = client.V1HorizontalPodAutoscaler(
+                    api_version="autoscaling/v1",
+                    kind="HorizontalPodAutoscaler",
+                    spec=hpa_spec,
+                    metadata=metadata)
+            return hpa
+        else:
+            return None
 
     # init_service initializes Kubernetes service object
     def init_service(self, tosca_kube_obj, kube_obj_name):
-        list_service_port = list()
-        service_label = tosca_kube_obj.labels
-        for port in tosca_kube_obj.mapping_ports:
-            if COLON_CHARACTER in port:
-                ports = port.split(COLON_CHARACTER)
-                published_port = int(ports[0])
-                target_port = int(ports[1])
-            else:
-                target_port = published_port = int(port)
-            service_port = client.V1ServicePort(
-                name=str(published_port),
-                port=published_port,
-                target_port=target_port)
-            list_service_port.append(service_port)
-
-        deployment_name = kube_obj_name
-        selector_by_name = self.config_labels(deployment_name)
-        if tosca_kube_obj.labels:
-            selectors = tosca_kube_obj.labels.copy()
-        else:
-            selectors = selector_by_name
-        if tosca_kube_obj.mgmt_connection_point:
-            service_label['management_connection'] = 'True'
-        if tosca_kube_obj.network_name:
-            service_label['network_name'] = tosca_kube_obj.network_name
-        service_label['vdu_name'] = tosca_kube_obj.name
-
-        metadata = client.V1ObjectMeta(name=deployment_name,
-                                       labels=service_label)
         if tosca_kube_obj.service_type:
-            service_type = tosca_kube_obj.service_type
-        else:
-            service_type = None
-        service_spec = client.V1ServiceSpec(
-            selector=selectors,
-            ports=list_service_port,
-            type=service_type)
+            list_service_port = list()
+            for port in tosca_kube_obj.mapping_ports:
+                if COLON_CHARACTER in port:
+                    ports = port.split(COLON_CHARACTER)
+                    published_port = int(ports[0])
+                    target_port = int(ports[1])
+                else:
+                    target_port = published_port = int(port)
+                service_port = client.V1ServicePort(
+                    name=str(published_port),
+                    port=published_port,
+                    target_port=target_port)
+                list_service_port.append(service_port)
 
-        service = client.V1Service(
-            api_version="v1",
-            kind="Service",
-            spec=service_spec,
-            metadata=metadata)
-        return service
+            metadata = client.V1ObjectMeta(
+                name=kube_obj_name, labels=tosca_kube_obj.service_labels)
+            service_spec = client.V1ServiceSpec(
+                selector=tosca_kube_obj.deployment_labels,
+                ports=list_service_port,
+                type=tosca_kube_obj.service_type)
+
+            service = client.V1Service(
+                api_version="v1",
+                kind="Service",
+                spec=service_spec,
+                metadata=metadata)
+            return service
+        else:
+            return None
 
     # init_config_map initializes Kubernetes ConfigMap object
     def init_configmap(self, container_props, kube_obj_name):

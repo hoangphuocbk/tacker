@@ -270,6 +270,13 @@ class VNFMPlugin(vnfm_db.VNFMPluginDb, VNFMMgmtMixin):
         vim_res = self.get_vim(context, vnf_info)
         return vim_res['vim_type'], vim_res['vim_auth']
 
+    def _get_extra_vim_auth(self, context, vnf_info):
+        vim_res = self.get_vim(context, vnf_info)
+        if 'extra_vim_auth' in vim_res:
+            return vim_res['extra_vim_auth']
+        else:
+            return None
+
     def _create_vnf_wait(self, context, vnf_dict, auth_attr, driver_name):
         vnf_id = vnf_dict['id']
         instance_id = self._instance_id(vnf_dict)
@@ -863,12 +870,14 @@ class VNFMPlugin(vnfm_db.VNFMPluginDb, VNFMMgmtMixin):
         vnf_info = self.get_vnf(context, vnf_id)
         infra_driver, vim_auth = self._get_infra_driver(context, vnf_info)
         if vnf_info['status'] == constants.ACTIVE:
+            extra_vim_auth = self._get_extra_vim_auth(context, vnf_info)
             vnf_details = self._vnf_manager.invoke(infra_driver,
                                                    'get_resource_info',
                                                    plugin=self,
                                                    context=context,
                                                    vnf_info=vnf_info,
-                                                   auth_attr=vim_auth)
+                                                   auth_attr=vim_auth,
+                                                   extra_vim_auth=extra_vim_auth)
             resources = [{'name': name,
                           'type': info.get('type'),
                           'id': info.get('id')}
