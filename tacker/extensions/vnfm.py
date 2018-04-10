@@ -172,6 +172,14 @@ class InvalidKubernetesInputParameter(exceptions.InvalidInput):
     message = _("Found unsupported keys for %(found_keys)s ")
 
 
+class MissingServiceTypeForScalingSupport(exceptions.InvalidInput):
+    message = _("Please provide service_type for scaling support")
+
+
+class InvalidKubernetesServiceType(exceptions.InvalidInput):
+    message = _("Found unsupported service type: %(service_type)s")
+
+
 def _validate_service_type_list(data, valid_values=None):
     if not isinstance(data, list):
         msg = _("Invalid data format for service list: '%s'") % data

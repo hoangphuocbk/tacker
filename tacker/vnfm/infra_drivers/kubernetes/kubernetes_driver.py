@@ -52,6 +52,7 @@ def config_opts():
 
 SCALING_POLICY = 'tosca.policies.tacker.Scaling'
 COMMA_CHARACTER = ','
+K8S_POD_RUNNING_STATUS = 'Running'
 
 
 def get_scaling_policy_name(action, policy_name):
@@ -120,26 +121,20 @@ class Kubernetes(abstract_driver.DeviceAbstractDriver,
             core_v1_api_client = \
                 self.kubernetes.get_core_v1_api_client(auth=auth_cred)
             deployment_info = vnf_id.split(COMMA_CHARACTER)
-            mgmt_ips = dict()
-            pods_information = self._get_pods_information(
+            deployment_on_present = self._get_deployment_on_present(
                 core_v1_api_client=core_v1_api_client,
                 deployment_info=deployment_info)
-            status = self._get_pod_status(pods_information)
             stack_retries = self.STACK_RETRIES
-            error_reason = None
-            while status == 'Pending' and stack_retries > 0:
+            while not deployment_on_present and stack_retries > 0:
                 time.sleep(self.STACK_RETRY_WAIT)
-                pods_information = \
-                    self._get_pods_information(
-                        core_v1_api_client=core_v1_api_client,
-                        deployment_info=deployment_info)
-                status = self._get_pod_status(pods_information)
-                LOG.debug('status: %s', status)
-                stack_retries = stack_retries - 1
+                deployment_on_present = self._get_deployment_on_present(
+                    core_v1_api_client=core_v1_api_client,
+                    deployment_info=deployment_info)
+                if not deployment_on_present:
+                    LOG.debug("Deployment is not ready yet")
+                    stack_retries = stack_retries - 1
 
-            LOG.debug('VNF initializing status: %(service_name)s %(status)s',
-                      {'service_name': str(deployment_info), 'status': status})
-            if stack_retries == 0 and status != 'Running':
+            if stack_retries == 0 and not deployment_on_present:
                 error_reason = _("Resource creation is not completed within"
                                 " {wait} seconds as creation of stack {stack}"
                                 " is not completed").format(
@@ -149,56 +144,94 @@ class Kubernetes(abstract_driver.DeviceAbstractDriver,
                 LOG.warning("VNF Creation failed: %(reason)s",
                             {'reason': error_reason})
                 raise vnfm.VNFCreateWaitFailed(reason=error_reason)
-            elif stack_retries != 0 and status != 'Running':
-                raise vnfm.VNFCreateWaitFailed(reason=error_reason)
 
-            for i in range(0, len(deployment_info), 2):
-                namespace = deployment_info[i]
-                deployment_name = deployment_info[i + 1]
-                service_info = core_v1_api_client.read_namespaced_service(
-                    name=deployment_name,
-                    namespace=namespace)
-                if service_info.metadata.labels.get("management_connection"):
-                    vdu_name = service_info.metadata.labels.\
-                        get("vdu_name").split("-")[1]
-                    mgmt_ip = service_info.spec.cluster_ip
-                    mgmt_ips.update({vdu_name: mgmt_ip})
-                    vnf_dict['mgmt_url'] = jsonutils.dumps(mgmt_ips)
+            LOG.debug('VNF initializing status: %(service_name)s successful',
+                      {'service_name': str(deployment_info)})
+            mgmt_ips = self._get_mgmt_url(
+                core_v1_api_client=core_v1_api_client,
+                deployment_info=deployment_info)
+            if mgmt_ips:
+                vnf_dict['mgmt_url'] = jsonutils.dumps(mgmt_ips)
         except Exception as e:
             LOG.error('Creating wait VNF got an error due to %s', e)
             raise
         finally:
             self.clean_authenticate_vim(auth_cred, file_descriptor)
 
-    def _get_pods_information(self, core_v1_api_client, deployment_info):
-        """Get pod information"""
-        pods_information = list()
+    def _get_deployment_on_present(self, core_v1_api_client, deployment_info):
+        """Check pods and services are ready or not"""
+        pod_on_present = False
+        service_on_present = False
+        service_info = None
         for i in range(0, len(deployment_info), 2):
             namespace = deployment_info[i]
             deployment_name = deployment_info[i + 1]
-            respone = \
-                core_v1_api_client.list_namespaced_pod(namespace=namespace)
-            for item in respone.items:
-                if deployment_name in item.metadata.name:
-                    pods_information.append(item)
-        return pods_information
+            label_filter = "selector=" + deployment_name
 
-    def _get_pod_status(self, pods_information):
-        pending_flag = False
-        unknown_flag = False
-        for pod_info in pods_information:
-            status = pod_info.status.phase
-            if status == 'Pending':
-                pending_flag = True
-            elif status == 'Unknown':
-                unknown_flag = True
-        if unknown_flag:
-            status = 'Unknown'
-        elif pending_flag:
-            status = 'Pending'
+            pods_information = core_v1_api_client.list_namespaced_pod(
+                namespace=namespace, label_selector=label_filter)
+            for pod in pods_information.items:
+                # pod_on_present will return to True when all pod status
+                # is Running
+                pod_on_present = self._is_ready_pod(pod)
+                if not pod_on_present:
+                    return False
+            try:
+                service_info = core_v1_api_client.read_namespaced_service(
+                    namespace=namespace, name=deployment_name)
+            except Exception:
+                pass
+            if service_info:
+                service_on_present = self._is_ready_service(service_info)
+            else:
+                # If we don't expose service, service_on_present will be
+                # set to True
+                service_on_present = True
+        return pod_on_present and service_on_present
+
+    def _is_ready_pod(self, pod):
+        return pod.spec.node_name and \
+            pod.status.phase == K8S_POD_RUNNING_STATUS
+
+    def _is_ready_service(self, service):
+        if service.spec.type == 'ClusterIP':
+            if service.spec.cluster_ip:
+                return True
+        elif service.spec.type == 'LoadBalancer':
+            if service.status.load_balancer.ingress:
+                return True
         else:
-            status = 'Running'
-        return status
+            return False
+
+    def _get_mgmt_url(self, core_v1_api_client, deployment_info):
+        service_info = None
+        mgmt_ips = dict()
+        for i in range(0, len(deployment_info), 2):
+            namespace = deployment_info[i]
+            deployment_name = deployment_info[i + 1]
+            try:
+                service_info = core_v1_api_client.read_namespaced_service(
+                    namespace=namespace, name=deployment_name)
+            except Exception:
+                pass
+            mgmt_ip = None
+            if service_info:
+                if service_info.metadata.labels.get('cp_mgmt') == 'True':
+                    if service_info.spec.type == 'ClusterIP':
+                        mgmt_ip = service_info.spec.cluster_ip
+                    elif service_info.spec.type == 'LoadBalancer':
+                        mgmt_ip = \
+                            service_info.status.load_balancer.ingress[0].ip
+            else:
+                label_filter = "selector=" + deployment_name
+                pods_information = core_v1_api_client.list_namespaced_pod(
+                    namespace=namespace, label_selector=label_filter)
+                if pods_information.items[0].metadata.labels.get('cp_mgmt'):
+                    mgmt_ip = pods_information.items[0].status.pod_ip
+            vdu_name = deployment_name.split("-")[1]
+            if mgmt_ip:
+                mgmt_ips.update({vdu_name: mgmt_ip})
+        return mgmt_ips
 
     @log.log
     def update(self, plugin, context, vnf_id, vnf_dict, vnf, auth_attr):
@@ -435,7 +468,7 @@ class Kubernetes(abstract_driver.DeviceAbstractDriver,
 
                 replicas = deployment_info.status.replicas
                 scale_replicas = replicas
-                vnf_scaling_name = deployment_info.metadata.labels.\
+                vnf_scaling_name = scaling_info.metadata.labels.\
                     get("scaling_name")
                 if vnf_scaling_name == policy_name:
                     if policy_action == 'out':
@@ -529,12 +562,12 @@ class Kubernetes(abstract_driver.DeviceAbstractDriver,
             auth_cred['password'] = None
         return auth_cred, file_descriptor
 
-    def _create_ssl_ca_file(self, auth_attr):
-        ca_cert = auth_attr['ssl_ca_cert']
-        if ca_cert is not None:
+    def _create_ssl_ca_file(self, auth_cred):
+        if auth_cred.get('ssl_ca_cert', ''):
+            ca_cert = auth_cred['ssl_ca_cert']
             file_descriptor, file_path = \
                 self.kubernetes.create_ca_cert_tmp_file(ca_cert)
-            auth_attr['ca_cert_file'] = file_path
+            auth_cred['ca_cert_file'] = file_path
             return file_descriptor
         else:
             return None

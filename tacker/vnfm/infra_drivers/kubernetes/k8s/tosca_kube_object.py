@@ -22,18 +22,20 @@ class ToscaKubeObject(object):
     """
 
     def __init__(self, name=None, namespace=None, mapping_ports=None,
-                 containers=None, network_name=None,
-                 mgmt_connection_point=False, scaling_object=None,
-                 service_type=None, labels=None):
+                 containers=None, network_name=None, cp_name=None,
+                 cp_mgmt=False, scaling_object=None, service_type=None,
+                 deployment_labels=None, service_labels=None):
         self._name = name
         self._namespace = namespace
         self._mapping_ports = mapping_ports
         self._containers = containers
         self._network_name = network_name
-        self._mgmt_connection_point = mgmt_connection_point
+        self._cp_name = cp_name
+        self._cp_mgmt = cp_mgmt
         self._scaling_object = scaling_object
         self._service_type = service_type
-        self._labels = labels
+        self._deployment_labels = deployment_labels
+        self._service_labels = service_labels
 
     @property
     def name(self):
@@ -76,12 +78,20 @@ class ToscaKubeObject(object):
         self._network_name = network_name
 
     @property
-    def mgmt_connection_point(self):
-        return self._mgmt_connection_point
+    def cp_name(self):
+        return self._cp_name
 
-    @mgmt_connection_point.setter
-    def mgmt_connection_point(self, mgmt_connection_point):
-        self._mgmt_connection_point = mgmt_connection_point
+    @cp_name.setter
+    def cp_name(self, cp_name):
+        self._cp_name = cp_name
+
+    @property
+    def cp_mgmt(self):
+        return self._cp_mgmt
+
+    @cp_mgmt.setter
+    def cp_mgmt(self, cp_mgmt):
+        self._cp_mgmt = cp_mgmt
 
     @property
     def scaling_object(self):
@@ -100,12 +110,20 @@ class ToscaKubeObject(object):
         self._service_type = service_type
 
     @property
-    def labels(self):
-        return self._labels
+    def deployment_labels(self):
+        return self._deployment_labels
 
-    @labels.setter
-    def labels(self, labels):
-        self._labels = labels
+    @deployment_labels.setter
+    def deployment_labels(self, deployment_labels):
+        self._deployment_labels = deployment_labels
+
+    @property
+    def service_labels(self):
+        return self._service_labels
+
+    @service_labels.setter
+    def service_labels(self, service_labels):
+        self._service_labels = service_labels
 
 
 class Container(object):
