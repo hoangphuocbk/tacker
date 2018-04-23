@@ -301,13 +301,6 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
 
             self.validate_vnffg_properties(template['template'])
 
-            template_yaml = template['template']['vnffgd']
-            if not template.get('description'):
-                template['description'] = template_yaml.get('description', '')
-            if not template.get('name') and 'metadata' in template_yaml:
-                template['name'] = template_yaml['metadata'].get(
-                    'template_name', '')
-
         return super(NfvoPlugin, self).create_vnffgd(context, vnffgd)
 
     @log.log
@@ -516,6 +509,9 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
         vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
         vim_id = vnfm_plugin.get_vnf(context, vnf_id, fields=['vim_id'])
         vim_obj = self.get_vim(context, vim_id['vim_id'], mask_password=False)
+        if vim_obj['type'] == 'kubernetes':
+            vim_obj = self.get_vim(context, vim_obj['auth_cred'].get(
+                'openstack_vim_id'), mask_password=False)
         if vim_obj is None:
             raise nfvo.VimFromVnfNotFoundException(vnf_id=vnf_id)
         self._build_vim_auth(context, vim_obj)

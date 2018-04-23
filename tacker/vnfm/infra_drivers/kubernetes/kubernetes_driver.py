@@ -16,7 +16,11 @@
 import time
 import yaml
 
+from keystoneauth1 import identity
+from keystoneauth1 import session
 from kubernetes import client
+from neutronclient.common import exceptions as nc_exceptions
+from neutronclient.v2_0 import client as neutron_client
 from oslo_config import cfg
 from oslo_log import log as logging
 from oslo_serialization import jsonutils
@@ -551,9 +555,43 @@ class Kubernetes(abstract_driver.DeviceAbstractDriver,
 
     @log.log
     def get_resource_info(self, plugin, context, vnf_info, auth_attr,
-                          region_name=None):
-        # TODO(phuoc): will update it for other components
-        pass
+                          extra_vim_auth=None, region_name=None):
+        core_v1_api_client = self.kubernetes.get_core_v1_api_client(
+            auth=auth_attr)
+        deployment_info = vnf_info['instance_id'].split(",")
+        service_info = None
+        cp_ip = None
+        details_dict = dict()
+        neutronclient_ = NeutronClient(extra_vim_auth)
+        for i in range(0, len(deployment_info), 2):
+            namespace = deployment_info[i]
+            deployment_name = deployment_info[i + 1]
+            try:
+                service_info = core_v1_api_client.read_namespaced_service(
+                    namespace=namespace, name=deployment_name)
+            except Exception:
+                pass
+            if service_info:
+                network_name = service_info.metadata.labels.get('network_name')
+                cp_name = service_info.metadata.labels.get('cp_name')
+                if service_info.spec.type == 'ClusterIP':
+                    cp_ip = service_info.spec.cluster_ip
+                elif service_info.spec.type == 'LoadBalancer':
+                    cp_ip = service_info.status.load_balancer.ingress[0].ip
+            else:
+                label_filter = "selector=" + deployment_name
+                pods_information = core_v1_api_client.list_namespaced_pod(
+                    namespace=namespace, label_selector=label_filter)
+                network_name = pods_information.items[0].metadata.labels.get('network_name')
+                print('network_name: ', network_name)
+                cp_name = pods_information.items[0].metadata.labels.get('cp_name')
+                print('cp_name: ', cp_name)
+                cp_ip = pods_information.items[0].status.pod_ip
+                print('cp_ip: ', cp_ip)
+            cp_port_id = neutronclient_.get_port_id(network_name=network_name,
+                                                    ip_address=cp_ip)
+            details_dict.update({cp_name: {"id": cp_port_id}})
+        return details_dict
 
     def _get_auth_creds(self, auth_cred):
         file_descriptor = self._create_ssl_ca_file(auth_cred)
@@ -578,3 +616,24 @@ class Kubernetes(abstract_driver.DeviceAbstractDriver,
         if file_descriptor is not None:
             file_path = vim_auth.pop('ca_cert_file')
             self.kubernetes.close_tmp_file(file_descriptor, file_path)
+
+
+class NeutronClient(object):
+    """Neutron Client class for networking-sfc driver"""
+
+    def __init__(self, auth_attr):
+        auth_cred = auth_attr.copy()
+        verify = 'True' == auth_cred.pop('cert_verify', 'True') or False
+        auth = identity.Password(**auth_cred)
+        sess = session.Session(auth=auth, verify=verify)
+        self.client = neutron_client.Client(session=sess)
+
+    def get_port_id(self, network_name, ip_address):
+        try:
+            fixed_ip = ['subnet=%s' % str(network_name),
+                        'ip_address=%s' % str(ip_address)]
+            ports = self.client.list_ports(fixed_ips=fixed_ip)
+        except nc_exceptions.NotFound:
+            LOG.error("Neutron port with fixed ip %s not found", fixed_ip)
+            raise ValueError('Neutron port with %s not found' % fixed_ip)
+        return ports['ports'][0].get('id')

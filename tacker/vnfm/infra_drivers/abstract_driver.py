@@ -66,6 +66,6 @@ class DeviceAbstractDriver(extensions.PluginInterface):
 
     @abc.abstractmethod
     def get_resource_info(self, plugin, context, vnf_info, auth_attr,
-                          region_name=None):
+                          extra_vim_auth=None, region_name=None):
         '''Fetches optional details of a VNF'''
         pass

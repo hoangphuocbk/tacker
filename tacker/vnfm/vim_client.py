@@ -61,6 +61,14 @@ class VimClient(object):
         vim_res = {'vim_auth': vim_auth, 'vim_id': vim_info['id'],
                    'vim_name': vim_info.get('name', vim_info['id']),
                    'vim_type': vim_info['type']}
+        if vim_auth.get('openstack_vim_id'):
+            # in case of kubernetes vim, if user integrate with
+            #  kuryr-kubernetes, openstack vim auth is stored in extra vim auth
+            extra_vim_info = nfvo_plugin.get_vim(context,
+                                                 vim_auth['openstack_vim_id'],
+                                                 mask_password = False)
+            extra_vim_auth = self._build_vim_auth(context, extra_vim_info)
+            vim_res.update({'extra_vim_auth': extra_vim_auth})
         return vim_res
 
     @staticmethod
