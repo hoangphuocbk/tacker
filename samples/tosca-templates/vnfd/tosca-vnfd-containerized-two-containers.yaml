@@ -13,17 +13,17 @@ topology_template:
         mapping_ports:
           - "80:80"
           - "88:88"
-        service_type: NodePort
+        service_type: ClusterIP
         vnfcs:
           front_end:
             num_cpus: 0.5
-            mem_size: 512 MB
+            mem_size: 128 MB
             image: nginx
             ports:
               - "80"
           rss_reader:
             num_cpus: 0.5
-            mem_size: 512 MB
+            mem_size: 128 MB
             image: nickchase/rss-php-nginx:v1
             ports:
               - "88"
@@ -33,5 +33,5 @@ topology_template:
         targets: [VDU1]
         properties:
           min_instances: 1
-          max_instances: 3
+          max_instances: 5
           target_cpu_utilization_percentage: 40

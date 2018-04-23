@@ -3,7 +3,7 @@ Experimenting containerized VNFs with Kubernetes VIM
 ====================================================
 
 In the past, Tacker only supports creating virtual machine based VNF using
-Heat. This section covers how to deploy `containerized VNF` using Kubernetes
+Heat. This section covers how to deploy ``containerized VNF`` using Kubernetes
 VIM in Tacker.
 
 Prepare Kubernetes VIM
@@ -61,7 +61,7 @@ Kubernetes environment with one container per VDU.
           mapping_ports:
             - "80:80"
             - "88:88"
-          service_type: NodePort
+          service_type: LoadBalancer
           vnfcs:
             front_end:
               num_cpus: 0.5
@@ -136,8 +136,8 @@ parameters as the following table.
   |       labels            |      "app: webserver"     | Labels which is set for Kubernetes objects, it is used as Selector to    |
   |                         |                           | Service can send requests to Pods                                        |
   +--------------------------------------------------------------------------------------------------------------------------------+
-  |     service_type        |         ClusterIP         | Set service type for Service object.                                     |
-  |                         |                           |                                                                          |
+  |     service_type        |         LoadBalancer      | Set service type for Service object, which can be ClusterIP, LoadBalancer|
+  |                         |                           | or ClusterIP (default: ClusterIP).                                       |
   +--------------------------------------------------------------------------------------------------------------------------------+
   |         vnfcs           |                           | Vnfcs are modeled by Containers and Deployment object. User can limit    |
   |                         |                           | resource, set image, publish container ports, set commands and variables |
@@ -184,7 +184,7 @@ Similar to the above example, in this scenario, we define 2 containers in VDU1.
             - "80:8080"
           labels:
             - "app: webserver"
-          service_type: ClusterIP
+          service_type: LoadBalancer
           vnfcs:
             web_server:
               properties:
@@ -261,9 +261,9 @@ following commands
 .. code-block:: console
 
   $ kubectl get svc
-  NAME              TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
-  kubernetes        ClusterIP   192.168.28.129   <none>        443/TCP   5h
-  svc-vdu1-05db44   ClusterIP   192.168.28.187   <none>        80/TCP    12m
+  NAME              TYPE           CLUSTER-IP       EXTERNAL-IP        PORT(S)         AGE
+  kubernetes        ClusterIP      192.168.28.129   <none>             443/TCP         5h
+  svc-vdu1-05db44   LoadBalancer   192.168.28.187   192.168.11.239     80:31674/TCP    12m
 
   $ kubectl get deployment
   NAME              DESIRED   CURRENT   UP-TO-DATE   AVAILABLE   AGE
@@ -280,6 +280,12 @@ following commands
   $ kubectl get configmap
   NAME              DATA      AGE
   svc-vdu1-05db44   2         17m
+
+If users use 'LoadBalancer' type, user can access the service inside VNF:
+
+.. code-block:: console
+
+  $ curl 192.168.11.239
 
 User also can scale VNF manually, by running the following commands:
 
@@ -315,4 +321,3 @@ References
 .. [#fourth] https://kubernetes.io/docs/concepts/workloads/controllers/deployment
 .. [#fifth] https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap
 .. [#sixth] https://kubernetes.io/docs/concepts/services-networking/service
-
