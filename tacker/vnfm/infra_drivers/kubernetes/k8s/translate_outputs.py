@@ -168,6 +168,8 @@ class Transformer(object):
                 port = int(container_port)
                 cport = client.V1ContainerPort(container_port=port)
                 list_container_port.append(cport)
+        security_context = client.V1SecurityContext(
+            capabilities=client.V1Capabilities(add=["NET_ADMIN"]))
         container = client.V1Container(
             name=container_name,
             image=container_props.image,
@@ -176,6 +178,7 @@ class Transformer(object):
             command=container_props.command,
             args=container_props.args,
             env=list_env_var,
+            security_context=security_context,
             image_pull_policy="IfNotPresent")
         return container
 

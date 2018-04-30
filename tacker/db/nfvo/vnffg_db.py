@@ -630,13 +630,11 @@ class VnffgPluginDbMixin(vnffg.VNFFGPluginBase, db_base.CommonDbMixin):
         :param vnfs: List of VNF instance IDs
         :return: None
         """
-        print("vnfs: ", vnfs)
         LOG.debug('validating vim for vnfs %s', vnfs)
         vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
         nfvo_plugin = manager.TackerManager.get_service_plugins()['NFVO']
         vim_id = None
         for vnf in vnfs:
-            print('vnf: ', vnf)
             vnf_dict = vnfm_plugin.get_vnf(context, vnf)
             if vim_id is None:
                 vim_obj = nfvo_plugin.get_vim(
@@ -648,11 +646,8 @@ class VnffgPluginDbMixin(vnffg.VNFFGPluginBase, db_base.CommonDbMixin):
             elif vnf_dict['vim_id'] != vim_id:
                 vim_obj = nfvo_plugin.get_vim(
                     context, vnf_dict['vim_id'], mask_password=False)
-                print('vim_obj: ', vim_obj)
                 if vim_obj['type'] != 'kubernetes' or vim_obj['auth_cred']['openstack_vim_id'] != vim_id:
                     raise nfvo.VnffgVimMappingException(vnf_id=vnf, vim_id=vim_id)
-            print('Gotchaaa')
-            print('vim_id: ', vim_id)
 
     def _validate_criteria(self, criteria):
         """Validate whether or not the classifiers are unique.
