@@ -20,18 +20,27 @@ if [ "${TACKER_MODE}" == "all" ]; then
 
     if [ "${KUBERNETES_VIM}" == "True" ]; then
         KURYR_NEUTRON_DEFAULT_PROJECT="admin"
-        if [[ "$KURYR_K8S_LBAAS_USE_OCTAVIA" == "True" ]]; then
-            # Octavia LBaaSv2
-            TACKER_OCTAVIA_AGENTS=${TACKER_OCTAVIA_AGENTS:-octavia,o-api,o-cw,o-hm,o-hk}
-            for i in $(echo $TACKER_OCTAVIA_AGENTS | sed 's/,/ /g')
-            do
-                enable_service $i
-            done
-            IMAGE_URLS+=",http://download.cirros-cloud.net/0.3.4/cirros-0.3.4-x86_64-disk.img"
-        else
-            enable_service q-lbaasv2
-            NEUTRON_LBAAS_SERVICE_PROVIDERV2="LOADBALANCERV2:Haproxy:neutron_lbaas.drivers.haproxy.plugin_driver.HaproxyOnHostPluginDriver:default"
-        fi
+        # Octavia LBaaSv2
+        LIBS_FROM_GIT+=python-octaviaclient
+        TACKER_OCTAVIA_AGENTS=${TACKER_OCTAVIA_AGENTS:-octavia,o-api,o-cw,o-hm,o-hk}
+        for i in $(echo $TACKER_OCTAVIA_AGENTS | sed 's/,/ /g')
+        do
+            enable_service $i
+        done
+        # Nova
+        TACKER_NOVA_AGENTS=${TACKER_NOVA_AGENTS:-n-api,n-api-meta,n-cpu,n-cond,n-sch,placement-api,placement-client}
+        for i in $(echo $TACKER_NOVA_AGENTS | sed 's/,/ /g')
+        do
+            enable_service $i
+        done
+        # Glance
+        enable_service g-api
+        enable_service g-reg
+
+        # dependencies
+        enable_service mysql
+        enable_service rabbit
+
         # enable kuryr-kubernetes services
         KURYR_KUBERNETES_AGENTS=${KURYR_KUBERNETES_AGENTS:-etcd3,kubernetes-api,kubernetes-controller-manager,kubernetes-scheduler,kubelet,kuryr-kubernetes,kuryr-daemon}
         for i in $(echo $KURYR_KUBERNETES_AGENTS | sed 's/,/ /g')

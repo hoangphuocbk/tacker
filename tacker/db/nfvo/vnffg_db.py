@@ -646,6 +646,7 @@ class VnffgPluginDbMixin(vnffg.VNFFGPluginBase, db_base.CommonDbMixin):
             elif vnf_dict['vim_id'] != vim_id:
                 vim_obj = nfvo_plugin.get_vim(
                     context, vnf_dict['vim_id'], mask_password=False)
+                print("vim obj: ", vim_obj)
                 if vim_obj['type'] != 'kubernetes' or vim_obj['auth_cred']['openstack_vim_id'] != vim_id:
                     raise nfvo.VnffgVimMappingException(vnf_id=vnf, vim_id=vim_id)
 
