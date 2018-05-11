@@ -1,0 +1,92 @@
+[[local|localrc]]
+# The name of the RECLONE environment variable is a bit misleading.  It doesn't actually
+# reclone repositories, rather it uses git fetch to make sure the repos are current.
+
+RECLONE=False
+FORCE=yes
+
+HOST_IP=192.168.0.11
+MULTI_HOST=1
+
+# Load the external LBaaS plugin.
+
+enable_plugin neutron-lbaas https://git.openstack.org/openstack/neutron-lbaas master
+enable_plugin octavia https://git.openstack.org/openstack/octavia master
+enable_plugin barbican https://git.openstack.org/openstack/barbican master
+
+DATABASE_PASSWORD=devstack
+ADMIN_PASSWORD=devstack
+SERVICE_PASSWORD=devstack
+SERVICE_TOKEN=devstack
+RABBIT_PASSWORD=devstack
+# Enable Logging
+LOGFILE=$DEST/logs/stack.sh.log
+VERBOSE=True
+LOG_COLOR=False
+SCREEN_LOGDIR=$DEST/logs
+
+ENABLED_SERVICES=""
+
+# Pre-requisites
+ENABLED_SERVICES=rabbit,mysql,key
+
+# Nova
+ENABLED_SERVICES+=,n-api,n-cpu,n-cond,n-sch,placement-api,placement-client
+
+# Neutron
+# ENABLED_SERVICES+=,q-svc,q-agt,q-dhcp,q-l3,q-meta,q-lbaasv2
+ENABLED_SERVICES+=,q-lbaasv2
+NETWORK_API_EXTENSIONS="all,lbaasv2"
+
+# Glance
+ENABLED_SERVICES+=,g-api,g-reg
+
+# Octavia
+ENABLED_SERVICES+=,octavia,o-cw,o-hk,o-hm,o-api
+NEUTRON_LBAAS_SERVICE_PROVIDERV2="LOADBALANCERV2:Haproxy:neutron_lbaas.drivers.haproxy.plugin_driver.HaproxyOnHostPluginDriver:default"
+OCTAVIA_MGMT_SUBNET=${OCTAVIA_MGMT_SUBNET:-"192.168.112.0/24"}
+OCTAVIA_MGMT_SUBNET_START=${OCTAVIA_MGMT_SUBNET_START:-"192.168.112.2"}
+OCTAVIA_MGMT_SUBNET_END=${OCTAVIA_MGMT_SUBNET_END:-"192.168.112.200"}
+OCTAVIA_NODE=main
+
+# Horizon
+ENABLED_SERVICES+=,horizon
+
+# Neutron ML2 with OpenVSwitch
+Q_PLUGIN=ml2
+Q_AGENT=openvswitch
+
+# Disable security groups
+Q_USE_SECGROUP=False
+LIBVIRT_FIREWALL_DRIVER=nova.virt.firewall.NoopFirewallDriver
+
+# Enable heat, networking-sfc, barbican and mistral
+enable_plugin heat https://git.openstack.org/openstack/heat master
+enable_plugin networking-sfc git://git.openstack.org/openstack/networking-sfc master
+enable_plugin mistral https://git.openstack.org/openstack/mistral master
+
+# Ceilometer
+#CEILOMETER_PIPELINE_INTERVAL=300
+enable_plugin ceilometer https://git.openstack.org/openstack/ceilometer master
+enable_plugin aodh https://git.openstack.org/openstack/aodh master
+
+# Tacker
+enable_plugin tacker https://git.openstack.org/openstack/tacker refs/changes/08/529808/40
+
+
+[[post-config|$OCTAVIA_CONF]]
+[controller_worker]
+amp_active_retries=9999
+
+[[post-config|/etc/neutron/dhcp_agent.ini]]
+[DEFAULT]
+enable_isolated_metadata = True
+
+[[post-config|/$NOVA_CONF]]
+[libvirt]
+hw_machine_type = "x86_64=pc-i440fx-xenial,i686=pc-i440fx-xenial"
+
+[[post-config|/$NOVA_CPU_CONF]]
+[libvirt]
+hw_machine_type = "x86_64=pc-i440fx-xenial,i686=pc-i440fx-xenial"
+

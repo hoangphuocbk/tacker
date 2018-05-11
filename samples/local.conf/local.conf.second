@@ -1,0 +1,65 @@
+[[local|localrc]]
+# The name of the RECLONE environment variable is a bit misleading.  It doesn't actually
+# reclone repositories, rather it uses git fetch to make sure the repos are current.
+
+RECLONE=False
+FORCE=yes
+
+HOST_IP=192.168.0.12
+SERVICE_HOST=192.168.0.11
+MULTI_HOST=1
+NEUTRON_SERVICE_HOST=$SERVICE_HOST
+MYSQL_HOST=$SERVICE_HOST
+RABBIT_HOST=$SERVICE_HOST
+GLANCE_HOSTPORT=$SERVICE_HOST:9292
+NOVA_VNC_ENABLED=True
+NOVNCPROXY_URL="http://$SERVICE_HOST:6080/vnc_auto.html"
+
+# Load the external LBaaS plugin.
+
+enable_plugin octavia https://git.openstack.org/openstack/octavia
+LIBS_FROM_GIT=python-octaviaclient
+
+DATABASE_PASSWORD=devstack
+ADMIN_PASSWORD=devstack
+SERVICE_PASSWORD=devstack
+SERVICE_TOKEN=devstack
+RABBIT_PASSWORD=devstack
+
+# Enable Logging
+LOGFILE=$DEST/logs/stack.sh.log
+VERBOSE=True
+LOG_COLOR=False
+SCREEN_LOGDIR=$DEST/logs
+
+ENABLED_SERVICES=
+
+# Nova
+enable_service n-cpu
+
+# Neutron
+enable_service q-agt
+
+# LBaaS V2 and Octavia
+enable_service octavia
+enable_service o-cw
+enable_service o-hm
+enable_service o-hk
+enable_service o-api
+
+OCTAVIA_NODE=second
+
+OCTAVIA_MGMT_SUBNET=192.168.112.0/24
+OCTAVIA_MGMT_SUBNET_START=192.168.112.2
+OCTAVIA_MGMT_SUBNET_END=192.168.112.200
+
+# Networking-sfc
+enable_plugin networking-sfc https://git.openstack.org/openstack/networking-sfc master
+
+# we are not enabling the mysql service here, but this is necessary
+# to get the connection string constructed
+DATABASE_TYPE=mysql
+
+LOGFILE=$DEST/logs/stack.sh.log
+LOGDAYS=1
+
