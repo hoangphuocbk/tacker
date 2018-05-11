@@ -716,19 +716,22 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
                             new_pp_id = new_port_pairs[j]
                             neutronclient.port_pair_delete(new_pp_id)
 
-    def _wait_for_lb_ready(self, neutron_client, lb_id, timeout=200):
+    def _wait_for_lb_ready(self, neutron_client, lb_id, timeout):
+        if not timeout:
+            timeout = 200
         lb_status = False
         timer = 0
         while timer < timeout:
-            lb_resource = neutron_client.\
-                find_resource_by_name_or_id('loadbalancer', lb_id)
+            lb_resource = neutron_client.loadbalancer_get(lb_id)
             if lb_resource is None:
                 break
             else:
                 failed_prov_status = {'ERROR'}
                 failed_oper_status = {'DEGRADED', 'ERROR'}
-                prov_status = lb_resource.get('provisioning_status')
-                oper_status = lb_resource.get('operating_status')
+                prov_status = lb_resource.get(
+                    'loadbalancer').get('provisioning_status')
+                oper_status = lb_resource.get(
+                    'loadbalancer').get('operating_status')
                 if prov_status == 'ACTIVE' and oper_status == 'ONLINE':
                     lb_status = True
                     break
@@ -1106,7 +1109,7 @@ class NeutronClient(object):
         return subnet
 
     def loadbalancer_get(self, name_or_id, ignore_missing=False):
-        lb_dict = self.client.find_load_balancer(name_or_id, ignore_missing)
+        lb_dict = self.client.show_loadbalancer(name_or_id)
         if not lb_dict:
             raise ValueError('Load balancer %s not found' % name_or_id)
         return lb_dict
