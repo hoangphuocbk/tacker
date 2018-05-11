@@ -1,0 +1,15 @@
+properties:
+  role:
+    active: 2
+    standby: 1
+  load_balancer:
+    vip:
+      subnet: subnet0
+    listener:
+      protocol: HTTP
+      protocol_port: 80
+    pool:
+      protocol: HTTP
+      lb_algorithm: ROUND_ROBIN
+    target: CP2
+
