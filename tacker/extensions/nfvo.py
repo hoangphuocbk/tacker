@@ -278,6 +278,10 @@ class UpdateVnffgException(exceptions.TackerException):
     message = _("%(message)s")
 
 
+class MessageException(exceptions.TackerException):
+    message = _("%(message)s")
+
+
 NAME_MAX_LEN = 255
 
 RESOURCE_ATTRIBUTE_MAP = {
@@ -770,6 +774,13 @@ RESOURCE_ATTRIBUTE_MAP = {
             'validate': {'type:uuid': None},
             'is_visible': True,
             'default': None,
+        },
+        'placement_attr': {
+            'allow_post': True,
+            'allow_put': False,
+            'validate': {'type:dict_or_none': None},
+            'is_visible': True,
+            'default': {},
         },
         'vim_id': {
             'allow_post': True,

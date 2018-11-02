@@ -43,6 +43,8 @@ from tacker.keymgr import API as KEYMGR_API
 from tacker import manager
 from tacker.nfvo.workflows.vim_monitor import vim_monitor_utils
 from tacker.plugins.common import constants
+from tacker.policy_management import parser_policy
+from tacker.policy_management import partition
 from tacker.vnfm import vim_client
 
 from tacker.tosca import utils as toscautils
@@ -695,6 +697,8 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
         step-3: Create mistral workflow to create VNFs, VNFFG and execute the
         workflow
         """
+        test_flag = True
+
         ns_info = ns['ns']
         name = ns_info['name']
 
@@ -712,10 +716,39 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
         nsd_dict = yaml.safe_load(nsd['attributes']['nsd'])
         vnfm_plugin = manager.TackerManager.get_service_plugins()['VNFM']
         onboarded_vnfds = vnfm_plugin.get_vnfds(context, [])
-        region_name = ns.setdefault('placement_attr', {}).get(
-            'region_name', None)
+        region_name = ns_info.get('placement_attr', {}).\
+            get('region_name', None)
+
         vim_res = self.vim_client.get_vim(context, ns['ns']['vim_id'],
                                           region_name)
+
+        vnfds = nsd['vnfds']
+
+        vim_info = self.get_vim(context, ns['ns']['vim_id'])
+        vim_regions = vim_info['placement_attr']['regions']
+
+        vnfd_vnf_mapping = dict()
+
+        for node_name, node_val in \
+                (nsd_dict['topology_template']['node_templates']).items():
+            if node_val.get('type') not in vnfds.keys():
+                continue
+            vnfd_name = vnfds[node_val.get('type')]
+            vnfd_vnf_mapping[vnfd_name] = node_name
+
+        defied_policies, grouped_vnfs = parser_policy.get_policies(
+            nsd_dict, vim_regions, vnfds)
+
+        vnf_resource_req = parser_policy.get_vnf_resource(context, vnfd_vnf_mapping)
+
+        vim_obj = self.get_vim(context, ns['ns']['vim_id'], mask_password=False)
+        vim_auth = self._build_vim_auth(vim_obj)
+
+        mapping_region = partition.partition_ns(
+            nsd_dict, defied_policies, grouped_vnfs,
+            vnfd_vnf_mapping, vim_auth, vnf_resource_req)
+
+
         driver_type = vim_res['vim_type']
         if not ns['ns']['vim_id']:
             ns['ns']['vim_id'] = vim_res['vim_id']
@@ -738,13 +771,18 @@ class NfvoPlugin(nfvo_db_plugin.NfvoPluginDb, vnffg_db.VnffgPluginDbMixin,
         vnfd_dict = dict()
         for node_name, node_val in \
                 (nsd_dict['topology_template']['node_templates']).items():
+            for k in mapping_region:
+                if node_name in mapping_region[k]:
+                    region_name = k
+                    break
             if node_val.get('type') not in vnfds.keys():
                 continue
             vnfd_name = vnfds[node_val.get('type')]
             if not vnfd_dict.get(vnfd_name):
                 vnfd_dict[vnfd_name] = {
                     'id': self._get_vnfd_id(vnfd_name, onboarded_vnfds),
-                    'instances': [node_name]
+                    'instances': [node_name],
+                    'region_name': region_name
                 }
             else:
                 vnfd_dict[vnfd_name]['instances'].append(node_name)

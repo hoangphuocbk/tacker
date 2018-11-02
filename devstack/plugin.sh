@@ -40,7 +40,7 @@ if is_service_enabled tacker; then
             echo_summary "Modifying Heat policy.json file"
             modify_heat_flavor_policy_rule
             echo_summary "Setup initial tacker network"
-            tacker_create_initial_network
+            #tacker_create_initial_network
             if [ "${KUBERNETES_VIM}" == "True" ]; then
                 tacker_create_initial_k8s_network
             fi

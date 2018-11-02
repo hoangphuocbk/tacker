@@ -217,6 +217,61 @@ policy_types:
         default: true
         description: If the policy is not mandatory, set this flag to 'false'. Setting this flag to 'false' allows the VDU deployment request to continue even if the nova-scheduler fails to assign compute hosts under the policy.
 
+  tosca.policies.tacker.Placement.ns:
+    derived_from: tosca.policies.Placement
+    description: Defines policy for placement of Network Service.
+    properties:
+      policy:
+        type: string
+        required: false
+        constraints:
+          - valid_values: [ load_balancing, consolidation ]
+        default: load_balancing
+        description: Placement policy for target VNF's of a Network Service.
+      strict:
+        type: boolean
+        required: false
+        default: true
+      data_centers:
+        type: list
+        entry_schema:
+          type: string
+        required: true
+      strategy:
+        type: string
+        entry_schema:
+          type: string
+        required: false
+        default: least_loaded_first
+      targets:
+        type: list
+        entry_schema:
+          type: string
+        required: true
+        description: List of VNFs.
+
+  tosca.policies.tacker.Placement.vnf:
+    derived_from: tosca.policies.Placement
+    description: Defines policy for placement of vnf.
+    properties:
+      policy:
+        type: string
+        required: false
+        constraints:
+          - valid_values: [ affinity, anti-affinity ]
+        default: load_balancing
+        description: Placement policy for target VNF's of a Network Service.
+      strict:
+        type: boolean
+        required: false
+        default: true
+      targets:
+        type: list
+        entry_schema:
+          type: string
+        required: true
+        description: List of VNFs.
+
   tosca.policies.tacker.Failure:
     derived_from: tosca.policies.Root
     action:

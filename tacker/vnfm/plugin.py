@@ -24,6 +24,7 @@ from oslo_log import log as logging
 from oslo_utils import excutils
 from oslo_utils import uuidutils
 from toscaparser.tosca_template import ToscaTemplate
+from toscaparser.utils import yamlparser
 
 from tacker.api.v1 import attributes
 from tacker.common import driver_manager
@@ -183,6 +184,10 @@ class VNFMPlugin(vnfm_db.VNFMPluginDb, VNFMMgmtMixin):
         self._parse_template_input(vnfd)
         return super(VNFMPlugin, self).create_vnfd(
             context, vnfd)
+
+    def update_vnfd(self, context, vnfd_id, vnfd):
+        super(VNFMPlugin, self).update_vnfd(
+            context, vnfd_id, vnfd)
 
     def _parse_template_input(self, vnfd):
         vnfd_dict = vnfd['vnfd']
@@ -863,13 +868,15 @@ class VNFMPlugin(vnfm_db.VNFMPluginDb, VNFMMgmtMixin):
     def get_vnf_resources(self, context, vnf_id, fields=None, filters=None):
         vnf_info = self.get_vnf(context, vnf_id)
         infra_driver, vim_auth = self._get_infra_driver(context, vnf_info)
+        region_name = vnf_info.get('placement_attr', {}).get('region_name', None)
         if vnf_info['status'] == constants.ACTIVE:
             vnf_details = self._vnf_manager.invoke(infra_driver,
                                                    'get_resource_info',
                                                    plugin=self,
                                                    context=context,
                                                    vnf_info=vnf_info,
-                                                   auth_attr=vim_auth)
+                                                   auth_attr=vim_auth,
+                                                   region_name=region_name)
             resources = [{'name': name,
                           'type': info.get('type'),
                           'id': info.get('id')}

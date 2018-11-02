@@ -184,12 +184,16 @@ class WorkflowGenerator(workflow_generator.WorkflowGeneratorBase):
             nodes = vnfd_info['instances']
             for node in nodes:
                 vnf_name = '%s_VNF_%s' % (ns_name, vnfd_info['id'])
+                placement_attr = dict()
+                if vnfd_info.get('region_name'):
+                    placement_attr['region_name'] = vnfd_info.get('region_name')
                 self.input_dict['ns'][node] = dict()
                 self.input_dict['ns'][node]['vnf'] = {
                     'attributes': {},
                     'vim_id': ns['ns'].get('vim_id', ''),
                     'vnfd_id': vnfd_info['id'],
-                    'name': vnf_name
+                    'name': vnf_name,
+                    'placement_attr': placement_attr
                 }
                 if params.get(vnfd_name):
                     self.input_dict['ns'][node]['vnf']['attributes'] = {

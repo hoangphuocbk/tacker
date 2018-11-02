@@ -391,12 +391,12 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
         raise ValueError('empty match field for input flow classifier')
 
     def create_chain(self, name, path_id, fc_ids, vnfs, symmetrical=False,
-                     auth_attr=None):
+                     auth_attr=None, region_name='CentralRegion'):
         if not auth_attr:
             LOG.warning("auth information required for n-sfc driver")
             return None
 
-        neutronclient_ = NeutronClient(auth_attr)
+        neutronclient_ = NeutronClient(auth_attr, region_name)
         port_pairs_list = neutronclient_.port_pair_list()
         port_pair_groups_list = neutronclient_.port_pair_group_list()
         port_chains_list = neutronclient_.port_chain_list()
@@ -826,12 +826,13 @@ class OpenStack_Driver(abstract_vim_driver.VimAbstractDriver,
 class NeutronClient(object):
     """Neutron Client class for networking-sfc driver"""
 
-    def __init__(self, auth_attr):
+    def __init__(self, auth_attr, region_name="CentralRegion"):
         auth_cred = auth_attr.copy()
         verify = 'True' == auth_cred.pop('cert_verify', 'True') or False
         auth = identity.Password(**auth_cred)
         sess = session.Session(auth=auth, verify=verify)
-        self.client = neutron_client.Client(session=sess)
+        self.client = neutron_client.Client(session=sess,
+                                            region_name=region_name)
 
     def flow_classifier_show(self, fc_id):
         try:
